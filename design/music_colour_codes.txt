@@ -1,0 +1,5 @@
+MUSIC Colours:
+
+Primary: #264653
+Secondary: White
+Link Hover: #e76f51
