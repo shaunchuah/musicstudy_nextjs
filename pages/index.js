@@ -50,7 +50,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex items-center mb-16">
               <a
                 className="mt-4 text-gray-300 hover:text-white"
                 href="https://www.ed.ac.uk/inflammation-research/research/gut-research-unit"
@@ -80,9 +80,10 @@ export default function Home() {
           </div>
           <div className="col-span-1">
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow flex flex-wrap gap-4 justify-center lg:justify-start items-start mb-6">
-              <div className="text-center lg:text-left">
-                <div className="flex flex-row items-start gap-4">
-                  <div>
+              <div>
+                <div className="md:flex flex-row items-start gap-4">
+                  <div className="flex w-full md:w-1/3">
+                  <div className="mx-auto md:mx-0 mb-4 md:mb-0">
                     <Image
                       src="/static/images/ppi.jpg"
                       alt="Molly Halligan shares her experience"
@@ -90,6 +91,7 @@ export default function Home() {
                       height="100"
                       className="rounded-full"
                     />
+                  </div>
                   </div>
                   <div>
                     <h2 className="text-xl">
@@ -111,7 +113,7 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow flex flex-wrap gap-4 justify-center lg:justify-start items-start mb-6">
-              <div className="text-center lg:text-left">
+              <div>
                 <h2 className="text-xl">
                   John Rysdale, Patient Representative
                 </h2>
