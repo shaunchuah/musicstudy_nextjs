@@ -8,8 +8,7 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>
-          MARVEL IBD - Mitochondrial Antioxidant Therapy to Resolve Inflammation
-          in Ulcerative Colitis
+          MUSIC IBD Study
         </title>
         <link rel="icon" href="/favicon.ico" />
         <link

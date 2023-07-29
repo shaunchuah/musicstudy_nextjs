@@ -91,7 +91,7 @@ export default function Home() {
       </SectionWrapperWhite>
   
       <SectionWrapper id="overview">
-        <SectionHeader title="Marvel Study Overview" />
+        <SectionHeader title="Updates" />
         <div className="grid lg:grid-cols-3 gap-4 lg:gap-6">
           <div className="lg:col-span-2">
             <div className="border p-6 rounded-lg shadow hover:text-[#264653]">
