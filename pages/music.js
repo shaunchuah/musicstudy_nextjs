@@ -10,10 +10,9 @@ export default function Participants() {
   return (
     <MotionPage>
       <main className="flex flex-col w-full">
-        
         <SectionWrapperWhite id="introduction">
           <SectionHeaderWhite title="What is the MUSIC study?" />
-          <div className="text-xl space-y-4">
+          <div className="text-xl space-y-4 max-w-prose">
             <p>
               The MUSIC study is an observational study where participants are
               followed up closely every 3 months for a year.
@@ -32,10 +31,9 @@ export default function Participants() {
 
         <SectionWrapperWhite id="takepart">
           <SectionHeaderWhite title="Why Take Part?" />
-          <div className="text-xl space-y-4">
-            <ul>
+          <div className="text-xl space-y-4 max-w-prose">
+            <ul className="list-disc list-outside pl-4 space-y-4">
               <li>
-                {" "}
                 MUSIC runs in conjunction with your existing NHS treatment. It
                 simply aims to monitor you much more closely as your condition
                 hopefully improves.
@@ -54,10 +52,22 @@ export default function Participants() {
             </ul>
           </div>
         </SectionWrapperWhite>
+        <SectionWrapperWhite id="who">
+          <SectionHeaderWhite title="Who Can Take Part?" />
+          <div className="text-xl space-y-4 max-w-prose">
+            <p className="mb-4">We are looking for patients:</p>
+            <ul className="list-disc list-outside pl-4 space-y-4">
+              <li>Age 16 and above</li>
+              <li>Have Crohn's disease or ulcerative colitis</li>
+              <li>Referred by their NHS doctor</li>
+              <li>Edinburgh, Glasgow or Dundee</li>
+            </ul>
+          </div>
+        </SectionWrapperWhite>
 
         <SectionWrapperWhite id="involvement">
           <SectionHeaderWhite title="What is Involved?" />
-          <div className="text-xl space-y-4">
+          <div className="text-xl space-y-4 max-w-prose mb-12">
             <p>
               This is a 12-month follow-up study which will involve appointments
               at 3 monthly intervals. We plan to closely monitor your clinical
@@ -74,6 +84,65 @@ export default function Participants() {
               read the patient information sheet linked here.
             </p>
           </div>
+
+          <ol class="items-center sm:flex mx-auto">
+            <li class="relative mb-6 sm:mb-0 w-1/5">
+              <div class="flex items-center">
+                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                  0
+                </div>
+                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+              </div>
+              <div class="mt-3 sm:pr-8">
+                <h3 class="text-lg font-semibold text-gray-900 ">Start</h3>
+              </div>
+            </li>
+            <li class="relative mb-6 sm:mb-0 w-1/5">
+              <div class="flex items-center">
+                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                  3
+                </div>
+                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+              </div>
+              <div class="mt-3 sm:pr-8">
+                <h3 class="text-lg font-semibold text-gray-900 ">3 Months</h3>
+              </div>
+            </li>
+            <li class="relative mb-6 sm:mb-0 w-1/5">
+              <div class="flex items-center">
+                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                  6
+                </div>
+                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+              </div>
+              <div class="mt-3 sm:pr-8">
+                <h3 class="text-lg font-semibold text-gray-900 ">6 Months</h3>
+              </div>
+            </li>
+            <li class="relative mb-6 sm:mb-0 w-1/5">
+              <div class="flex items-center">
+                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                  9
+                </div>
+                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+              </div>
+              <div class="mt-3 sm:pr-8">
+                <h3 class="text-lg font-semibold text-gray-900 ">9 Months</h3>
+              </div>
+            </li>
+            <li class="relative mb-6 sm:mb-0 w-1/5">
+              <div class="flex items-center">
+                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                  12
+                </div>
+                
+              </div>
+              <div class="mt-3 sm:pr-8">
+                <h3 class="text-lg font-semibold text-gray-900 ">12 Months</h3>
+              </div>
+            </li>
+           
+          </ol>
         </SectionWrapperWhite>
 
         <SectionWrapperWhite id="centres">
@@ -108,9 +177,7 @@ export default function Participants() {
             height="1080px">
             This browser does not support PDFs. Please download the PDF to view
             it:{" "}
-            <a
-              href="/static/files/musicsummarypis.pdf"
-              target="_blank">
+            <a href="/static/files/musicsummarypis.pdf" target="_blank">
               Download Patient Information Sheet.
             </a>
           </object>
@@ -149,6 +216,23 @@ export default function Participants() {
                   clipRule="evenodd"></path>
               </svg>
               Summary Participant Information Sheet v1.0
+            </a>
+            <a
+              href="/static/files/music_ppi_strategy.pdf"
+              target="_blank"
+              className="flex flex-row items-center hover:text-[#e76f51]">
+              <svg
+                className="w-8 h-8 mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fillRule="evenodd"
+                  d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
+                  clipRule="evenodd"></path>
+              </svg>
+              Patient Public Involvement and Engagement: A Strategic Vision to
+              Combine High Quality Clinical Care with Research
             </a>
           </div>
         </SectionWrapperWhite>

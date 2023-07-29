@@ -283,37 +283,38 @@ export default function Home() {
           <div className="xl:w-1/3 md:w-1/2 p-4">
             <Image
               className="h-40 rounded w-full object-cover object-center mb-6"
-              src="/static/jonmoulton.png"
-              alt="Jon Moulton Charity Trust"
+              src="/static/images/helmsley.png"
+              alt="The Helmsley Charitable Trust"
               height="354"
               width="709"
               priority={true}
             />
           </div>
-          <div className="xl:w-1/3 md:w-1/2 p-4">
-            <Image
-              className="h-40 rounded w-full object-cover object-center mb-6"
-              src="/static/cir.png"
-              alt="Centre for Inflammation Research"
-              height="354"
-              width="709"
-            />
-          </div>
+          
 
           <div className="xl:w-1/6 md:w-1/4 p-4 w-1/2">
             <Image
               className="h-40 rounded w-full object-cover object-center mb-6"
-              src="/static/nhslothian.png"
+              src="/static/images/nhslothian.png"
               alt="NHS Lothian"
               height="354"
               width="354"
+            />
+          </div>
+          <div className="xl:w-1/3 md:w-1/2 p-4">
+            <Image
+              className="h-40 rounded w-full object-cover object-center mb-6"
+              src="/static/images/cir.png"
+              alt="Centre for Inflammation Research"
+              height="354"
+              width="709"
             />
           </div>
           <div className="hidden md:w-1/4 md:block xl:hidden"></div>
           <div className="xl:w-1/6 md:w-1/4 p-4 w-1/2">
             <Image
               className="h-40 rounded w-full object-cover object-center mb-6"
-              src="/static/accord.png"
+              src="/static/images/accord.png"
               alt="ACCORD"
               height="354"
               width="354"
