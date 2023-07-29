@@ -1,13 +1,13 @@
 import MotionPage from "../components/MotionPage";
-import SectionHeader from "../components/SectionHeader";
-import SectionWrapper from "../components/SectionWrapper";
+import SectionHeaderWhite from "../components/SectionHeaderWhite";
+import SectionWrapperWhite from "../components/SectionWrapperWhite";
 
-export default function Contact() {
+export default function Downloads() {
   return (
     <MotionPage>
       <main className="flex flex-col w-full">
-        <SectionWrapper id="contact">
-          <SectionHeader title="Contact" />
+        <SectionWrapperWhite id="contact">
+          <SectionHeaderWhite title="Downloads" />
           <div className="flex flex-col items-center justify-center text-xl h-96">
             <div className="text-3xl text-center mb-2 font-bold">
               
@@ -56,7 +56,7 @@ export default function Contact() {
             </div>
           </div>
           
-        </SectionWrapper>
+        </SectionWrapperWhite>
       </main>
     </MotionPage>
   );

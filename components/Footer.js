@@ -8,27 +8,27 @@ export default function Footer() {
         <div className="flex flex-wrap lg:text-left text-center order-first">
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium tracking-widest text-sm mb-3">
-              CONTACT DETAILS
+              USEFUL LINKS
             </h2>
-            <h3 className="font-bold">Email</h3>
+            
             <p>
               <a
-                href="mailto:MARVEL.Trial@ed.ac.uk"
+                href="https://samples.musicstudy.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block lg:inline py-1 lg:py-0 border rounded-lg lg:border-0 hover:text-[#e76f51] mb-2 lg:mb-0"
               >
-                MARVEL.Trial@ed.ac.uk
+                G-Trac
               </a>
             </p>
             <p className="mb-4">
               <a
-                href="mailto:miniMarvel.Trial@ed.ac.uk"
+                href="https://ecrf.igmm.ed.ac.uk/index.php?action=myprojects"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block lg:inline py-1 lg:py-0 border rounded-lg lg:border-0 hover:text-[#e76f51] mb-2 lg:mb-0"
               >
-                miniMarvel.Trial@ed.ac.uk
+                RedCap
               </a>
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function Footer() {
             <div className="flex flex-col">
               <a
                 className="py-1 lg:py-0 border rounded-lg lg:border-0 hover:text-[#e76f51] mb-2 lg:mb-0"
-                href="https://clinicaltrials.gov/ct2/show/NCT04276740"
+                href="https://clinicaltrials.gov/ct2/show/NCT04760964"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -106,11 +106,12 @@ export default function Footer() {
             className="flex title-font font-medium items-center lg:justify-start justify-center text-gray-900">
 
             <Image
-                src="/static/logos/header_highres.png"
-                alt="MARVEL Logo"
+                src="/static/images/musicicon.png"
+                alt="MUSIC Logo"
                 height="50"
                 width="56"
                 priority={true}
+                className="border border-white rounded-xl"
               />
 
           </Link>
