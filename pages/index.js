@@ -29,7 +29,7 @@ export default function Home() {
         <div className="md:grid grid-cols-3 mt-20">
           <div className="col-span-2">
             <div className="flex">
-              <div class="text-7xl">MUSIC & Mini-MUSIC</div>
+              <div class="text-5xl md:text-7xl">MUSIC & Mini-MUSIC</div>
             </div>
             <div className="flex items-center pt-4 lg:pt-8 lg:pb-2">
               <p className="font-merriweather mb-6 leading-relaxed sm:text-2xl text-xl max-w-lg">
@@ -137,8 +137,8 @@ export default function Home() {
         <div className="md:grid lg:grid-cols-3 gap-4 lg:gap-6">
           <div className="lg:col-span-2">
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
-              <div className="flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/6 flex-none">
+              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
+                <div className="w-1/3 md:w-1/6 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                   <Image
                     src="/static/images/ppi2.jpg"
                     alt="Aerin Thompson joins MUSIC PPI group"
@@ -148,7 +148,7 @@ export default function Home() {
                     className="rounded-full"
                   />
                 </div>
-                <div className="text-center lg:text-left">
+                <div className="text-left">
                   <h2 className="text-2xl mb-4">
                     Welcome to our new PPI member Aerin Thompson
                   </h2>
@@ -177,8 +177,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
-              <div className="flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/6 flex-none">
+              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
+                <div className="w-1/3 md:w-1/6 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                   <Image
                     src="/static/images/rebeccahall.jpeg"
                     alt="Rebecca Hall presents interim results at the Scottish Society of Gastroenterology"
@@ -188,7 +188,7 @@ export default function Home() {
                     className="rounded-full"
                   />
                 </div>
-                <div className="text-center lg:text-left">
+                <div>
                   <h2 className="text-2xl mb-4">
                     Scottish Society of Gastroenterology Winter Meeting December
                     2022
@@ -218,8 +218,8 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
-              <div className="flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/6 flex-none">
+              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
+                <div className="w-4/6 md:w-1/6 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                   <Image
                     src="/static/images/story.jpg"
                     alt="Kris Gourlay sharing his experience"
@@ -229,7 +229,7 @@ export default function Home() {
                     className="rounded-full"
                   />
                 </div>
-                <div className="text-center lg:text-left">
+                <div>
                   <h2 className="text-2xl mb-4">Read and hear from Kris</h2>
                   <p className="mb-2">
                     Kris is one of our study's patient representative and he
