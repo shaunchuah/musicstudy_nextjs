@@ -39,19 +39,19 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center gap-2 mb-4">
-            <Link href="/marvel">
+            <Link href="/marvel" legacyBehavior>
               <button className="ml-2 border-2 border-[#264653] bg-[#264653] text-white hover:text-[#264653] hover:bg-green-100 py-2 px-6 rounded text-lg">
                 MUSIC (Adults)
               </button>
             </Link>
-            <Link href="/mini-marvel">
+            <Link href="/mini-marvel" legacyBehavior>
               <button className="ml-2 border-2 border-[#264653] bg-[#264653] text-white hover:text-[#264653] hover:bg-green-100 py-2 px-6 rounded text-lg">
                 mini-MUSIC (Children)
               </button>
             </Link>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center gap-2">
-            <Link href="/investigators">
+            <Link href="/investigators" legacyBehavior>
               <button className="ml-2 border-2 border-[#264653] text-[#264653] hover:bg-green-600 hover:text-white py-2 px-6 rounded text-lg">
                 For Investigators
               </button>

@@ -101,8 +101,10 @@ export default function Footer() {
       </div>
       <div>
         <div className="px-5 py-6 flex items-center lg:flex-row flex-col">
-          <Link href="/">
-            <a className="flex title-font font-medium items-center lg:justify-start justify-center text-gray-900">
+          <Link
+            href="/"
+            className="flex title-font font-medium items-center lg:justify-start justify-center text-gray-900">
+
             <Image
                 src="/static/logos/header_highres.png"
                 alt="MARVEL Logo"
@@ -110,7 +112,7 @@ export default function Footer() {
                 width="56"
                 priority={true}
               />
-            </a>
+
           </Link>
           <p className="text-center lg:text-left text-sm text-gray-300 lg:ml-4 lg:mt-0 mt-4">
             © 2023 MUSIC &amp; mini-MUSIC Research Team <br/>Last Updated July 2023
