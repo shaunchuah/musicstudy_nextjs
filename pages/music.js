@@ -94,7 +94,7 @@ export default function Participants() {
                 <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-semibold text-gray-900 ">Start</h3>
+                <h3 class="sm:text-lg font-semibold text-gray-900 ">Start</h3>
               </div>
             </li>
             <li class="relative mb-6 sm:mb-0 w-1/5">
@@ -105,7 +105,9 @@ export default function Participants() {
                 <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-semibold text-gray-900 ">3 Months</h3>
+                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+                  3 Months
+                </h3>
               </div>
             </li>
             <li class="relative mb-6 sm:mb-0 w-1/5">
@@ -116,7 +118,9 @@ export default function Participants() {
                 <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-semibold text-gray-900 ">6 Months</h3>
+                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+                  6 Months
+                </h3>
               </div>
             </li>
             <li class="relative mb-6 sm:mb-0 w-1/5">
@@ -127,7 +131,9 @@ export default function Participants() {
                 <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-semibold text-gray-900 ">9 Months</h3>
+                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+                  9 Months
+                </h3>
               </div>
             </li>
             <li class="relative mb-6 sm:mb-0 w-1/5">
@@ -135,13 +141,13 @@ export default function Participants() {
                 <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   12
                 </div>
-                
               </div>
               <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-semibold text-gray-900 ">12 Months</h3>
+                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+                  12 Months
+                </h3>
               </div>
             </li>
-           
           </ol>
         </SectionWrapperWhite>
 
@@ -168,23 +174,25 @@ export default function Participants() {
             />
           </div>
         </SectionWrapperWhite>
-        <SectionWrapperWhite id="downloads">
-          <SectionHeaderWhite title="Participant Information Sheet" />
-          <object
-            data="/static/files/musicsummarypis.pdf"
-            type="application/pdf"
-            width="100%"
-            height="1080px">
-            This browser does not support PDFs. Please download the PDF to view
-            it:{" "}
-            <a href="/static/files/musicsummarypis.pdf" target="_blank">
-              Download Patient Information Sheet.
-            </a>
-          </object>
-        </SectionWrapperWhite>
+        <div className="hidden sm:block">
+          <SectionWrapperWhite id="pis">
+            <SectionHeaderWhite title="Participant Information Sheet" />
+            <object
+              data="/static/files/musicsummarypis.pdf"
+              type="application/pdf"
+              width="100%"
+              height="1080px">
+              This browser does not support PDFs. Please download the PDF to
+              view it:{" "}
+              <a href="/static/files/musicsummarypis.pdf" target="_blank">
+                Download Patient Information Sheet.
+              </a>
+            </object>
+          </SectionWrapperWhite>
+        </div>
         <SectionWrapperWhite id="downloads">
           <SectionHeaderWhite title="Downloads" />
-          <div className="text-lg md:text-xl">
+          <div className="sm:text-lg md:text-xl">
             <a
               href="/static/files/musicfullpis.pdf"
               target="_blank"

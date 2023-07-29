@@ -138,7 +138,7 @@ export default function Participants() {
                 <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-semibold text-gray-900 ">Start</h3>
+                <h3 class="sm:text-lg font-semibold text-gray-900 ">Start</h3>
                 <ol class="text-base font-normal text-gray-500 list-disc list-outside pl-4 ">
                   <li>Questionnaire</li>
                   <li>Blood samples</li>
@@ -156,7 +156,9 @@ export default function Participants() {
                 <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-semibold text-gray-900 ">3 Months</h3>
+                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+                  3 Months
+                </h3>
                 <ol class="text-base font-normal text-gray-500 list-disc list-outside pl-4 ">
                   <li>Questionnaire</li>
                   <li>Blood samples</li>
@@ -173,7 +175,9 @@ export default function Participants() {
                 </div>
               </div>
               <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-semibold text-gray-900 ">12 Months</h3>
+                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+                  12 Months
+                </h3>
                 <ol class="text-base font-normal text-gray-500 list-disc list-outside pl-4 ">
                   <li>Questionnaire</li>
                   <li>Blood samples</li>
@@ -215,29 +219,33 @@ export default function Participants() {
             />
           </div>
         </SectionWrapperWhite>
-        <SectionWrapperWhite id="downloads">
-          <SectionHeaderWhite title="Participant Information Sheet" />
-          <object
-            data="/static/files/minimusic_parentguardian.pdf"
-            type="application/pdf"
-            width="100%"
-            height="1080px">
-            This browser does not support PDFs. Please download the PDF to view
-            it:{" "}
-            <a href="/static/files/minimusic_parentguardian.pdf" target="_blank">
-              Download Patient Information Sheet.
-            </a>
-          </object>
-        </SectionWrapperWhite>
+        <div className="hidden sm:block">
+          <SectionWrapperWhite id="pis">
+            <SectionHeaderWhite title="Participant Information Sheet" />
+            <object
+              data="/static/files/minimusic_parentguardian.pdf"
+              type="application/pdf"
+              width="100%"
+              height="1080px">
+              This browser does not support PDFs. Please download the PDF to
+              view it:{" "}
+              <a
+                href="/static/files/minimusic_parentguardian.pdf"
+                target="_blank">
+                Download Patient Information Sheet.
+              </a>
+            </object>
+          </SectionWrapperWhite>
+        </div>
         <SectionWrapperWhite id="downloads">
           <SectionHeaderWhite title="Downloads" />
-          <div className="text-lg md:text-xl">
+          <div className="sm:text-lg md:text-xl">
             <a
               href="/static/files/minimusic_parentguardian.pdf"
               target="_blank"
               className="flex flex-row items-center hover:text-[#e76f51]">
               <svg
-                className="w-8 h-8 mr-1"
+                className="flex-none w-8 h-8 mr-1"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -253,7 +261,7 @@ export default function Participants() {
               target="_blank"
               className="flex flex-row items-center hover:text-[#e76f51]">
               <svg
-                className="w-8 h-8 mr-1"
+                className="flex-none w-8 h-8 mr-1"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -269,7 +277,7 @@ export default function Participants() {
               target="_blank"
               className="flex flex-row items-center hover:text-[#e76f51]">
               <svg
-                className="w-8 h-8 mr-1"
+                className="flex-none w-8 h-8 mr-1"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -285,7 +293,7 @@ export default function Participants() {
               target="_blank"
               className="flex flex-row items-center hover:text-[#e76f51]">
               <svg
-                className="w-8 h-8 mr-1"
+                className="flex-none w-8 h-8 mr-1"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
