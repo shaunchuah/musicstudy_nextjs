@@ -1,10 +1,9 @@
 import MotionPage from "../components/MotionPage";
 import SectionHeaderWhite from "../components/SectionHeaderWhite";
 import SectionWrapperWhite from "../components/SectionWrapperWhite";
-import SectionHeader from "../components/SectionHeader";
-import SectionWrapper from "../components/SectionWrapper";
-import Image from "next/image";
-import MarvelCenterCard from "../components/MarvelCenterCard";
+import CenterCard from "../components/CenterCard";
+import InlinePDFViewer from "../components/InlinePDFViewer";
+import FileDownload from "../components/FileDownload";
 
 export default function Participants() {
   return (
@@ -193,25 +192,25 @@ export default function Participants() {
         <SectionWrapperWhite id="centres">
           <SectionHeaderWhite title="Participating Centres" />
           <div className="grid lg:grid-cols-4 gap-8 mb-4">
-            <MarvelCenterCard
+            <CenterCard
               name="Royal Hospital for Children and Young People"
               city="Edinburgh"
               pi="TBC"
               image_url="/static/images/edinburgh_ch.png"
             />
-            <MarvelCenterCard
+            <CenterCard
               name="Royal Hospital for Children"
               city="Glasgow"
               pi="TBC"
               image_url="/static/images/glasgow_ch.png"
             />
-            <MarvelCenterCard
+            <CenterCard
               name="Royal Aberdeen Children's Hospital"
               city="Aberdeen"
               pi="TBC"
               image_url="/static/images/aberdeen_ch.png"
             />
-            <MarvelCenterCard
+            <CenterCard
               name="Tayside Children's Hospital"
               city="Dundee"
               pi="TBC"
@@ -222,88 +221,28 @@ export default function Participants() {
         <div className="hidden sm:block">
           <SectionWrapperWhite id="pis">
             <SectionHeaderWhite title="Participant Information Sheet" />
-            <object
-              data="/static/files/minimusic_parentguardian.pdf"
-              type="application/pdf"
-              width="100%"
-              height="1080px">
-              This browser does not support PDFs. Please download the PDF to
-              view it:{" "}
-              <a
-                href="/static/files/minimusic_parentguardian.pdf"
-                target="_blank">
-                Download Patient Information Sheet.
-              </a>
-            </object>
+            <InlinePDFViewer pdf_file_path="/static/files/minimusic_parentguardian.pdf" />
           </SectionWrapperWhite>
         </div>
         <SectionWrapperWhite id="downloads">
           <SectionHeaderWhite title="Downloads" />
           <div className="sm:text-lg md:text-xl">
-            <a
-              href="/static/files/minimusic_parentguardian.pdf"
-              target="_blank"
-              className="flex flex-row items-center hover:text-[#e76f51]">
-              <svg
-                className="flex-none w-8 h-8 mr-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fillRule="evenodd"
-                  d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                  clipRule="evenodd"></path>
-              </svg>
-              Participant Information Sheet - Parents/Guardians
-            </a>
-            <a
-              href="/static/files/minimusic_6-11.pdf"
-              target="_blank"
-              className="flex flex-row items-center hover:text-[#e76f51]">
-              <svg
-                className="flex-none w-8 h-8 mr-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fillRule="evenodd"
-                  d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                  clipRule="evenodd"></path>
-              </svg>
-              Participant Information Sheet - Age 6-11
-            </a>
-            <a
-              href="/static/files/minimusic_12-15.pdf"
-              target="_blank"
-              className="flex flex-row items-center hover:text-[#e76f51]">
-              <svg
-                className="flex-none w-8 h-8 mr-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fillRule="evenodd"
-                  d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                  clipRule="evenodd"></path>
-              </svg>
-              Participant Information Sheet - Age 12-15
-            </a>
-            <a
-              href="/static/files/minimusic_16-17.pdf"
-              target="_blank"
-              className="flex flex-row items-center hover:text-[#e76f51]">
-              <svg
-                className="flex-none w-8 h-8 mr-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fillRule="evenodd"
-                  d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                  clipRule="evenodd"></path>
-              </svg>
-              Participant Information Sheet - Age 16-17
-            </a>
+            <FileDownload
+              filename="Participant Information Sheet - Parents/Guardians"
+              file_path="/static/files/minimusic_parentguardian.pdf"
+            />
+            <FileDownload
+              filename="Participant Information Sheet - Age 6-11"
+              file_path="/static/files/minimusic_6-11.pdf"
+            />
+            <FileDownload
+              filename="Participant Information Sheet - Age 12-15"
+              file_path="/static/files/minimusic_12-15.pdf"
+            />
+            <FileDownload
+              filename="Participant Information Sheet - Age 16-17"
+              file_path="/static/files/minimusic_16-17.pdf"
+            />
           </div>
         </SectionWrapperWhite>
       </main>
