@@ -1,9 +1,9 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
 import { AnimatePresence } from "framer-motion";
-import Script from "next/script";
 import { useState, useEffect } from "react";
 import { Merriweather, Roboto } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 
 const merriweather = Merriweather({
   weight: ['300','400','700','900'],
@@ -31,20 +31,6 @@ function MyApp({ Component, pageProps, router }) {
   }
   return (
     <>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-TMPPWF9DWD`}
-      />
-      <Script strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-TMPPWF9DWD', {
-            page_path: window.location.pathname,
-          });
-      `}
-      </Script>
       <main className={`${merriweather.variable} font-sans ${roboto.variable}`}>
         <Layout>
           <AnimatePresence exitBeforeEnter>
@@ -52,6 +38,7 @@ function MyApp({ Component, pageProps, router }) {
           </AnimatePresence>
         </Layout>
       </main>
+      <Analytics />
     </>
   );
 }
