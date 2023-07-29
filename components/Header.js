@@ -7,7 +7,7 @@ export default function Header() {
       <div className="flex justify-between flex-wrap md:px-12 py-4 flex-col lg:flex-row items-center shadow-xl">
         <div className="flex items-center mb-4 lg:mb-0">
           <Link href="/" legacyBehavior>
-            <h1 className="text-xl">MUSIC & Mini-MUSIC</h1>
+            <h1 className="text-2xl">MUSIC & Mini-MUSIC</h1>
           </Link>
         </div>
         <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-6 sm:text-xl">

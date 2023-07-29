@@ -81,7 +81,7 @@ export default function Participants() {
             <p>
               This may allow them to make treatment adjustments and check on how
               you're doing more closely than usual. For full details, please
-              read the patient information sheet linked here.
+              read the patient information sheet below.
             </p>
           </div>
 

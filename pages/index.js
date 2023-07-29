@@ -128,7 +128,6 @@ export default function Home() {
                 </audio>
               </div>
             </div>
-            
           </div>
         </div>
       </SectionWrapperHero>
@@ -244,14 +243,16 @@ export default function Home() {
                     . His experience and views help us shape the design and
                     conduct of our research.
                   </p>
-                  <p className="mb-4">Hear him share his thoughts on the study here:</p>
+                  <p className="mb-4">
+                    Hear him share his thoughts on the study here:
+                  </p>
                   <audio id="marvel_intro" controls className="mb-4">
-                  <source
-                    src="/static/files/musicintrokris.mp3"
-                    type="audio/mpeg"
-                  />
-                  Your browser does not support the audio element.
-                </audio>
+                    <source
+                      src="/static/files/musicintrokris.mp3"
+                      type="audio/mpeg"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
                 </div>
               </div>
               <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
@@ -290,7 +291,6 @@ export default function Home() {
               priority={true}
             />
           </div>
-          
 
           <div className="xl:w-1/6 md:w-1/4 p-4 w-1/2">
             <Image
@@ -310,7 +310,6 @@ export default function Home() {
               width="709"
             />
           </div>
-          <div className="hidden md:w-1/4 md:block xl:hidden"></div>
           <div className="xl:w-1/6 md:w-1/4 p-4 w-1/2">
             <Image
               className="h-40 rounded w-full object-cover object-center mb-6"
@@ -318,6 +317,15 @@ export default function Home() {
               alt="ACCORD"
               height="354"
               width="354"
+            />
+          </div>
+          <div className="xl:w-1/3 md:w-1/2 p-4">
+            <Image
+              className="h-40 rounded w-full object-contain mb-6"
+              src="/static/images/ehcc.png"
+              alt="Centre for Inflammation Research"
+              height="354"
+              width="625"
             />
           </div>
         </div>
