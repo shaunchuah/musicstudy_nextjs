@@ -280,7 +280,7 @@ export default function Home() {
 
       <SectionWrapperWhite id="sponsors">
         <SectionHeaderWhite title="Sponsors" />
-        <div className="items-center flex flex-col md:flex-wrap -m-4">
+        <div className="md:flex md:flex-wrap -m-4">
           <div className="xl:w-1/3 md:w-1/2 p-4">
             <Image
               className="h-40 rounded w-full object-cover object-center mb-6"
@@ -292,7 +292,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="xl:w-1/6 md:w-1/4 p-4 w-1/2">
+          <div className="xl:w-1/6 md:w-1/4 p-4 w-1/2 mx-auto md:mx-0">
             <Image
               className="h-40 rounded w-full object-cover object-center mb-6"
               src="/static/images/nhslothian.png"
@@ -310,7 +310,7 @@ export default function Home() {
               width="709"
             />
           </div>
-          <div className="xl:w-1/6 md:w-1/4 p-4 w-1/2">
+          <div className="xl:w-1/6 md:w-1/4 p-4 w-1/2 mx-auto md:mx-0">
             <Image
               className="h-40 rounded w-full object-cover object-center mb-6"
               src="/static/images/accord.png"
