@@ -85,13 +85,13 @@ export default function Participants() {
             </p>
           </div>
 
-          <ol class="items-center sm:flex mx-auto">
+          <ol class="items-center flex mx-auto">
             <li class="relative mb-6 sm:mb-0 w-1/5">
               <div class="flex items-center">
                 <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   0
                 </div>
-                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+                <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
                 <h3 class="text-lg font-semibold text-gray-900 ">Start</h3>
@@ -102,7 +102,7 @@ export default function Participants() {
                 <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   3
                 </div>
-                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+                <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
                 <h3 class="text-lg font-semibold text-gray-900 ">3 Months</h3>
@@ -113,7 +113,7 @@ export default function Participants() {
                 <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   6
                 </div>
-                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+                <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
                 <h3 class="text-lg font-semibold text-gray-900 ">6 Months</h3>
@@ -124,7 +124,7 @@ export default function Participants() {
                 <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   9
                 </div>
-                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+                <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
                 <h3 class="text-lg font-semibold text-gray-900 ">9 Months</h3>
@@ -184,13 +184,13 @@ export default function Participants() {
         </SectionWrapperWhite>
         <SectionWrapperWhite id="downloads">
           <SectionHeaderWhite title="Downloads" />
-          <div className="text-xl">
+          <div className="text-lg md:text-xl">
             <a
               href="/static/files/musicfullpis.pdf"
               target="_blank"
               className="flex flex-row items-center hover:text-[#e76f51]">
               <svg
-                className="w-8 h-8 mr-1"
+                className="flex-none w-8 h-8 mr-1"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -206,7 +206,7 @@ export default function Participants() {
               target="_blank"
               className="flex flex-row items-center hover:text-[#e76f51]">
               <svg
-                className="w-8 h-8 mr-1"
+                className="flex-none w-8 h-8 mr-1"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -222,7 +222,7 @@ export default function Participants() {
               target="_blank"
               className="flex flex-row items-center hover:text-[#e76f51]">
               <svg
-                className="w-8 h-8 mr-1"
+                className="flex-none w-8 h-8 mr-1"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">

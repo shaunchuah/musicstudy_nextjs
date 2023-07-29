@@ -26,7 +26,7 @@ export default function Home() {
           charset="utf-8"></script>
       </Head>
       <SectionWrapperHero id="hero">
-        <div className="grid grid-cols-3 mt-20">
+        <div className="md:grid grid-cols-3 mt-20">
           <div className="col-span-2">
             <div className="flex">
               <div class="text-7xl">MUSIC & Mini-MUSIC</div>
@@ -134,7 +134,7 @@ export default function Home() {
 
       <SectionWrapper id="overview">
         <SectionHeader title="Updates" />
-        <div className="grid lg:grid-cols-3 gap-4 lg:gap-6">
+        <div className="md:grid lg:grid-cols-3 gap-4 lg:gap-6">
           <div className="lg:col-span-2">
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
               <div className="flex flex-row gap-4 justify-center lg:justify-start items-start">
@@ -280,7 +280,7 @@ export default function Home() {
 
       <SectionWrapperWhite id="sponsors">
         <SectionHeaderWhite title="Sponsors" />
-        <div className="flex flex-wrap -m-4">
+        <div className="items-center flex flex-col md:flex-wrap -m-4">
           <div className="xl:w-1/3 md:w-1/2 p-4">
             <Image
               className="h-40 rounded w-full object-cover object-center mb-6"

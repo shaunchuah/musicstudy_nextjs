@@ -129,13 +129,13 @@ export default function Participants() {
             </p>
           </div>
 
-          <ol class="items-center sm:flex mx-auto">
-            <li class="relative mb-6 sm:mb-0 w-1/5">
+          <ol class="items-center flex mx-auto">
+            <li class="relative mb-6 sm:mb-0 w-1/3 md:w-1/5">
               <div class="flex items-center">
                 <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   0
                 </div>
-                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+                <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
                 <h3 class="text-lg font-semibold text-gray-900 ">Start</h3>
@@ -148,12 +148,12 @@ export default function Participants() {
                 </ol>
               </div>
             </li>
-            <li class="relative mb-6 sm:mb-0 w-3/5">
+            <li class="relative mb-6 sm:mb-0 w-1/3 md:w-3/5">
               <div class="flex items-center">
                 <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   3
                 </div>
-                <div class="hidden sm:flex w-full bg-[#264653] h-0.5 "></div>
+                <div class="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
               <div class="mt-3 sm:pr-8">
                 <h3 class="text-lg font-semibold text-gray-900 ">3 Months</h3>
@@ -166,7 +166,7 @@ export default function Participants() {
                 </ol>
               </div>
             </li>
-            <li class="relative mb-6 sm:mb-0 w-1/5">
+            <li class="relative mb-6 sm:mb-0 w-1/3 md:w-1/5">
               <div class="flex items-center">
                 <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   12
@@ -231,7 +231,7 @@ export default function Participants() {
         </SectionWrapperWhite>
         <SectionWrapperWhite id="downloads">
           <SectionHeaderWhite title="Downloads" />
-          <div className="text-xl">
+          <div className="text-lg md:text-xl">
             <a
               href="/static/files/minimusic_parentguardian.pdf"
               target="_blank"
