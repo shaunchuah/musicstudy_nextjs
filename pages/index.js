@@ -39,12 +39,12 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col md:flex-row items-center  gap-2 mb-4">
-            <Link href="/marvel" legacyBehavior>
+            <Link href="/music" legacyBehavior>
               <button className=" border-2 border-[#264653] bg-[#264653] text-white hover:text-[#264653] hover:bg-white py-2 px-6 rounded text-lg">
                 MUSIC (Adults)
               </button>
             </Link>
-            <Link href="/mini-marvel" legacyBehavior>
+            <Link href="/mini-music" legacyBehavior>
               <button className="ml-2 border-2 border-[#264653] bg-[#264653] text-white hover:text-[#264653] hover:bg-white py-2 px-6 rounded text-lg">
                 mini-MUSIC (Children)
               </button>
