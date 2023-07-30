@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export default function CenterCard({ name, city, pi, image_url }) {
   return (
-    <div className="border rounded-lg px-4 py-4 shadow-sm text-left">
-      <div className="relative h-72 rounded-lg mb-4">
+    <div className="border rounded-lg shadow-md text-left">
+      <div className="relative h-72 rounded-t-lg">
         <Image
           src={image_url}
           alt="name"
           layout="fill"
           objectFit="cover"
-          className="rounded-lg"
+          className="rounded-t-lg"
         />
       </div>
-      <div>
+      <div className="p-4">
         <p className="text-gray-600 text-xs uppercase">{city}</p>
         <h3 className="text-xl font-bold  mb-4">{name}</h3>
         <p className="text-gray-600 text-xs uppercase">

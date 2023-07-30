@@ -28,24 +28,24 @@ export default function Home() {
       <SectionWrapperHero id="hero">
         <div className="md:grid grid-cols-3 mt-20">
           <div className="col-span-2">
-            <div className="flex">
-              <div class="text-5xl md:text-7xl">MUSIC & Mini-MUSIC</div>
+            <div className="flex mb-2 md:mb-0">
+              <div class="text-5xl md:text-7xl md:-ml-1">MUSIC & Mini-MUSIC</div>
             </div>
-            <div className="flex items-center pt-4 lg:pt-8 lg:pb-2">
+            <div className="flex items-center pt-4 md:pt-6 pb-2">
               <p className="font-merriweather mb-6 leading-relaxed sm:text-2xl text-xl max-w-lg">
                 Mitochondrial DAMPs as mechanistic biomarkers of gut mucosal
                 inflammation in adults and children.
               </p>
             </div>
-            <div className="flex flex-col md:flex-row items-center  gap-2 mb-4">
+            <div className="flex flex-col md:flex-row gap-2 mb-4">
               <Link href="/music" legacyBehavior>
-                <button className=" border-2 border-[#264653] bg-[#264653] text-white hover:text-[#264653] hover:bg-white py-2 px-6 rounded text-lg">
+                <button className="  border-[#264653] bg-[#264653] text-white hover:text-[#264653] hover:bg-white py-2 px-6 rounded text-lg">
                   MUSIC (Adults)
                 </button>
               </Link>
               <Link href="/mini-music" legacyBehavior>
-                <button className="ml-2 border-2 border-[#264653] bg-[#264653] text-white hover:text-[#264653] hover:bg-white py-2 px-6 rounded text-lg">
-                  mini-MUSIC (Children)
+                <button className="md:ml-2 border-[#264653] bg-[#264653] text-white hover:text-[#264653] hover:bg-white py-2 px-6 rounded text-lg">
+                  Mini-MUSIC (Children)
                 </button>
               </Link>
             </div>
@@ -98,7 +98,7 @@ export default function Home() {
                       Molly Halligan, Patient Representative
                     </h2>
                     <p className="mb-6">
-                      Listen to her experience in taking part in IBD research.
+                      Listen to her experience on taking part in IBD research.
                     </p>
                   </div>
                 </div>
@@ -203,14 +203,14 @@ export default function Home() {
                   <a
                     href="/static/files/ssgabstract2022.pdf"
                     target="_blank"
-                    className=" hover:text-[#e76f51] pr-1">
+                    className=" hover:text-[#e76f51] pr-1 underline underline-offset-2">
                     Download Abstract
                   </a>
                   |
                   <a
                     href="/static/files/ssgslides2022.pptx"
                     target="_blank"
-                    className=" hover:text-[#e76f51] pl-1">
+                    className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">
                     Download Presentation Slides
                   </a>
                 </div>

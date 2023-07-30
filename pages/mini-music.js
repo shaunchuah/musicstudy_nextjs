@@ -191,7 +191,7 @@ export default function Participants() {
 
         <SectionWrapperWhite id="centres">
           <SectionHeaderWhite title="Participating Centres" />
-          <div className="grid lg:grid-cols-4 gap-8 mb-4">
+          <div className="grid lg:grid-cols-4 gap-6 mb-4">
             <CenterCard
               name="Royal Hospital for Children and Young People"
               city="Edinburgh"

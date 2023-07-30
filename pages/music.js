@@ -152,7 +152,7 @@ export default function Participants() {
 
         <SectionWrapperWhite id="centres">
           <SectionHeaderWhite title="Participating Centres" />
-          <div className="grid lg:grid-cols-3 gap-8 mb-4">
+          <div className="grid lg:grid-cols-3 gap-10 mb-4">
             <CenterCard
               name="Western General Hospital"
               city="Edinburgh"
