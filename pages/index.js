@@ -6,6 +6,7 @@ import SectionHeaderWhite from "../components/SectionHeaderWhite";
 import SectionWrapper from "../components/SectionWrapper";
 import SectionWrapperWhite from "../components/SectionWrapperWhite";
 import SectionWrapperHero from "../components/SectionWrapperHero";
+import MaxWidthControl from "../components/MaxWidthControl";
 
 export default function Home() {
   const consoleStyle =
@@ -332,6 +333,7 @@ export default function Home() {
           </div>
         </div>
       </SectionWrapperWhite>
+      
     </main>
   );
 }

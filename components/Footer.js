@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import FooterLink from "./FooterLink";
+import MaxWidthControl from "./MaxWidthControl";
 
 export default function Footer() {
   return (
-    <footer className="text-white text-lg lg:text-base">
-      <div className="px-5 pt-10 border-t-2">
+    <footer className="text-white text-lg lg:text-base border-t-2">
+      <MaxWidthControl>
+      <div className="px-5 2xl:px-0 pt-10">
         <div className="flex flex-wrap lg:text-left text-center order-first">
           <div className="lg:w-1/3 md:w-1/2 w-full px-4 mb-10">
             <h2 className="title-font font-medium tracking-widest text-sm mb-3">
@@ -86,6 +88,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      </MaxWidthControl>
     </footer>
   );
 }

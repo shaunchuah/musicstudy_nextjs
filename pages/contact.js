@@ -1,18 +1,15 @@
 import MotionPage from "../components/MotionPage";
-import SectionHeaderWhite from "../components/SectionHeaderWhite";
-import SectionWrapperWhite from "../components/SectionWrapperWhite";
+import SectionHeader from "../components/SectionHeader";
+import SectionWrapper from "../components/SectionWrapper";
 
 export default function Contact() {
   return (
     <MotionPage>
       <main className="flex flex-col w-full">
-        <SectionWrapperWhite id="contact">
-          <SectionHeaderWhite title="Contact Us" />
-          <div className="flex flex-col items-center justify-center text-xl h-96">
-            <div className="text-3xl text-center mb-2 font-bold">
-              
-              MUSIC
-            </div>
+        <SectionWrapper id="contact">
+          <SectionHeader title="Contact Us" />
+          <div className="flex flex-col items-center justify-center text-xl ">
+            <div className="text-3xl text-center mb-2 font-bold">MUSIC</div>
             <div className="mb-16">
               <a
                 className="flex flex-row items-center hover:text-[#008000]"
@@ -55,8 +52,7 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          
-        </SectionWrapperWhite>
+        </SectionWrapper>
       </main>
     </MotionPage>
   );

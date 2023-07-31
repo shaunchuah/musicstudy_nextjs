@@ -1,10 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
+import MaxWidthControl from "./MaxWidthControl.js"
 
 export default function Header() {
   return (
+    
     <header className="sticky top-0 z-50 shadow-xl bg-[#264653]">
-      <div className="flex justify-between flex-wrap md:px-12 py-4 flex-col lg:flex-row items-center shadow-xl">
+      <MaxWidthControl>
+      <div className="flex justify-between flex-wrap md:px-12 2xl:px-0 py-4 flex-col lg:flex-row items-center">
         <div className="flex items-center mb-4 lg:mb-0">
           <Link href="/" legacyBehavior>
             <h1 className="text-2xl">MUSIC & Mini-MUSIC</h1>
@@ -106,6 +108,7 @@ export default function Header() {
           </Link>
         </nav>
       </div>
+      </MaxWidthControl>
     </header>
   );
 }
