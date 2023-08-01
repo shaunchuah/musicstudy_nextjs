@@ -12,8 +12,8 @@ export default function Contact() {
             <div className="text-3xl text-center mb-2 font-bold">MUSIC</div>
             <div className="mb-16">
               <a
-                className="flex flex-row items-center hover:text-[#008000]"
-                href="mailto:IBDMUSICStudy@ed.ac.uk"
+                className="flex flex-row items-center hover:text-[#e76f51]"
+                href="mailto:ibdmusicstudy@ed.ac.uk"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -26,7 +26,7 @@ export default function Contact() {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                 </svg>
-                IBDMUSICStudy@ed.ac.uk
+                ibdmusicstudy@ed.ac.uk
               </a>
             </div>
             <div className="text-3xl text-center mb-2 font-bold">
@@ -34,8 +34,8 @@ export default function Contact() {
             </div>
             <div>
               <a
-                className="flex flex-row items-center hover:text-[#008000]"
-                href="mailto:minimarvel.trial@ed.ac.uk"
+                className="flex flex-row items-center hover:text-[#e76f51]"
+                href="mailto:minimusic@ed.ac.uk"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -48,7 +48,7 @@ export default function Contact() {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                 </svg>
-                minimarvel.trial@ed.ac.uk
+                minimusic@ed.ac.uk
               </a>
             </div>
           </div>

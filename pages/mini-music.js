@@ -195,25 +195,25 @@ export default function Participants() {
             <CenterCard
               name="Royal Hospital for Children and Young People"
               city="Edinburgh"
-              pi="TBC"
+              pi="David Wilson"
               image_url="/static/images/edinburgh_ch.png"
             />
             <CenterCard
               name="Royal Hospital for Children"
               city="Glasgow"
-              pi="TBC"
+              pi="David Wands"
               image_url="/static/images/glasgow_ch.png"
             />
             <CenterCard
               name="Royal Aberdeen Children's Hospital"
               city="Aberdeen"
-              pi="TBC"
+              pi="Iain Chalmers"
               image_url="/static/images/aberdeen_ch.png"
             />
             <CenterCard
               name="Tayside Children's Hospital"
               city="Dundee"
-              pi="TBC"
+              pi="Richard Hansen"
               image_url="/static/images/dundee_ch.png"
             />
           </div>
