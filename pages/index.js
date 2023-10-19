@@ -24,13 +24,16 @@ export default function Home() {
         <script
           async
           src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"></script>
+          charset="utf-8"
+        ></script>
       </Head>
       <SectionWrapperHero id="hero">
         <div className="md:grid grid-cols-3 mt-20">
           <div className="col-span-2">
             <div className="flex mb-2 md:mb-0">
-              <div class="text-5xl md:text-7xl md:-ml-1">MUSIC & Mini-MUSIC</div>
+              <div class="text-5xl md:text-7xl md:-ml-1">
+                MUSIC & Mini-MUSIC
+              </div>
             </div>
             <div className="flex items-center pt-4 md:pt-6 pb-2">
               <p className="font-merriweather mb-6 leading-relaxed sm:text-2xl text-xl max-w-lg">
@@ -56,7 +59,8 @@ export default function Home() {
                 className="mt-4 text-gray-300 hover:text-white"
                 href="https://www.ed.ac.uk/inflammation-research/research/gut-research-unit"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <span className="inline-flex">
                   A project by the Gut Research Unit
                   <svg
@@ -64,12 +68,14 @@ export default function Home() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    ></path>
                   </svg>
                 </span>
                 <br />
@@ -84,15 +90,15 @@ export default function Home() {
               <div>
                 <div className="md:flex flex-row items-start gap-4">
                   <div className="flex w-full md:w-1/3">
-                  <div className="mx-auto md:mx-0 mb-4 md:mb-0">
-                    <Image
-                      src="/static/images/ppi.jpg"
-                      alt="Molly Halligan shares her experience"
-                      width="100"
-                      height="100"
-                      className="rounded-full"
-                    />
-                  </div>
+                    <div className="mx-auto md:mx-0 mb-4 md:mb-0">
+                      <Image
+                        src="/static/images/ppi.jpg"
+                        alt="Molly Halligan shares her experience"
+                        width="100"
+                        height="100"
+                        className="rounded-full"
+                      />
+                    </div>
                   </div>
                   <div>
                     <h2 className="text-xl">
@@ -139,6 +145,41 @@ export default function Home() {
         <SectionHeader title="Updates" />
         <div className="md:grid lg:grid-cols-3 gap-4 lg:gap-6">
           <div className="lg:col-span-2">
+            <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
+                <div className="w-1/3 md:w-1/6 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                  <Image
+                    src="/static/images/fringe_cropped.jpg"
+                    alt="Dr Ho and Dr Hall engaging the public at the Edinburgh Fringe Festival"
+                    height="1024"
+                    width="1024"
+                    priority={true}
+                    className="rounded-full"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-2xl mb-4">
+                    Engaging the public at the Edinburgh Fringe Festival 2023
+                  </h2>
+                  <p className="mb-2">
+                    As part of engaging the public in research, Dr Rebecca Hall & Dr Gwo-Tzer Ho recently put on a show at the Edinburgh
+                    Fringe Festival in August 2023. Peter Ranscombe, writing for the Lancet Gastroenterology & Hepatology, summarises the event. Read more about it below.
+                  </p>
+                  <a
+                    href="/static/files/taking_colonoscopies_to_the_stage_at_the_edinburgh_fringe.pdf"
+                    target="_blank"
+                    className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
+                  >
+                    Taking colonoscopies to the stage at the Edinburgh Fringe
+                  </a>
+                  
+                </div>
+              </div>
+              <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+                19 October 2023
+              </div>
+            </div>
+
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
               <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
                 <div className="w-1/3 md:w-1/6 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
@@ -204,14 +245,16 @@ export default function Home() {
                   <a
                     href="/static/files/ssgabstract2022.pdf"
                     target="_blank"
-                    className=" hover:text-[#e76f51] pr-1 underline underline-offset-2">
+                    className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
+                  >
                     Download Abstract
                   </a>
                   |
                   <a
                     href="/static/files/ssgslides2022.pptx"
                     target="_blank"
-                    className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">
+                    className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                  >
                     Download Presentation Slides
                   </a>
                 </div>
@@ -240,7 +283,8 @@ export default function Home() {
                     <a
                       target="_blank"
                       className=" hover:text-[#e76f51]"
-                      href="https://www.heraldscotland.com/news/19159021.crohns-disease-ordeal-edinburgh-student-thought-food-poisoning/">
+                      href="https://www.heraldscotland.com/news/19159021.crohns-disease-ordeal-edinburgh-student-thought-food-poisoning/"
+                    >
                       here
                     </a>
                     . His experience and views help us shape the design and
@@ -269,13 +313,15 @@ export default function Home() {
               <a
                 className="twitter-timeline mb-4"
                 data-height="600"
-                href="https://twitter.com/Edin_IBDScience?ref_src=twsrc%5Etfw">
+                href="https://twitter.com/Edin_IBDScience?ref_src=twsrc%5Etfw"
+              >
                 Tweets by Edin_IBDScience
               </a>
               <script
                 async
                 src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"></script>
+                charset="utf-8"
+              ></script>
             </div>
           </div>
         </div>
@@ -333,7 +379,6 @@ export default function Home() {
           </div>
         </div>
       </SectionWrapperWhite>
-      
     </main>
   );
 }
