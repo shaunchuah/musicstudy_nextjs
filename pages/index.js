@@ -147,7 +147,35 @@ export default function Home() {
           <div className="lg:col-span-2">
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
               <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/3 md:w-1/6 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                  <Image
+                    src="/static/images/ppi_meeting.jpg"
+                    alt="Aerin Thompson joins MUSIC PPI group"
+                    height="1024"
+                    width="1024"
+                    priority={true}
+                    className="rounded-full"
+                  />
+                </div>
+                <div className="text-left">
+                  <h2 className="text-2xl mb-4">End of 2023 Patient-Public Involvement Group Meeting</h2>
+                  <p className="mb-2">
+                    A fantastic afternoon with our Patient Engagement group! We
+                    discussed co-production of our IBD wellbeing paper, new work
+                    with paediatric IBD, our upcoming Edinburgh Science Festival
+                    show 'Our Lives and IBD'; and welcoming Ola, our new parent
+                    patient representative!
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+                29 December 2023
+              </div>
+            </div>
+
+            <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
+                <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                   <Image
                     src="/static/images/fringe_cropped.jpg"
                     alt="Dr Ho and Dr Hall engaging the public at the Edinburgh Fringe Festival"
@@ -162,8 +190,11 @@ export default function Home() {
                     Engaging the public at the Edinburgh Fringe Festival 2023
                   </h2>
                   <p className="mb-2">
-                    As part of engaging the public in research, Dr Rebecca Hall & Dr Gwo-Tzer Ho recently put on a show at the Edinburgh
-                    Fringe Festival in August 2023. Peter Ranscombe, writing for the Lancet Gastroenterology & Hepatology, summarises the event. Read more about it below.
+                    As part of engaging the public in research, Dr Rebecca Hall
+                    & Dr Gwo-Tzer Ho recently put on a show at the Edinburgh
+                    Fringe Festival in August 2023. Peter Ranscombe, writing for
+                    the Lancet Gastroenterology & Hepatology, summarises the
+                    event. Read more about it below.
                   </p>
                   <a
                     href="/static/files/taking_colonoscopies_to_the_stage_at_the_edinburgh_fringe.pdf"
@@ -172,7 +203,6 @@ export default function Home() {
                   >
                     Taking colonoscopies to the stage at the Edinburgh Fringe
                   </a>
-                  
                 </div>
               </div>
               <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
@@ -182,7 +212,7 @@ export default function Home() {
 
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
               <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/3 md:w-1/6 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                   <Image
                     src="/static/images/ppi2.jpg"
                     alt="Aerin Thompson joins MUSIC PPI group"
@@ -222,7 +252,7 @@ export default function Home() {
 
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
               <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/3 md:w-1/6 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                   <Image
                     src="/static/images/rebeccahall.jpeg"
                     alt="Rebecca Hall presents interim results at the Scottish Society of Gastroenterology"
@@ -265,7 +295,7 @@ export default function Home() {
             </div>
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
               <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-4/6 md:w-1/6 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <div className="w-4/6 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                   <Image
                     src="/static/images/story.jpg"
                     alt="Kris Gourlay sharing his experience"
