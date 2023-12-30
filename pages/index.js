@@ -150,9 +150,9 @@ export default function Home() {
                 <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                   <Image
                     src="/static/images/ppi_meeting.jpg"
-                    alt="Aerin Thompson joins MUSIC PPI group"
-                    height="1024"
-                    width="1024"
+                    alt="End of 2023 patient public involvement group meeting"
+                    height="480"
+                    width="480"
                     priority={true}
                     className="rounded-full"
                   />
