@@ -142,216 +142,258 @@ export default function Home() {
       </SectionWrapperHero>
 
       <SectionWrapper id="overview">
-        <SectionHeader title="Updates" />
-        <div className="md:grid lg:grid-cols-3 gap-4 lg:gap-6">
-          <div className="lg:col-span-2">
-            <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
-              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
-                  <Image
-                    src="/static/images/ppi_meeting.jpg"
-                    alt="End of 2023 patient public involvement group meeting"
-                    height="480"
-                    width="480"
-                    priority={true}
-                    className="rounded-full"
-                  />
-                </div>
-                <div className="text-left">
-                  <h2 className="text-2xl mb-4">End of 2023 Patient-Public Involvement Group Meeting</h2>
-                  <p className="mb-2">
-                    A fantastic afternoon with our Patient Engagement group! We
-                    discussed co-production of our IBD wellbeing paper, new work
-                    with paediatric IBD, our upcoming Edinburgh Science Festival
-                    show 'Our Lives and IBD'; and welcoming Ola, our new parent
-                    patient representative!
-                  </p>
-                </div>
+        <div className="flex flex-col">
+          <div className="w-full mb-8">
+            <h1 className="sm:text-4xl text-3xl text-center font-medium title-font mb-2 text-white">
+              Latest News
+            </h1>
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto gap-4 lg:gap-6">
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <Image
+                  src="/static/images/microscope.jpg"
+                  alt="CCUK Patient Involvement in Research Day"
+                  height="1024"
+                  width="1024"
+                  priority={true}
+                  className="rounded-full"
+                />
               </div>
-              <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
-                29 December 2023
-              </div>
-            </div>
-
-            <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
-              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
-                  <Image
-                    src="/static/images/fringe_cropped.jpg"
-                    alt="Dr Ho and Dr Hall engaging the public at the Edinburgh Fringe Festival"
-                    height="1024"
-                    width="1024"
-                    priority={true}
-                    className="rounded-full"
-                  />
+              <div>
+                <h2 className="text-2xl mb-4">
+                  How Patients Shape Our Research
+                </h2>
+                <p className="mb-2">
+                  We recently presented on how patients influence our research
+                  at the Crohn's and Colitis UK Patient Involvement in Research
+                  Day.
+                </p>
+                <div class="mb-2">
+                  <iframe
+                    className="w-full aspect-video"
+                    src="https://www.youtube.com/embed/GhqFOjJuYE0?si=-2cVmp37o4rLHhAz&amp;start=4642"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
                 </div>
-                <div>
-                  <h2 className="text-2xl mb-4">
-                    Engaging the public at the Edinburgh Fringe Festival 2023
-                  </h2>
-                  <p className="mb-2">
-                    As part of engaging the public in research, Dr Rebecca Hall
-                    & Dr Gwo-Tzer Ho recently put on a show at the Edinburgh
-                    Fringe Festival in August 2023. Peter Ranscombe, writing for
-                    the Lancet Gastroenterology & Hepatology, summarises the
-                    event. Read more about it below.
-                  </p>
-                  <a
-                    href="/static/files/taking_colonoscopies_to_the_stage_at_the_edinburgh_fringe.pdf"
-                    target="_blank"
-                    className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
-                  >
-                    Taking colonoscopies to the stage at the Edinburgh Fringe
-                  </a>
-                </div>
-              </div>
-              <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
-                19 October 2023
+                <a
+                  href="/static/files/ccuk_patient_day_talk_nov_2024.pptx"
+                  target="_blank"
+                  className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
+                >
+                  Download Presentation Slides
+                </a>
+                |
+                <a
+                  href="https://crohnsandcolitis.org.uk/get-involved/want-to-get-involved-in-research/patient-involvement-in-research-day/ibd-patient-involvement-in-research-day-2024"
+                  target="_blank"
+                  className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                >
+                  CCUK Page
+                </a>
               </div>
             </div>
-
-            <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
-              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
-                  <Image
-                    src="/static/images/ppi2.jpg"
-                    alt="Aerin Thompson joins MUSIC PPI group"
-                    height="1024"
-                    width="1024"
-                    priority={true}
-                    className="rounded-full"
-                  />
-                </div>
-                <div className="text-left">
-                  <h2 className="text-2xl mb-4">
-                    Welcome to our new PPI member Aerin Thompson
-                  </h2>
-                  <p className="mb-2">
-                    I'm Aerin, a first year PhD student at The University of
-                    Edinburgh studying inflammation resolution and tissue
-                    repair.
-                  </p>
-                  <p className="mb-2">
-                    I was diagnosed with Ulcerative Colitis back in 2014 under
-                    paediatric care. I was experiencing severe symptoms before
-                    being admitted to hospital through A&E where I was monitored
-                    for four weeks.
-                  </p>
-                  <p>
-                    I like to be active and row for the university high
-                    performance team alongside my studies. Originally from
-                    Nottingham, I am enjoying the views that Edinburgh and
-                    Scotland have to offer.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
-                8 March 2023
-              </div>
-            </div>
-
-            <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
-              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
-                  <Image
-                    src="/static/images/rebeccahall.jpeg"
-                    alt="Rebecca Hall presents interim results at the Scottish Society of Gastroenterology"
-                    height="1024"
-                    width="1024"
-                    priority={true}
-                    className="rounded-full"
-                  />
-                </div>
-                <div>
-                  <h2 className="text-2xl mb-4">
-                    Scottish Society of Gastroenterology Winter Meeting December
-                    2022
-                  </h2>
-                  <p className="mb-2">
-                    Dr Rebecca Hall recently presented our work linking
-                    patient-reported well-being as a potential marker for our
-                    scientific biomarker studies
-                  </p>
-                  <a
-                    href="/static/files/ssgabstract2022.pdf"
-                    target="_blank"
-                    className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
-                  >
-                    Download Abstract
-                  </a>
-                  |
-                  <a
-                    href="/static/files/ssgslides2022.pptx"
-                    target="_blank"
-                    className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
-                  >
-                    Download Presentation Slides
-                  </a>
-                </div>
-              </div>
-              <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
-                28 December 2022
-              </div>
-            </div>
-            <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
-              <div className="md:flex flex-row gap-4 justify-center lg:justify-start items-start">
-                <div className="w-4/6 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
-                  <Image
-                    src="/static/images/story.jpg"
-                    alt="Kris Gourlay sharing his experience"
-                    height="1024"
-                    width="1024"
-                    priority={true}
-                    className="rounded-full"
-                  />
-                </div>
-                <div>
-                  <h2 className="text-2xl mb-4">Read and hear from Kris</h2>
-                  <p className="mb-2">
-                    Kris is one of our study's patient representative and he
-                    shares his story with The Herald{" "}
-                    <a
-                      target="_blank"
-                      className=" hover:text-[#e76f51]"
-                      href="https://www.heraldscotland.com/news/19159021.crohns-disease-ordeal-edinburgh-student-thought-food-poisoning/"
-                    >
-                      here
-                    </a>
-                    . His experience and views help us shape the design and
-                    conduct of our research.
-                  </p>
-                  <p className="mb-4">
-                    Hear him share his thoughts on the study here:
-                  </p>
-                  <audio id="marvel_intro" controls className="mb-4">
-                    <source
-                      src="/static/files/musicintrokris.mp3"
-                      type="audio/mpeg"
-                    />
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
-              </div>
-              <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
-                29 June 2021
-              </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              20 December 2024
             </div>
           </div>
 
-          <div>
-            <div>
-              <a
-                className="twitter-timeline mb-4"
-                data-height="600"
-                href="https://twitter.com/Edin_IBDScience?ref_src=twsrc%5Etfw"
-              >
-                Tweets by Edin_IBDScience
-              </a>
-              <script
-                async
-                src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"
-              ></script>
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <Image
+                  src="/static/images/ppi_meeting.jpg"
+                  alt="End of 2023 patient public involvement group meeting"
+                  height="480"
+                  width="480"
+                  priority={true}
+                  className="rounded-full"
+                />
+              </div>
+              <div className="text-left">
+                <h2 className="text-2xl mb-4">
+                  End of 2023 Patient-Public Involvement Group Meeting
+                </h2>
+                <p className="mb-2">
+                  A fantastic afternoon with our Patient Engagement group! We
+                  discussed co-production of our IBD wellbeing paper, new work
+                  with paediatric IBD, our upcoming Edinburgh Science Festival
+                  show 'Our Lives and IBD'; and welcoming Ola, our new parent
+                  patient representative!
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              29 December 2023
+            </div>
+          </div>
+
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <Image
+                  src="/static/images/fringe_cropped.jpg"
+                  alt="Dr Ho and Dr Hall engaging the public at the Edinburgh Fringe Festival"
+                  height="1024"
+                  width="1024"
+                  priority={true}
+                  className="rounded-full"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl mb-4">
+                  Engaging the public at the Edinburgh Fringe Festival 2023
+                </h2>
+                <p className="mb-2">
+                  As part of engaging the public in research, Dr Rebecca Hall &
+                  Dr Gwo-Tzer Ho recently put on a show at the Edinburgh Fringe
+                  Festival in August 2023. Peter Ranscombe, writing for the
+                  Lancet Gastroenterology & Hepatology, summarises the event.
+                  Read more about it below.
+                </p>
+                <a
+                  href="/static/files/taking_colonoscopies_to_the_stage_at_the_edinburgh_fringe.pdf"
+                  target="_blank"
+                  className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
+                >
+                  Taking colonoscopies to the stage at the Edinburgh Fringe
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              19 October 2023
+            </div>
+          </div>
+
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <Image
+                  src="/static/images/ppi2.jpg"
+                  alt="Aerin Thompson joins MUSIC PPI group"
+                  height="1024"
+                  width="1024"
+                  priority={true}
+                  className="rounded-full"
+                />
+              </div>
+              <div className="text-left">
+                <h2 className="text-2xl mb-4">
+                  Welcome to our new PPI member Aerin Thompson
+                </h2>
+                <p className="mb-2">
+                  I'm Aerin, a first year PhD student at The University of
+                  Edinburgh studying inflammation resolution and tissue repair.
+                </p>
+                <p className="mb-2">
+                  I was diagnosed with Ulcerative Colitis back in 2014 under
+                  paediatric care. I was experiencing severe symptoms before
+                  being admitted to hospital through A&E where I was monitored
+                  for four weeks.
+                </p>
+                <p>
+                  I like to be active and row for the university high
+                  performance team alongside my studies. Originally from
+                  Nottingham, I am enjoying the views that Edinburgh and
+                  Scotland have to offer.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              8 March 2023
+            </div>
+          </div>
+
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <Image
+                  src="/static/images/rebeccahall.jpeg"
+                  alt="Rebecca Hall presents interim results at the Scottish Society of Gastroenterology"
+                  height="1024"
+                  width="1024"
+                  priority={true}
+                  className="rounded-full"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl mb-4">
+                  Scottish Society of Gastroenterology Winter Meeting December
+                  2022
+                </h2>
+                <p className="mb-2">
+                  Dr Rebecca Hall recently presented our work linking
+                  patient-reported well-being as a potential marker for our
+                  scientific biomarker studies
+                </p>
+                <a
+                  href="/static/files/ssgabstract2022.pdf"
+                  target="_blank"
+                  className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
+                >
+                  Download Abstract
+                </a>
+                |
+                <a
+                  href="/static/files/ssgslides2022.pptx"
+                  target="_blank"
+                  className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                >
+                  Download Presentation Slides
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              28 December 2022
+            </div>
+          </div>
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div className="w-4/6 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <Image
+                  src="/static/images/story.jpg"
+                  alt="Kris Gourlay sharing his experience"
+                  height="1024"
+                  width="1024"
+                  priority={true}
+                  className="rounded-lg"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl mb-4">Read and hear from Kris</h2>
+                <p className="mb-2">
+                  Kris is one of our study's patient representative and he
+                  shares his story with The Herald{" "}
+                  <a
+                    target="_blank"
+                    className=" hover:text-[#e76f51]"
+                    href="https://www.heraldscotland.com/news/19159021.crohns-disease-ordeal-edinburgh-student-thought-food-poisoning/"
+                  >
+                    here
+                  </a>
+                  . His experience and views help us shape the design and
+                  conduct of our research.
+                </p>
+                <p className="mb-4">
+                  Hear him share his thoughts on the study here:
+                </p>
+                <audio id="marvel_intro" controls className="mb-4">
+                  <source
+                    src="/static/files/musicintrokris.mp3"
+                    type="audio/mpeg"
+                  />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              29 June 2021
             </div>
           </div>
         </div>
