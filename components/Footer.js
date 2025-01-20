@@ -26,16 +26,29 @@ export default function Footer() {
               ADDRESS
             </h2>
 
-            <p>
+            <p className="mb-3">
               Gut Research Unit
               <br />
-              Centre for Inflammation Research
+              Institute for Regeneration and Repair
               <br />
-              Queen's Medical Research Institute
+              Edinburgh BioQuarter
               <br />
-              47 Little France Crescent
+              4-5 Little France Drive
               <br />
-              Edinburgh EH16 4TJ
+              Edinburgh EH16 4UU
+            </p>
+            <p>
+              School of Infection and Immunity
+              <br />
+              College of Medical, Veterinary and Life Sciences
+              <br />
+              University of Glasgow
+              <br />
+              Sir Graeme Davis Building
+              <br />
+              120 University Place
+              <br />
+              Glasgow G12 8TA
             </p>
           </div>
 
@@ -84,7 +97,7 @@ export default function Footer() {
           </Link>
           <p className="text-center lg:text-left text-sm text-gray-300 lg:ml-4 lg:mt-0 mt-4">
             © 2023 MUSIC &amp; mini-MUSIC Research Team <br />
-            Last Updated July 2023
+            Last Updated January 2025
           </p>
         </div>
       </div>

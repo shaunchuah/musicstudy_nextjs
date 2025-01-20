@@ -24,7 +24,7 @@ export default function Results() {
                 Gwo-Tzer Ho
               </div>
               <div className="mb-8">
-                <div class="grid grid-cols-2 gap-8">
+                <div class="grid lg:grid-cols-2 gap-8">
                   <div>
                     <figure className="border rounded-lg p-4 shadow-md">
                       <svg
@@ -71,9 +71,9 @@ export default function Results() {
                           height="36"
                           className="rounded-full"
                         />
-                        <div class="flex items-center divide-x-2 divide-gray-500 ">
-                          <div class="pr-3 font-medium flex-none">Molly Halligan</div>
-                          <div class="pl-3 text-sm">
+                        <div class="md:flex items-center md:divide-x-2 divide-gray-500 ">
+                          <div class="md:pr-3 font-medium flex-none">Molly Halligan</div>
+                          <div class="md:pl-3 text-sm">
                             on behalf of the Gut Research Group Patient PPIE
                             team
                           </div>
@@ -110,11 +110,11 @@ export default function Results() {
                           height="36"
                           className="rounded-full"
                         />
-                        <div class="flex items-center divide-x-2 divide-gray-500 ">
-                          <div class="pr-3 font-medium flex-none">
+                        <div class="md:flex items-center md:divide-x-2 divide-gray-500 ">
+                          <div class="md:pr-3 font-medium flex-none">
                             Professor Gwo-Tzer Ho
                           </div>
-                          <div class="pl-3 text-sm">
+                          <div class="md:pl-3 text-sm">
                             on behalf of the MUSIC IBD team
                           </div>
                         </div>
