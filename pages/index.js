@@ -150,6 +150,44 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-4xl mx-auto gap-4 lg:gap-6">
+        <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <Image
+                  src="/static/images/initial_results.png"
+                  alt="Initial Results"
+                  height="1024"
+                  width="1024"
+                  priority={true}
+                  className="rounded-full"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl mb-4">
+                  You've told us that fatigue is one of the key things we should study
+                </h2>
+                <p className="mb-2">
+                  We performed an online survey last year and are now pleased to present the initial results of a joint effort between patients and clinicians to study fatigue in IBD.
+                </p>
+                
+                <p className="mb-2">
+                  Our patient-public involvement group summarises the full findings of the online survey and
+                  we have built an initial machine learning pipeline to better understand fatigue in IBD.
+                </p>
+                
+                <Link
+                  href="/results"
+                  className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
+                >
+                  Read more
+                </Link>
+                
+              </div>
+            </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              20 January 2025
+            </div>
+          </div>
           <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
             <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
               <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">

@@ -1,0 +1,38 @@
+[
+  {
+    "date": "20 January 2025",
+    "type": "Publication",
+    "title": "Patient-led Analysis of Inflammatory Bowel Disease: Defining an Equitable Approach towards Patient-centric IBD care",
+    "authors": "Molly J Halligan, Aerin E Thompson, Destiny Docherty, Patricia Kelly, Emma Pryde, Crohn’s and Colitis UK, Rebecca Hall and Gwo-tzer Ho",
+    "summary": "This draft report analyses and discusses patient reported concerns from a survey exploring Wellbeing living with Inflammatory Bowel Disease (IBD). This report was developed by members of the IBD Patient Public Involvement (PPI) group who have lived experience of either Crohn's disease or colitis. The report draws together survey responses and the PPI group members' experiences of managing wellbeing living with IBD. The key findings highlight priority areas for future research, such as improving quality of life overall, addressing the confusion around the term 'remission', and improving access to mental health support. The report also outlines a number of interconnected issues across the themes explored. Currently, the project group is working to refine this report and strengthen its ability to influence clinical-based research, practice, and challenge traditional models of PPI work.",
+    "links": [
+      {
+        "type": "DOI",
+        "url": "https://doi.org/10.1234/5678",
+        "text": "External Link"
+      },
+      {
+        "type": "PDF",
+        "url": "https://example.com/path/to/pdf",
+        "text": "Download PDF"
+      }
+    ]
+  },
+  {
+    "date": "20 January 2025",
+    "type": "Publication",
+    "title": "Characterisation of 3000 patient reported outcomes with predictive machine learning to develop a scientific platform to study fatigue in Inflammatory Bowel Disease",
+    "authors": "Rebecca Hall, Robert J Whelan, Peter D Cartlidge, Emily F Brownson, Craig Mowat, John Paul Seenan, Jonathan C MacDonald, Iona AM Campbell, Gwo-Tzer Ho, Cher Shiong Chuah",
+    "summary": "Background: Fatigue is commonly identified by IBD patients as major issue that affects their wellbeing. This presentation, however, is complex, multifactorial and mired in clinical heterogeneity. Aims/Methods: We prospectively captured patient reported outcomes (PROs) from 2 current IBD biomarker studies in Scotland with ~100 clinical metadata points; and an international dataset (that includes non-IBD healthy controls) using CUCQ32, a validated IBD questionnaire to generate a contemporaneous dataset of fatigue and overall wellbeing (2021-2024) and utilized 6 different machine learning (ML) approaches to predict IBD-associated fatigue and patterns that may aid future stratification to human mechanistic and clinical studies. Results: In 2 970 responses from 2 290 participants, CUCQ32 were higher in active IBD vs. remission; and in remission, higher than in non-IBD controls (both p<0.0001). CUCQ32-specific fatigue score significantly correlated to all CUCQ32 components (p=2.9 x 10-28 to 3.2 x 10-147). During active IBD, patients had significantly more fatigue days compared to those in remission and non-IBD controls (medians 14 vs. 7 vs. 4 [out of 14 days]; both p<0.0001). We determine a threshold of ≥10/14 days of fatigue as clinically relevant - Fatiguehigh. Overall, 72.8% (863/1185), 45.0% (408/906) and 13.7% (46/355) responses in active, remission and non-IBD controls were in Fatiguehigh. Using train-validate-test steps, we incorporated all available metadata to generate ML-models to predict Fatiguehigh. The 6 ML models performed similarly (all 6 models AUC of ~0.70). SHapley Additive exPlanations (SHAP) analysis revealed that each algorithm places different importance on variables with seasonality, biologic drug levels, BMI and gender identified as factors. ML prediction of Fatiguehigh in patients in biochemical remission (CRP<5 mg/l and calprotectin <250ug/g) was more challenging with AUC of 0.66-0.61. Conclusion: We provide a comprehensive patient involvement-ML-pathway to predict IBD-associated fatigue. Our data suggests a large 'hidden' pathobiological component and current work is in progress to integrate deep molecular data and build a clinical-scientific ML model as a step towards better understanding of IBD-associated fatigue.",
+    "links": [
+      {
+        "type": "DOI",
+        "url": "https://doi.org/10.1234/5678"
+      },
+      {
+        "type": "PDF",
+        "url": "https://example.com/path/to/pdf"
+      }
+    ]
+  }
+]
