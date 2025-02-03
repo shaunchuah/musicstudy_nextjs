@@ -12,6 +12,7 @@ export default function Fatigue() {
     formState: { errors },
   } = useForm();
   const [result, setResult] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const onSubmit = async (data) => {
     // Replace all false values with 0 before sending
     const cleanedData = Object.fromEntries(
@@ -21,6 +22,7 @@ export default function Fatigue() {
       ])
     );
     console.log(cleanedData);
+    setIsLoading(true); // Set loading state before the request
     try {
       const response = await fetch("http://0.0.0.0:8000/predict", {
         method: "POST",
@@ -35,6 +37,8 @@ export default function Fatigue() {
       setResult(result);
     } catch (error) {
       console.error("Error:", error);
+    } finally {
+      setIsLoading(false); // Reset loading state after the request completes
     }
   };
 
@@ -45,394 +49,407 @@ export default function Fatigue() {
           <SectionHeader title="Fatigue Predictor" />
           <div className="flex flex-col text-lg bg-white rounded-lg p-8 text-gray-700">
             <form onSubmit={handleSubmit(onSubmit)}>
-              <h3 className="text-2xl font-medium mb-4">Demographics</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div class="mb-4 md:mb-0">
+                  <h3 className="text-2xl font-medium mb-4">Demographics</h3>
 
-              <div class="mb-4">
-                <label for="age" class="mb-4 text-gray-600 ">
-                  Age
-                </label>
-                <input
-                  type="number"
-                  id="age"
-                  name="age"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
-                  placeholder="Age"
-                  {...register("age", { required: true })}
-                />
+                  <div class="mb-4">
+                    <label for="age" class="mb-4 text-gray-600 ">
+                      Age
+                    </label>
+                    <input
+                      type="number"
+                      id="age"
+                      name="age"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      placeholder="Age"
+                      {...register("age", { required: true })}
+                    />
 
-                {errors.age && (
-                  <span className="text-red-400">*This field is required</span>
-                )}
+                    {errors.age && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="sex" class="mb-4 text-gray-600 ">
+                      Biological Sex
+                    </label>
+                    <select
+                      id="sex"
+                      name="sex"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      placeholder="Biological Sex"
+                      {...register("sex", { required: true })}
+                    >
+                      <option value="">Select...</option>
+                      <option value="1">Male</option>
+                      <option value="0">Female</option>
+                    </select>
+                    {errors.sex && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+                  <div class="mb-4">
+                    <label for="height" class="mb-4 text-gray-600 ">
+                      Height (cm)
+                    </label>
+                    <input
+                      type="number"
+                      id="height"
+                      name="height"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      placeholder="Height in cm"
+                      {...register("height", {
+                        required: true,
+                        min: 0,
+                        max: 300,
+                      })}
+                    />
+
+                    {errors.height && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="weight" class="mb-4 text-gray-600 ">
+                      Weight
+                    </label>
+                    <input
+                      type="number"
+                      id="weight"
+                      name="weight"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      placeholder="Weight"
+                      {...register("weight", { required: true })}
+                    />
+
+                    {errors.weight && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+                  <div class="mb-4">
+                    <label for="is_smoker" class="mb-4 text-gray-600 ">
+                      Smoking Status
+                    </label>
+                    <select
+                      id="is_smoker"
+                      name="is_smoker"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      placeholder="Smoking Status"
+                      {...register("is_smoker", { required: true })}
+                    >
+                      <option value="">Select...</option>
+                      <option value="Smoker">Smoker</option>
+                      <option value="Non-smoker">Non-smoker</option>
+                      <option value="Ex-smoker">Ex-smoker</option>
+                    </select>
+                    {errors.is_smoker && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-medium mb-4">
+                    Diagnosis Details
+                  </h3>
+                  <div class="mb-4">
+                    <label for="study_group" class="mb-4 text-gray-600 ">
+                      Diagnosis
+                    </label>
+                    <select
+                      id="study_group"
+                      name="study_group"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      placeholder="Diagnosis"
+                      {...register("study_group", { required: true })}
+                    >
+                      <option value="">Select...</option>
+                      <option value="cd">Crohn's Disease</option>
+                      <option value="uc">Ulcerative Colitis</option>
+                      <option value="ibdu">
+                        Inflammatory Bowel Disease Unclassified
+                      </option>
+                    </select>
+                    {errors.study_group && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="age_at_diagnosis" class="mb-4 text-gray-600 ">
+                      Age at Diagnosis
+                    </label>
+                    <input
+                      type="number"
+                      id="age_at_diagnosis"
+                      name="age_at_diagnosis"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      placeholder="Age at Diagnosis"
+                      {...register("age_at_diagnosis", { required: true })}
+                    />
+
+                    {errors.age && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="date_of_diagnosis" class="mb-4 text-gray-600 ">
+                      Date of Diagnosis
+                    </label>
+                    <input
+                      type="date"
+                      id="date_of_diagnosis"
+                      name="date_of_diagnosis"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      {...register("date_of_diagnosis", { required: true })}
+                    />
+                    {errors.date_of_diagnosis && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+                </div>
               </div>
-
-              <div class="mb-4">
-                <label for="sex" class="mb-4 text-gray-600 ">
-                  Biological Sex
-                </label>
-                <select
-                  id="sex"
-                  name="sex"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
-                  placeholder="Biological Sex"
-                  {...register("sex", { required: true })}
-                >
-                  <option value="">Select...</option>
-                  <option value="1">Male</option>
-                  <option value="0">Female</option>
-                </select>
-                {errors.sex && (
-                  <span className="text-red-400">*This field is required</span>
-                )}
-              </div>
-              <div class="mb-4">
-                <label for="height" class="mb-4 text-gray-600 ">
-                  Height (cm)
-                </label>
-                <input
-                  type="number"
-                  id="height"
-                  name="height"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
-                  placeholder="Height in cm"
-                  {...register("height", { required: true, min: 0, max: 300 })}
-                />
-
-                {errors.height && (
-                  <span className="text-red-400">*This field is required</span>
-                )}
-              </div>
-
-              <div class="mb-4">
-                <label for="weight" class="mb-4 text-gray-600 ">
-                  Weight
-                </label>
-                <input
-                  type="number"
-                  id="weight"
-                  name="weight"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
-                  placeholder="Weight"
-                  {...register("weight", { required: true })}
-                />
-
-                {errors.weight && (
-                  <span className="text-red-400">*This field is required</span>
-                )}
-              </div>
-              <div class="mb-4">
-                <label for="is_smoker" class="mb-4 text-gray-600 ">
-                  Smoking Status
-                </label>
-                <select
-                  id="is_smoker"
-                  name="is_smoker"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
-                  placeholder="Smoking Status"
-                  {...register("is_smoker", { required: true })}
-                >
-                  <option value="">Select...</option>
-                  <option value="Smoker">Smoker</option>
-                  <option value="Non-smoker">Non-smoker</option>
-                  <option value="Ex-smoker">Ex-smoker</option>
-                </select>
-                {errors.is_smoker && (
-                  <span className="text-red-400">*This field is required</span>
-                )}
-              </div>
-
-              <h3 className="text-2xl font-medium mb-4 mt-12">Diagnosis Details</h3>
-              <div class="mb-4">
-                <label for="study_group" class="mb-4 text-gray-600 ">
-                  Diagnosis
-                </label>
-                <select
-                  id="study_group"
-                  name="study_group"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
-                  placeholder="Diagnosis"
-                  {...register("study_group", { required: true })}
-                >
-                  <option value="">Select...</option>
-                  <option value="cd">Crohn's Disease</option>
-                  <option value="uc">Ulcerative Colitis</option>
-                  <option value="ibdu">
-                    Inflammatory Bowel Disease Unclassified
-                  </option>
-                </select>
-                {errors.study_group && (
-                  <span className="text-red-400">*This field is required</span>
-                )}
-              </div>
-
-           
-
-              <div class="mb-4">
-                <label for="age_at_diagnosis" class="mb-4 text-gray-600 ">
-                  Age at Diagnosis
-                </label>
-                <input
-                  type="number"
-                  id="age_at_diagnosis"
-                  name="age_at_diagnosis"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
-                  placeholder="Age at Diagnosis"
-                  {...register("age_at_diagnosis", { required: true })}
-                />
-
-                {errors.age && (
-                  <span className="text-red-400">*This field is required</span>
-                )}
-              </div>
-
-              <div class="mb-4">
-                <label for="date_of_diagnosis" class="mb-4 text-gray-600 ">
-                  Date of Diagnosis
-                </label>
-                <input
-                  type="date"
-                  id="date_of_diagnosis"
-                  name="date_of_diagnosis"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
-                  {...register("date_of_diagnosis", { required: true })}
-                />
-                {errors.date_of_diagnosis && (
-                  <span className="text-red-400">*This field is required</span>
-                )}
-              </div>
-
-              
 
               <h3 className="text-2xl font-medium mb-4 mt-12">
                 Montreal Classification
               </h3>
 
-              <table>
-                <thead>
-                  <td>Montreal CD Location</td>
-                  <td>Montreal CD Behaviour</td>
-                </thead>
-                <tr>
-                  <td className="pr-4">
-                    <div class=" gap-4">
-                      <div>
-                        <input
-                          type="radio"
-                          id="L1"
-                          value="l1"
-                          {...register("montreal_cd_location", {})}
-                        />
-                        <label for="L1" class="ml-2">
-                          L1 Ileal Disease Only
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          type="radio"
-                          id="L2"
-                          value="l2"
-                          {...register("montreal_cd_location", {})}
-                        />
-                        <label for="L2" class="ml-2">
-                          L2 Colonic Disease Only
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          type="radio"
-                          id="L3"
-                          value="l3"
-                          {...register("montreal_cd_location", {})}
-                        />
-                        <label for="L3" class="ml-2">
-                          L3 Ileocolonic involvement
-                        </label>
-                      </div>
-                    </div>
-                    {errors.montreal_cd_location && (
-                      <span className="text-red-400">
-                        *This field is required
-                      </span>
-                    )}
-                  </td>
-                  <td>
-                    <div class="gap-4">
-                      <div>
-                        <input
-                          type="radio"
-                          id="B1"
-                          value="b1"
-                          {...register("montreal_cd_behaviour", {})}
-                        />
-                        <label for="B1" class="ml-2">
-                          B1 Non-stricturing, non-penetrating
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          type="radio"
-                          id="B2"
-                          value="b2"
-                          {...register("montreal_cd_behaviour", {})}
-                        />
-                        <label for="B2" class="ml-2">
-                          B2 Stricturing
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          type="radio"
-                          id="B3"
-                          value="b3"
-                          {...register("montreal_cd_behaviour", {})}
-                        />
-                        <label for="B3" class="ml-2">
-                          B3 Penetrating
-                        </label>
-                      </div>
-                    </div>
-                    {errors.montreal_cd_behaviour && (
-                      <span className="text-red-400">
-                        *This field is required
-                      </span>
-                    )}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
+              {/* Montreal CD Location and Behaviour */}
+              <div className="flex flex-wrap">
+                <div className="w-full md:w-1/2 pr-4 mb-4">
+                  <div className="mb-2 font-semibold">Montreal CD Location</div>
+                  <div className="flex flex-col gap-4">
                     <div>
                       <input
-                        type="checkbox"
-                        id="montreal_upper_gi"
-                        {...register("montreal_upper_gi")}
+                        type="radio"
+                        id="L1"
+                        value="l1"
+                        {...register("montreal_cd_location", {})}
                       />
-                      <label for="montreal_upper_gi" class="ml-2">
-                        +/- L4 Upper GI Disease
+                      <label htmlFor="L1" className="ml-2">
+                        L1 Ileal Disease Only
                       </label>
                     </div>
-                  </td>
-                  <td>
                     <div>
                       <input
-                        type="checkbox"
-                        id="montreal_perianal"
-                        {...register("montreal_perianal")}
+                        type="radio"
+                        id="L2"
+                        value="l2"
+                        {...register("montreal_cd_location", {})}
                       />
-                      <label for="montreal_perianal" class="ml-2">
-                        +/- Perianal Disease
+                      <label htmlFor="L2" className="ml-2">
+                        L2 Colonic Disease Only
                       </label>
                     </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td className="pt-4">Montreal UC Extent</td>
-                  <td className="pt-4">Montreal UC Severity</td>
-                </tr>
-
-                <tr>
-                  <td className="pr-4">
-                    <div class="gap-4">
-                      <div>
-                        <input
-                          type="radio"
-                          id="E1"
-                          value="e1"
-                          {...register("montreal_uc_extent", {})}
-                        />
-                        <label for="E1" class="ml-2">
-                          E1 Proctitis
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          type="radio"
-                          id="E2"
-                          value="e2"
-                          {...register("montreal_uc_extent", {})}
-                        />
-                        <label for="E2" class="ml-2">
-                          E2 Left-sided Colitis
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          type="radio"
-                          id="E3"
-                          value="e3"
-                          {...register("montreal_uc_extent", {})}
-                        />
-                        <label for="E3" class="ml-2">
-                          E3 Extensive Colitis
-                        </label>
-                      </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="L3"
+                        value="l3"
+                        {...register("montreal_cd_location", {})}
+                      />
+                      <label htmlFor="L3" className="ml-2">
+                        L3 Ileocolonic involvement
+                      </label>
                     </div>
-                    {errors.montreal_uc_extent && (
-                      <span className="text-red-400">
-                        *This field is required
-                      </span>
-                    )}
-                  </td>
-                  <td>
-                    <div class="gap-4">
-                      <div>
-                        <input
-                          type="radio"
-                          id="S0"
-                          value="s0"
-                          {...register("montreal_uc_severity", {})}
-                        />
-                        <label for="S0" class="ml-2">
-                          S0 Clinical Remission
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          type="radio"
-                          id="S1"
-                          value="s1"
-                          {...register("montreal_uc_severity", {})}
-                        />
-                        <label for="S1" class="ml-2">
-                          S1 Mild
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          type="radio"
-                          id="S2"
-                          value="s2"
-                          {...register("montreal_uc_severity", {})}
-                        />
-                        <label for="S2" class="ml-2">
-                          S2 Moderate
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          type="radio"
-                          id="S3"
-                          value="s3"
-                          {...register("montreal_uc_severity", {})}
-                        />
-                        <label for="S3" class="ml-2">
-                          S3 Severe
-                        </label>
-                      </div>
+                  </div>
+                  {errors.montreal_cd_location && (
+                    <span className="text-red-400">
+                      *This field is required
+                    </span>
+                  )}
+                  <div className="mt-4">
+                    <input
+                      type="checkbox"
+                      id="montreal_upper_gi"
+                      {...register("montreal_upper_gi")}
+                    />
+                    <label htmlFor="montreal_upper_gi" className="ml-2">
+                      +/- L4 Upper GI Disease
+                    </label>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2">
+                  <div className="mb-2 font-semibold">
+                    Montreal CD Behaviour
+                  </div>
+                  <div className="flex flex-col gap-4">
+                    <div>
+                      <input
+                        type="radio"
+                        id="B1"
+                        value="b1"
+                        {...register("montreal_cd_behaviour", {})}
+                      />
+                      <label htmlFor="B1" className="ml-2">
+                        B1 Non-stricturing, non-penetrating
+                      </label>
                     </div>
-                    {errors.montreal_uc_severity && (
-                      <span className="text-red-400">
-                        *This field is required
-                      </span>
-                    )}
-                  </td>
-                </tr>
-              </table>
+                    <div>
+                      <input
+                        type="radio"
+                        id="B2"
+                        value="b2"
+                        {...register("montreal_cd_behaviour", {})}
+                      />
+                      <label htmlFor="B2" className="ml-2">
+                        B2 Stricturing
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="B3"
+                        value="b3"
+                        {...register("montreal_cd_behaviour", {})}
+                      />
+                      <label htmlFor="B3" className="ml-2">
+                        B3 Penetrating
+                      </label>
+                    </div>
+                  </div>
+                  {errors.montreal_cd_behaviour && (
+                    <span className="text-red-400">
+                      *This field is required
+                    </span>
+                  )}
+                  <div className="mt-4">
+                    <input
+                      type="checkbox"
+                      id="montreal_perianal"
+                      {...register("montreal_perianal")}
+                    />
+                    <label htmlFor="montreal_perianal" className="ml-2">
+                      +/- Perianal Disease
+                    </label>
+                  </div>
+                </div>
+              </div>
 
+              {/* Montreal UC Extent and Severity */}
+              <div className="flex flex-wrap mt-8">
+                <div className="w-full md:w-1/2 pr-4 mb-4">
+                  <div className="mb-2 font-semibold">Montreal UC Extent</div>
+                  <div className="flex flex-col gap-4">
+                    <div>
+                      <input
+                        type="radio"
+                        id="E1"
+                        value="e1"
+                        {...register("montreal_uc_extent", {})}
+                      />
+                      <label htmlFor="E1" className="ml-2">
+                        E1 Proctitis
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="E2"
+                        value="e2"
+                        {...register("montreal_uc_extent", {})}
+                      />
+                      <label htmlFor="E2" className="ml-2">
+                        E2 Left-sided Colitis
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="E3"
+                        value="e3"
+                        {...register("montreal_uc_extent", {})}
+                      />
+                      <label htmlFor="E3" className="ml-2">
+                        E3 Extensive Colitis
+                      </label>
+                    </div>
+                  </div>
+                  {errors.montreal_uc_extent && (
+                    <span className="text-red-400">
+                      *This field is required
+                    </span>
+                  )}
+                </div>
+                <div className="w-full md:w-1/2">
+                  <div className="mb-2 font-semibold">Montreal UC Severity</div>
+                  <div className="flex flex-col gap-4">
+                    <div>
+                      <input
+                        type="radio"
+                        id="S0"
+                        value="s0"
+                        {...register("montreal_uc_severity", {})}
+                      />
+                      <label htmlFor="S0" className="ml-2">
+                        S0 Clinical Remission
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="S1"
+                        value="s1"
+                        {...register("montreal_uc_severity", {})}
+                      />
+                      <label htmlFor="S1" className="ml-2">
+                        S1 Mild
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="S2"
+                        value="s2"
+                        {...register("montreal_uc_severity", {})}
+                      />
+                      <label htmlFor="S2" className="ml-2">
+                        S2 Moderate
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="S3"
+                        value="s3"
+                        {...register("montreal_uc_severity", {})}
+                      />
+                      <label htmlFor="S3" className="ml-2">
+                        S3 Severe
+                      </label>
+                    </div>
+                  </div>
+                  {errors.montreal_uc_severity && (
+                    <span className="text-red-400">
+                      *This field is required
+                    </span>
+                  )}
+                </div>
+              </div>
               <h3 className="mt-12 text-2xl font-medium mb-4">
                 Current Drug Therapy
               </h3>
 
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <div>
                   <input
                     type="checkbox"
@@ -480,7 +497,7 @@ export default function Fatigue() {
                     {...register("sampling_mp")}
                   />
                   <label htmlFor="sampling_mp" className="ml-2">
-                    6-Mercaptopurine
+                    Mercaptopurine
                   </label>
                 </div>
                 <div>
@@ -590,7 +607,7 @@ export default function Fatigue() {
               </h3>
 
               <h4 className="text-xl font-medium mb-4">Full Blood Count</h4>
-              <div className="grid grid-cols-4 gap-4 mb-8">
+              <div className="md:grid md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
                 <div className="mb-4">
                   <label htmlFor="haemoglobin" className="mb-4 text-gray-600">
                     Haemoglobin (g/L)
@@ -753,7 +770,7 @@ export default function Fatigue() {
                 </div>
               </div>
               <h4 className="text-xl font-medium mb-4">Urea & Electrolytes</h4>
-              <div className="grid grid-cols-4 gap-4 mb-8">
+              <div className="md:grid md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
                 <div className="mb-4">
                   <label htmlFor="urea" className="mb-4 text-gray-600">
                     Urea (mmol/L)
@@ -829,11 +846,12 @@ export default function Fatigue() {
                     <span className="text-red-400">*Required, 0-10</span>
                   )}
                 </div>
-                </div>
-              <h4 className="text-xl font-medium mb-4">Markers of Inflammation</h4>
-              <div className="grid grid-cols-4 gap-4">
-
-              <div className="mb-4">
+              </div>
+              <h4 className="text-xl font-medium mb-4">
+                Markers of Inflammation
+              </h4>
+              <div className="md:grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="mb-4">
                   <label htmlFor="crp" className="mb-4 text-gray-600">
                     CRP (mg/L)
                   </label>
@@ -869,8 +887,6 @@ export default function Fatigue() {
                   )}
                 </div>
 
-               
-
                 <div className="mb-4">
                   <label htmlFor="calprotectin" className="mb-4 text-gray-600">
                     Calprotectin (μg/g)
@@ -896,34 +912,112 @@ export default function Fatigue() {
                 type="submit"
                 class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg w-full sm:w-auto px-5 py-2.5 text-center "
               >
-                Get Prediction
+                {isLoading ? (
+                  <svg
+                    className="animate-spin inline w-5 h-5 mr-3 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    ></path>
+                  </svg>
+                ) : (
+                  "Get Prediction"
+                )}
               </button>
             </form>
           </div>
 
           <div>
-            {result && (
+            {isLoading ? (
+              <div className="flex items-center justify-center mt-8 text-lg">
+                <svg
+                  className="animate-spin inline w-5 h-5 mr-3 text-gray-700"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                  ></path>
+                </svg>
+                <span>Loading prediction...</span>
+              </div>
+            ) : result ? (
               <div className="flex flex-col text-lg bg-white rounded-lg p-8 text-gray-700 mt-8">
                 <h3 className="text-2xl font-medium mb-4">
                   Prediction Results
                 </h3>
-                <div className="mb-4">
-                  <p>Predicted Class: {result.predicted_class}</p>
-                  <p>
-                    Explanation:{" "}
-                    {result.predicted_class === "no_fatigue"
-                      ? "Likely less than 10 days of fatigue out of last 14 days"
-                      : "Likely fatigue >= 10 out of last 14 days"}
+                <div className="mb-8">
+                  <div className="max-w-lg mx-auto border shadow-md rounded-lg p-4 mb-4">
+
+                    <h4 className=" uppercase text-sm mb-4">Predicted Class</h4>
+                    <div className="text-3xl  mb-4">
+                      
+                      {result.predicted_class === "fatigue" ? (
+                        <span style={{ color: "red", fontWeight: "bold" }}>
+                          😴 Fatigue
+                        </span>
+                      ) : (
+                        <span style={{ color: "green", fontWeight: "bold" }}>
+                          💪 No Fatigue
+                        </span>
+                      )}
+                    </div>
+                    <p className="">
+                      
+                      {result.predicted_class === "no_fatigue"
+                        ? "The patient is likely to have less than 10 days of fatigue out of the last 14 days."
+                        : "The patient is likely to have experienced fatigue for 10 or more of the last 14 days."}
+                    </p>
+                    
+                  </div>
+                  <div className="max-w-lg mx-auto border rounded-lg p-4 bg-gray-50">
+                  <h4 className=" uppercase text-sm mb-4">Explanation</h4>
+                  
+                  <p className="text-sm mb-2">
+                    Softmax Output: <span className="font-bold">{result.predicted_probability.toFixed(3)}</span> 
                   </p>
-                  <p>
-                    Softmax Output: {result.predicted_probability.toFixed(3)}
-                  </p>
+                  <p className="text-sm">The model outputs a probability between 0 and 1 with 0 representing low fatigue and 1 representing high fatigue.</p>
+                  </div>
                 </div>
+                <h3 className="text-2xl font-medium mb-4">
+                  Force Plot
+                </h3>
                 {result.force_plot && (
                   <div className="mt-4">
                     <img src={`${result.force_plot}`} alt="Prediction plot" />
                   </div>
                 )}
+              </div>
+            ) : (
+              <div className="flex flex-col text-lg bg-white rounded-lg p-8 text-gray-700 mt-8">
+                <h3 className="text-2xl font-medium mb-4">
+                  Prediction Results
+                </h3>
+                <p className="text-center">Awaiting your prediction request.</p>
               </div>
             )}
           </div>
