@@ -47,6 +47,35 @@ export default function Fatigue() {
       <main className="flex flex-col w-full">
         <SectionWrapper id="fatigue">
           <SectionHeader title="Fatigue Predictor" />
+
+          <div
+            class=" items-center px-8 py-4 mb-4 text-red-800 rounded-lg bg-red-100 "
+            role="alert"
+          >
+            <div className="flex flex-row items-center mb-2">
+              <svg
+                class="shrink-0 inline w-4 h-4 mr-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+              </svg>
+              <span class="sr-only">Info</span>
+              <div>
+                <span class="font-medium">Disclaimer</span>
+              </div>
+            </div>
+            <div>
+              <p className="mb-1">
+                This fatigue predictor is for research use/interest only and has
+                not been validated. We may record your responses to improve the model.
+              </p>
+              
+            </div>
+          </div>
+
           <div className="flex flex-col text-lg bg-white rounded-lg p-8 text-gray-700">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="grid md:grid-cols-2 gap-4">
@@ -913,26 +942,29 @@ export default function Fatigue() {
                 class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg w-full sm:w-auto px-5 py-2.5 text-center "
               >
                 {isLoading ? (
-                  <svg
-                    className="animate-spin inline w-5 h-5 mr-3 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                    ></path>
-                  </svg>
+                  <>
+                    <svg
+                      className="animate-spin inline w-5 h-5 mr-3 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      ></path>
+                    </svg>
+                    Processing...
+                  </>
                 ) : (
                   "Get Prediction"
                 )}
@@ -942,7 +974,7 @@ export default function Fatigue() {
 
           <div>
             {isLoading ? (
-              <div className="flex items-center justify-center mt-8 text-lg">
+              <div className="flex items-center justify-center bg-white rounded-lg p-8 text-gray-700 mt-8 text-lg">
                 <svg
                   className="animate-spin inline w-5 h-5 mr-3 text-gray-700"
                   xmlns="http://www.w3.org/2000/svg"
@@ -971,41 +1003,41 @@ export default function Fatigue() {
                   Prediction Results
                 </h3>
                 <div className="mb-8">
-                  <div className="max-w-lg mx-auto border shadow-md rounded-lg p-4 mb-4">
-
+                  <div className="max-w-lg  border shadow-md rounded-lg p-4 mb-4">
                     <h4 className=" uppercase text-sm mb-4">Predicted Class</h4>
-                    <div className="text-3xl  mb-4">
-                      
+                    <div className="text-4xl  mb-4">
                       {result.predicted_class === "fatigue" ? (
                         <span style={{ color: "red", fontWeight: "bold" }}>
-                          😴 Fatigue
+                          High Fatigue 😞
                         </span>
                       ) : (
                         <span style={{ color: "green", fontWeight: "bold" }}>
-                          💪 No Fatigue
+                          Low Fatigue 😊
                         </span>
                       )}
                     </div>
-                    <p className="">
-                      
+                    <p className="text-sm">
                       {result.predicted_class === "no_fatigue"
                         ? "The patient is likely to have less than 10 days of fatigue out of the last 14 days."
                         : "The patient is likely to have experienced fatigue for 10 or more of the last 14 days."}
                     </p>
-                    
                   </div>
-                  <div className="max-w-lg mx-auto border rounded-lg p-4 bg-gray-50">
-                  <h4 className=" uppercase text-sm mb-4">Explanation</h4>
-                  
-                  <p className="text-sm mb-2">
-                    Softmax Output: <span className="font-bold">{result.predicted_probability.toFixed(3)}</span> 
-                  </p>
-                  <p className="text-sm">The model outputs a probability between 0 and 1 with 0 representing low fatigue and 1 representing high fatigue.</p>
+                  <div className="max-w-lg border rounded-lg p-4 bg-gray-50">
+                    <h4 className=" uppercase text-sm mb-4">Explanation</h4>
+
+                    <p className="text-sm mb-2">
+                      Softmax Output:{" "}
+                      <span className="font-bold">
+                        {result.predicted_probability.toFixed(3)}
+                      </span>
+                    </p>
+                    <p className="text-sm">
+                      The model outputs a probability between 0 and 1 with 0
+                      representing low fatigue and 1 representing high fatigue. A value close to 0.5 reflects high uncertainty.
+                    </p>
                   </div>
                 </div>
-                <h3 className="text-2xl font-medium mb-4">
-                  Force Plot
-                </h3>
+                <h3 className="text-2xl font-medium mb-4">Force Plot</h3>
                 {result.force_plot && (
                   <div className="mt-4">
                     <img src={`${result.force_plot}`} alt="Prediction plot" />
