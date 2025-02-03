@@ -24,7 +24,7 @@ export default function Fatigue() {
     console.log(cleanedData);
     setIsLoading(true); // Set loading state before the request
     try {
-      const response = await fetch("http://0.0.0.0:8000/predict", {
+      const response = await fetch("https://ml.musicstudy.uk/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,6 +33,12 @@ export default function Fatigue() {
       });
 
       const result = await response.json();
+      if (result["error"]) {
+        console.log("Error:", result["error"]);
+        setResult(null);
+        setIsLoading(false);
+        return;
+      }
       console.log(result);
       setResult(result);
     } catch (error) {
