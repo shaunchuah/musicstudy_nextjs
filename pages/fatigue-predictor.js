@@ -23,6 +23,20 @@ export default function Fatigue() {
         value === false ? 0 : value === true ? 1 : value === null ? "0" : value,
       ])
     );
+
+    if (!("montreal_uc_extent" in cleanedData)) {
+      cleanedData.montreal_uc_extent = "0";
+    }
+    if (!("montreal_uc_severity" in cleanedData)) {
+      cleanedData.montreal_uc_severity = "0";
+    }
+    if (!("montreal_cd_location" in cleanedData)) {
+      cleanedData.montreal_cd_location = "0";
+    }
+    if (!("montreal_cd_behaviour" in cleanedData)) {
+      cleanedData.montreal_cd_behaviour = "0";
+    }
+
     console.log(cleanedData);
     setIsLoading(true); // Set loading state before the request
     try {
@@ -986,8 +1000,43 @@ export default function Fatigue() {
                 </div>
                 <h3 className="text-2xl font-medium mb-4">Force Plot</h3>
                 {result.force_plot && (
-                  <div className="mt-4">
+                  <div className="mt-4 mb-4">
                     <img src={`${result.force_plot}`} alt="Prediction plot" />
+                  </div>
+                )}
+                <h3 className="text-2xl font-medium mb-4">
+                  Performance Profiling
+                </h3>
+                {result.execution_time_ms && (
+                  <div className="mb-4">
+                    <p>
+                      Input Data Formatting:{" "}
+                      <span className="font-bold">
+                        {result.execution_time_ms.input_data_formatting.toFixed(2)}{" "}
+                        ms
+                      </span>
+                    </p>
+                    <p>
+                      Dataframe Preparation:{" "}
+                      <span className="font-bold">
+                        {result.execution_time_ms.dataframe_preparation.toFixed(2)}{" "}
+                        ms
+                      </span>
+                    </p>
+                    <p>
+                      Model Prediction:{" "}
+                      <span className="font-bold">
+                        {result.execution_time_ms.model_prediction.toFixed(2)}{" "}
+                        ms
+                      </span>
+                    </p>
+                    <p>
+                      Force Plot Generation:{" "}
+                      <span className="font-bold">
+                        {result.execution_time_ms.force_plot_generation.toFixed(2)}{" "}
+                        ms
+                      </span>
+                    </p>
                   </div>
                 )}
               </div>
