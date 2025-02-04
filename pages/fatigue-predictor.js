@@ -1,6 +1,7 @@
 import MotionPage from "../components/MotionPage";
 import SectionHeader from "../components/SectionHeader";
 import SectionWrapper from "../components/SectionWrapper";
+import CheckboxField from "../components/forms/CheckboxField";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 
@@ -11,6 +12,7 @@ export default function Fatigue() {
     watch,
     formState: { errors },
   } = useForm();
+  const studyGroup = watch("study_group");
   const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const onSubmit = async (data) => {
@@ -55,7 +57,7 @@ export default function Fatigue() {
           <SectionHeader title="Fatigue Predictor" />
 
           <div
-            class=" items-center px-8 py-4 mb-4 text-red-800 rounded-lg bg-red-100 "
+            class=" items-center px-4 md:px-8 py-4 mb-4 text-red-800 rounded-lg bg-red-100 "
             role="alert"
           >
             <div className="flex flex-row items-center mb-2">
@@ -76,16 +78,16 @@ export default function Fatigue() {
             <div>
               <p className="mb-1">
                 This fatigue predictor is for research use/interest only and has
-                not been validated. We may record your responses to improve the model.
+                not been validated. We may record your responses to improve the
+                model.
               </p>
-              
             </div>
           </div>
 
-          <div className="flex flex-col text-lg bg-white rounded-lg p-8 text-gray-700">
+          <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700">
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div class="mb-4 md:mb-0">
+              <div className="grid md:grid-cols-2 gap-4 mb-4">
+                <div class="mb-4 ">
                   <h3 className="text-2xl font-medium mb-4">Demographics</h3>
 
                   <div class="mb-4">
@@ -155,7 +157,7 @@ export default function Fatigue() {
 
                   <div class="mb-4">
                     <label for="weight" class="mb-4 text-gray-600 ">
-                      Weight
+                      Weight (kg)
                     </label>
                     <input
                       type="number"
@@ -172,7 +174,7 @@ export default function Fatigue() {
                       </span>
                     )}
                   </div>
-                  <div class="mb-4">
+                  <div class="">
                     <label for="is_smoker" class="mb-4 text-gray-600 ">
                       Smoking Status
                     </label>
@@ -264,382 +266,320 @@ export default function Fatigue() {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-medium mb-4 mt-12">
+              <h3 className="text-2xl font-medium mb-4 mt-4">
                 Montreal Classification
               </h3>
 
-              {/* Montreal CD Location and Behaviour */}
-              <div className="flex flex-wrap">
-                <div className="w-full md:w-1/2 pr-4 mb-4">
-                  <div className="mb-2 font-semibold">Montreal CD Location</div>
-                  <div className="flex flex-col gap-4">
-                    <div>
-                      <input
-                        type="radio"
-                        id="L1"
-                        value="l1"
-                        {...register("montreal_cd_location", {})}
-                      />
-                      <label htmlFor="L1" className="ml-2">
-                        L1 Ileal Disease Only
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="L2"
-                        value="l2"
-                        {...register("montreal_cd_location", {})}
-                      />
-                      <label htmlFor="L2" className="ml-2">
-                        L2 Colonic Disease Only
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="L3"
-                        value="l3"
-                        {...register("montreal_cd_location", {})}
-                      />
-                      <label htmlFor="L3" className="ml-2">
-                        L3 Ileocolonic involvement
-                      </label>
-                    </div>
-                  </div>
-                  {errors.montreal_cd_location && (
-                    <span className="text-red-400">
-                      *This field is required
-                    </span>
-                  )}
-                  <div className="mt-4">
-                    <input
-                      type="checkbox"
-                      id="montreal_upper_gi"
-                      {...register("montreal_upper_gi")}
-                    />
-                    <label htmlFor="montreal_upper_gi" className="ml-2">
-                      +/- L4 Upper GI Disease
-                    </label>
-                  </div>
+              {!["cd", "ibdu", "uc"].includes(studyGroup) && (
+                <div className="my-4 p-4 border border-gray-300 rounded-lg text-center text-gray-600 animate-fadeIn">
+                  <p>
+                    Please select a diagnosis above to display the relevant
+                    Montreal Classification fields.
+                  </p>
                 </div>
-                <div className="w-full md:w-1/2">
-                  <div className="mb-2 font-semibold">
-                    Montreal CD Behaviour
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <div>
-                      <input
-                        type="radio"
-                        id="B1"
-                        value="b1"
-                        {...register("montreal_cd_behaviour", {})}
-                      />
-                      <label htmlFor="B1" className="ml-2">
-                        B1 Non-stricturing, non-penetrating
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="B2"
-                        value="b2"
-                        {...register("montreal_cd_behaviour", {})}
-                      />
-                      <label htmlFor="B2" className="ml-2">
-                        B2 Stricturing
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="B3"
-                        value="b3"
-                        {...register("montreal_cd_behaviour", {})}
-                      />
-                      <label htmlFor="B3" className="ml-2">
-                        B3 Penetrating
-                      </label>
-                    </div>
-                  </div>
-                  {errors.montreal_cd_behaviour && (
-                    <span className="text-red-400">
-                      *This field is required
-                    </span>
-                  )}
-                  <div className="mt-4">
-                    <input
-                      type="checkbox"
-                      id="montreal_perianal"
-                      {...register("montreal_perianal")}
-                    />
-                    <label htmlFor="montreal_perianal" className="ml-2">
-                      +/- Perianal Disease
-                    </label>
-                  </div>
-                </div>
-              </div>
+              )}
 
-              {/* Montreal UC Extent and Severity */}
-              <div className="flex flex-wrap mt-8">
-                <div className="w-full md:w-1/2 pr-4 mb-4">
-                  <div className="mb-2 font-semibold">Montreal UC Extent</div>
-                  <div className="flex flex-col gap-4">
-                    <div>
-                      <input
-                        type="radio"
-                        id="E1"
-                        value="e1"
-                        {...register("montreal_uc_extent", {})}
-                      />
-                      <label htmlFor="E1" className="ml-2">
-                        E1 Proctitis
-                      </label>
+              {(studyGroup === "cd" || studyGroup === "ibdu") && (
+                <div className="flex flex-wrap animate-fadeIn mb-4">
+                  <div className="w-full md:w-1/2 pr-4 mb-4">
+                    <div className="mb-2 font-semibold">
+                      Montreal CD Location
                     </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="E2"
-                        value="e2"
-                        {...register("montreal_uc_extent", {})}
-                      />
-                      <label htmlFor="E2" className="ml-2">
-                        E2 Left-sided Colitis
-                      </label>
+                    <div className="flex flex-col gap-4">
+                      <div>
+                        <input
+                          type="radio"
+                          id="L1"
+                          value="l1"
+                          {...register("montreal_cd_location", {})}
+                        />
+                        <label htmlFor="L1" className="ml-2">
+                          L1 Ileal Disease Only
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="L2"
+                          value="l2"
+                          {...register("montreal_cd_location", {})}
+                        />
+                        <label htmlFor="L2" className="ml-2">
+                          L2 Colonic Disease Only
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="L3"
+                          value="l3"
+                          {...register("montreal_cd_location", {})}
+                        />
+                        <label htmlFor="L3" className="ml-2">
+                          L3 Ileocolonic involvement
+                        </label>
+                      </div>
                     </div>
-                    <div>
+                    {errors.montreal_cd_location && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                    <div className="mt-4">
                       <input
-                        type="radio"
-                        id="E3"
-                        value="e3"
-                        {...register("montreal_uc_extent", {})}
+                        type="checkbox"
+                        id="montreal_upper_gi"
+                        {...register("montreal_upper_gi")}
                       />
-                      <label htmlFor="E3" className="ml-2">
-                        E3 Extensive Colitis
-                      </label>
-                    </div>
-                  </div>
-                  {errors.montreal_uc_extent && (
-                    <span className="text-red-400">
-                      *This field is required
-                    </span>
-                  )}
-                </div>
-                <div className="w-full md:w-1/2">
-                  <div className="mb-2 font-semibold">Montreal UC Severity</div>
-                  <div className="flex flex-col gap-4">
-                    <div>
-                      <input
-                        type="radio"
-                        id="S0"
-                        value="s0"
-                        {...register("montreal_uc_severity", {})}
-                      />
-                      <label htmlFor="S0" className="ml-2">
-                        S0 Clinical Remission
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="S1"
-                        value="s1"
-                        {...register("montreal_uc_severity", {})}
-                      />
-                      <label htmlFor="S1" className="ml-2">
-                        S1 Mild
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="S2"
-                        value="s2"
-                        {...register("montreal_uc_severity", {})}
-                      />
-                      <label htmlFor="S2" className="ml-2">
-                        S2 Moderate
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="S3"
-                        value="s3"
-                        {...register("montreal_uc_severity", {})}
-                      />
-                      <label htmlFor="S3" className="ml-2">
-                        S3 Severe
+                      <label htmlFor="montreal_upper_gi" className="ml-2">
+                        +/- L4 Upper GI Disease
                       </label>
                     </div>
                   </div>
-                  {errors.montreal_uc_severity && (
-                    <span className="text-red-400">
-                      *This field is required
-                    </span>
-                  )}
+                  <div className="w-full md:w-1/2">
+                    <div className="mb-2 font-semibold">
+                      Montreal CD Behaviour
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <div>
+                        <input
+                          type="radio"
+                          id="B1"
+                          value="b1"
+                          {...register("montreal_cd_behaviour", {})}
+                        />
+                        <label htmlFor="B1" className="ml-2">
+                          B1 Non-stricturing, non-penetrating
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="B2"
+                          value="b2"
+                          {...register("montreal_cd_behaviour", {})}
+                        />
+                        <label htmlFor="B2" className="ml-2">
+                          B2 Stricturing
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="B3"
+                          value="b3"
+                          {...register("montreal_cd_behaviour", {})}
+                        />
+                        <label htmlFor="B3" className="ml-2">
+                          B3 Penetrating
+                        </label>
+                      </div>
+                    </div>
+                    {errors.montreal_cd_behaviour && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                    <div className="mt-4">
+                      <input
+                        type="checkbox"
+                        id="montreal_perianal"
+                        {...register("montreal_perianal")}
+                      />
+                      <label htmlFor="montreal_perianal" className="ml-2">
+                        +/- Perianal Disease
+                      </label>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <h3 className="mt-12 text-2xl font-medium mb-4">
+              )}
+
+              {(studyGroup === "uc" || studyGroup === "ibdu") && (
+                <div className="flex flex-wrap mt-8 animate-fadeIn mb-4">
+                  <div className="w-full md:w-1/2 pr-4 mb-4">
+                    <div className="mb-2 font-semibold">Montreal UC Extent</div>
+                    <div className="flex flex-col gap-4">
+                      <div>
+                        <input
+                          type="radio"
+                          id="E1"
+                          value="e1"
+                          {...register("montreal_uc_extent", {})}
+                        />
+                        <label htmlFor="E1" className="ml-2">
+                          E1 Proctitis
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="E2"
+                          value="e2"
+                          {...register("montreal_uc_extent", {})}
+                        />
+                        <label htmlFor="E2" className="ml-2">
+                          E2 Left-sided Colitis
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="E3"
+                          value="e3"
+                          {...register("montreal_uc_extent", {})}
+                        />
+                        <label htmlFor="E3" className="ml-2">
+                          E3 Extensive Colitis
+                        </label>
+                      </div>
+                    </div>
+                    {errors.montreal_uc_extent && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <div className="mb-2 font-semibold">
+                      Montreal UC Severity
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <div>
+                        <input
+                          type="radio"
+                          id="S0"
+                          value="s0"
+                          {...register("montreal_uc_severity", {})}
+                        />
+                        <label htmlFor="S0" className="ml-2">
+                          S0 Clinical Remission
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="S1"
+                          value="s1"
+                          {...register("montreal_uc_severity", {})}
+                        />
+                        <label htmlFor="S1" className="ml-2">
+                          S1 Mild
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="S2"
+                          value="s2"
+                          {...register("montreal_uc_severity", {})}
+                        />
+                        <label htmlFor="S2" className="ml-2">
+                          S2 Moderate
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="S3"
+                          value="s3"
+                          {...register("montreal_uc_severity", {})}
+                        />
+                        <label htmlFor="S3" className="ml-2">
+                          S3 Severe
+                        </label>
+                      </div>
+                    </div>
+                    {errors.montreal_uc_severity && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
+              <h3 className=" text-2xl font-medium mb-4">
                 Current Drug Therapy
               </h3>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_steroids"
-                    {...register("sampling_steroids")}
-                  />
-                  <label htmlFor="sampling_steroids" className="ml-2">
-                    Steroids
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_abx"
-                    {...register("sampling_abx")}
-                  />
-                  <label htmlFor="sampling_abx" className="ml-2">
-                    Antibiotics
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_asa"
-                    {...register("sampling_asa")}
-                  />
-                  <label htmlFor="sampling_asa" className="ml-2">
-                    5-ASA
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_aza"
-                    {...register("sampling_aza")}
-                  />
-                  <label htmlFor="sampling_aza" className="ml-2">
-                    Azathioprine
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_mp"
-                    {...register("sampling_mp")}
-                  />
-                  <label htmlFor="sampling_mp" className="ml-2">
-                    Mercaptopurine
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_ifx"
-                    {...register("sampling_ifx")}
-                  />
-                  <label htmlFor="sampling_ifx" className="ml-2">
-                    Infliximab
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_ada"
-                    {...register("sampling_ada")}
-                  />
-                  <label htmlFor="sampling_ada" className="ml-2">
-                    Adalimumab
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_vedo"
-                    {...register("sampling_vedo")}
-                  />
-                  <label htmlFor="sampling_vedo" className="ml-2">
-                    Vedolizumab
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_uste"
-                    {...register("sampling_uste")}
-                  />
-                  <label htmlFor="sampling_uste" className="ml-2">
-                    Ustekinumab
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_tofa"
-                    {...register("sampling_tofa")}
-                  />
-                  <label htmlFor="sampling_tofa" className="ml-2">
-                    Tofacitinib
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_mtx"
-                    {...register("sampling_mtx")}
-                  />
-                  <label htmlFor="sampling_mtx" className="ml-2">
-                    Methotrexate
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_ciclosporin"
-                    {...register("sampling_ciclosporin")}
-                  />
-                  <label htmlFor="sampling_ciclosporin" className="ml-2">
-                    Ciclosporin
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_filgo"
-                    {...register("sampling_filgo")}
-                  />
-                  <label htmlFor="sampling_filgo" className="ml-2">
-                    Filgotinib
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_upa"
-                    {...register("sampling_upa")}
-                  />
-                  <label htmlFor="sampling_upa" className="ml-2">
-                    Upadacitinib
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="sampling_risa"
-                    {...register("sampling_risa")}
-                  />
-                  <label htmlFor="sampling_risa" className="ml-2">
-                    Risankizumab
-                  </label>
-                </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <CheckboxField
+                  id="sampling_steroids"
+                  label="Steroids (any)"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_abx"
+                  label="Antibiotics (any)"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_asa"
+                  label="5-ASA (any)"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_aza"
+                  label="Azathioprine"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_mp"
+                  label="Mercaptopurine"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_mtx"
+                  label="Methotrexate"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_ifx"
+                  label="Infliximab"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_ada"
+                  label="Adalimumab"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_vedo"
+                  label="Vedolizumab"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_uste"
+                  label="Ustekinumab"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_tofa"
+                  label="Tofacitinib"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_filgo"
+                  label="Filgotinib"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_upa"
+                  label="Upadacitinib"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_risa"
+                  label="Risankizumab"
+                  register={register}
+                />
+                <CheckboxField
+                  id="sampling_ciclosporin"
+                  label="Ciclosporin"
+                  register={register}
+                />
               </div>
 
-              <h3 className="mt-12 text-2xl font-medium mb-8">
-                Current Lab Results
-              </h3>
+              <h3 className="text-2xl font-medium mb-4">Current Lab Results</h3>
 
               <h4 className="text-xl font-medium mb-4">Full Blood Count</h4>
               <div className="md:grid md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
@@ -980,7 +920,7 @@ export default function Fatigue() {
 
           <div>
             {isLoading ? (
-              <div className="flex items-center justify-center bg-white rounded-lg p-8 text-gray-700 mt-8 text-lg">
+              <div className="flex items-center justify-center bg-white rounded-lg p-4 md:p-8 text-gray-700 mt-8 text-lg">
                 <svg
                   className="animate-spin inline w-5 h-5 mr-3 text-gray-700"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1004,7 +944,7 @@ export default function Fatigue() {
                 <span>Loading prediction...</span>
               </div>
             ) : result ? (
-              <div className="flex flex-col text-lg bg-white rounded-lg p-8 text-gray-700 mt-8">
+              <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700 mt-8">
                 <h3 className="text-2xl font-medium mb-4">
                   Prediction Results
                 </h3>
@@ -1039,7 +979,8 @@ export default function Fatigue() {
                     </p>
                     <p className="text-sm">
                       The model outputs a probability between 0 and 1 with 0
-                      representing low fatigue and 1 representing high fatigue. A value close to 0.5 reflects high uncertainty.
+                      representing low fatigue and 1 representing high fatigue.
+                      A value close to 0.5 reflects high uncertainty.
                     </p>
                   </div>
                 </div>
@@ -1051,7 +992,7 @@ export default function Fatigue() {
                 )}
               </div>
             ) : (
-              <div className="flex flex-col text-lg bg-white rounded-lg p-8 text-gray-700 mt-8">
+              <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700 mt-8">
                 <h3 className="text-2xl font-medium mb-4">
                   Prediction Results
                 </h3>
