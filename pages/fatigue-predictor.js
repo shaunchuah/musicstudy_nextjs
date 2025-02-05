@@ -36,6 +36,12 @@ export default function Fatigue() {
     if (!("montreal_cd_behaviour" in cleanedData)) {
       cleanedData.montreal_cd_behaviour = "0";
     }
+    if (!("montreal_upper_gi" in cleanedData)) {
+      cleanedData.montreal_upper_gi = "0";
+    }
+    if (!("montreal_perianal" in cleanedData)) {
+      cleanedData.montreal_perianal = "0";
+    }
 
     console.log(cleanedData);
     setIsLoading(true); // Set loading state before the request
