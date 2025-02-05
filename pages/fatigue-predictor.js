@@ -40,7 +40,7 @@ export default function Fatigue() {
     console.log(cleanedData);
     setIsLoading(true); // Set loading state before the request
     try {
-      const response = await fetch("https://ml.musicstudy.uk/predict", {
+      const response = await fetch("https://edi.sampletrek.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
