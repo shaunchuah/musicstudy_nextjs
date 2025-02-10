@@ -283,6 +283,41 @@ export default function Fatigue() {
                       </span>
                     )}
                   </div>
+
+                  <div className="mb-4">
+                    <label className="mb-4 text-gray-600">
+                      Currently has symptoms of active IBD
+                    </label>
+                    <div className="flex gap-4 border border-gray-300 text-gray-900 rounded-lg px-4 py-2 w-64 bg-gray-100">
+                      <div>
+                        <input
+                          type="radio"
+                          id="has_active_symptoms_yes"
+                          value="1"
+                          {...register("has_active_symptoms", { required: true })}
+                        />
+                        <label htmlFor="has_active_symptoms_yes" className="ml-2">
+                          Yes
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="has_active_symptoms_no"
+                          value="0"
+                          {...register("has_active_symptoms", { required: true })}
+                        />
+                        <label htmlFor="has_active_symptoms_no" className="ml-2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                    {errors.has_active_symptoms && (
+                      <span className="text-red-400">
+                        *This field is required
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
 
