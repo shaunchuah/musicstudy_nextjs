@@ -122,6 +122,7 @@ export default function Fatigue() {
                     {...register("cucq_5", {
                       min: 0,
                       max: 14,
+                      required: true,
                     })}
                   />
 
