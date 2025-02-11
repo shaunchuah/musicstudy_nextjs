@@ -98,14 +98,43 @@ export default function Fatigue() {
             <div>
               <p className="mb-1">
                 This fatigue predictor is for research use/interest only and has
-                not been validated. We may record your responses to improve the
-                model.
+                not been validated. We may record responses to ensure the
+                backend can handle the load.
               </p>
+              
             </div>
           </div>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700 mb-4">
+              <div class="">
+                <h3 className="text-2xl font-medium mb-4">Baseline</h3>
+                <div class="mb-4">
+                  <label for="height" class="mb-4 text-gray-600 ">
+                    On how many days over the last 14 days have you felt
+                    fatigue? (0-14)
+                  </label>
+                  <input
+                    type="number"
+                    id="height"
+                    name="height"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                    placeholder="Fatigue Days"
+                    {...register("cucq_5", {
+                      min: 0,
+                      max: 14,
+                    })}
+                  />
 
-          <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700">
-            <form onSubmit={handleSubmit(onSubmit)}>
+                  {errors.cucq_5 && (
+                    <span className="text-red-400">
+                      *Enter a number between 0-14
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700">
               <div className="grid md:grid-cols-2 gap-4 mb-4">
                 <div class="mb-4 ">
                   <h3 className="text-2xl font-medium mb-4">Demographics</h3>
@@ -294,9 +323,14 @@ export default function Fatigue() {
                           type="radio"
                           id="has_active_symptoms_yes"
                           value="1"
-                          {...register("has_active_symptoms", { required: true })}
+                          {...register("has_active_symptoms", {
+                            required: true,
+                          })}
                         />
-                        <label htmlFor="has_active_symptoms_yes" className="ml-2">
+                        <label
+                          htmlFor="has_active_symptoms_yes"
+                          className="ml-2"
+                        >
                           Yes
                         </label>
                       </div>
@@ -305,9 +339,14 @@ export default function Fatigue() {
                           type="radio"
                           id="has_active_symptoms_no"
                           value="0"
-                          {...register("has_active_symptoms", { required: true })}
+                          {...register("has_active_symptoms", {
+                            required: true,
+                          })}
                         />
-                        <label htmlFor="has_active_symptoms_no" className="ml-2">
+                        <label
+                          htmlFor="has_active_symptoms_no"
+                          className="ml-2"
+                        >
                           No
                         </label>
                       </div>
@@ -970,9 +1009,8 @@ export default function Fatigue() {
                   "Get Prediction"
                 )}
               </button>
-            </form>
-          </div>
-
+            </div>
+          </form>
           <div>
             {isLoading ? (
               <div className="flex items-center justify-center bg-white rounded-lg p-4 md:p-8 text-gray-700 mt-8 text-lg">
@@ -1053,14 +1091,18 @@ export default function Fatigue() {
                     <p>
                       Input Data Formatting:{" "}
                       <span className="font-bold">
-                        {result.execution_time_ms.input_data_formatting.toFixed(2)}{" "}
+                        {result.execution_time_ms.input_data_formatting.toFixed(
+                          2
+                        )}{" "}
                         ms
                       </span>
                     </p>
                     <p>
                       Dataframe Preparation:{" "}
                       <span className="font-bold">
-                        {result.execution_time_ms.dataframe_preparation.toFixed(2)}{" "}
+                        {result.execution_time_ms.dataframe_preparation.toFixed(
+                          2
+                        )}{" "}
                         ms
                       </span>
                     </p>
@@ -1074,7 +1116,9 @@ export default function Fatigue() {
                     <p>
                       Force Plot Generation:{" "}
                       <span className="font-bold">
-                        {result.execution_time_ms.force_plot_generation.toFixed(2)}{" "}
+                        {result.execution_time_ms.force_plot_generation.toFixed(
+                          2
+                        )}{" "}
                         ms
                       </span>
                     </p>
