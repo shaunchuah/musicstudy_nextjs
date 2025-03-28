@@ -150,7 +150,186 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-4xl mx-auto gap-4 lg:gap-6">
-        <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <Image
+                  src="/static/images/ppi_meeting.jpg"
+                  alt="End of 2023 patient public involvement group meeting"
+                  height="480"
+                  width="480"
+                  priority={true}
+                  className="rounded-full"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl mb-4">
+                  What happens if patients take the lead in an IBD Project?
+                </h2>
+                <blockquote class="twitter-tweet">
+                  <p lang="en" dir="ltr">
+                    What happens if patients take the lead in an IBD project?{" "}
+                    <br />
+                    <br />
+                    Result: A wholly patient-led paper on &#39;&#39;What it
+                    means to live with IBD&#39;.
+                    <br />
+                    <br />
+                    🧵on how our patient-public involvement (PPI){" "}
+                    <a href="https://twitter.com/hashtag/IBD?src=hash&amp;ref_src=twsrc%5Etfw">
+                      #IBD
+                    </a>{" "}
+                    came about....
+                    <a href="https://twitter.com/hashtag/Crohns?src=hash&amp;ref_src=twsrc%5Etfw">
+                      #Crohns
+                    </a>{" "}
+                    <a href="https://twitter.com/hashtag/colitis?src=hash&amp;ref_src=twsrc%5Etfw">
+                      #colitis
+                    </a>{" "}
+                    <a href="https://twitter.com/hashtag/PPIE?src=hash&amp;ref_src=twsrc%5Etfw">
+                      #PPIE
+                    </a>{" "}
+                    <a href="https://twitter.com/hashtag/patientinvolvement?src=hash&amp;ref_src=twsrc%5Etfw">
+                      #patientinvolvement
+                    </a>
+                    <a href="https://t.co/ewo9otZQC3">
+                      https://t.co/ewo9otZQC3
+                    </a>
+                  </p>
+                  &mdash; Edinburgh IBD Science (@Edin_IBDScience){" "}
+                  <a href="https://twitter.com/Edin_IBDScience/status/1903842652522500525?ref_src=twsrc%5Etfw">
+                    March 23, 2025
+                  </a>
+                </blockquote>{" "}
+                <p className="mb-2">
+                  Read the preprint
+                  <a
+                    href="https://www.medrxiv.org/content/10.1101/2025.03.19.25324163v1"
+                    target="_blank"
+                    className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                  >
+                    here
+                  </a>
+                  .
+                </p>
+                <p className="mb-2">We've also included a transcript of the thread for accessibility:</p>
+                <details>
+                  <summary className="cursor-pointer font-semibold text-[#264653] hover:text-[#e76f51]">
+                    Click to view full thread transcript
+                  </summary>
+                                    <div className="mt-3 ml-4 pl-3 border-l-2 border-gray-300">
+                    <p className="mb-2">
+                      What happens if patients take the lead in an IBD project?
+                    </p>
+                    <p className="mb-2">
+                      Result: A wholly patient-led paper on ''What it means to live with IBD'.
+                    </p>
+                    <p className="mb-2">
+                      🧵on how our patient-public involvement (PPI) #IBD came about....
+                    </p>
+                    
+                    <p className="mb-2">
+                      In 2023, 1315 patients with IBD in UK and across the world took part in our work, aided by 
+                      <a href="https://x.com/CMF_UK" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@CMF_UK</a>,
+                      <a href="https://x.com/CrohnsColitisC3" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@CrohnsColitisC3</a>, and
+                      <a href="https://x.com/CrohnsColitisR" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@CrohnsColitisR</a>.
+                      They left 415 specific comments about IBD and their lives.
+                    </p>
+                    
+                    <p className="mb-2">
+                      Precious data to analyse and study. But how to capture, analyse and present this?
+                    </p>
+                    
+                    <p className="mb-2">
+                      Our IBD PPI volunteers, Molly 
+                      <a href="https://x.com/halligan_molly" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@halligan_molly</a> and Tricia
+                      <a href="https://x.com/Patricia_EKelly" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@Patricia_EKelly</a> came out with the idea of a 'Patient-led' effort. We handed over the reins, 100% to our fab patient group.
+                    </p>
+                    
+                    <p className="mb-2">
+                      They met, discussed and wrote up this paper over 6 months with 
+                      <a href="https://x.com/emmapryde7" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@emmapryde7</a>,
+                      <a href="https://x.com/AerinET" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@AerinET</a> and Destiny.
+                    </p>
+                    
+                    <p className="mb-2">
+                      The result is a radiant, fresh, empowering and positive perspective. Produced by the patients. But lessons for all. With no input from analytical tools, clinicians, pharma input, KOLs, researchers.
+                    </p>
+                    
+                    <p className="mb-2">
+                      The paper is a great read, note 24 pages...(with a cup of tea?).
+                    </p>
+                    
+                    <p className="mb-2">
+                      'This was an incredibly rewarding process and an opportunity to represent people living with IBD in a totally new way'
+                    </p>
+                    
+                    <p className="mb-2">
+                      Molly led this group effort and originally introduced this at CCUK Patient Day in 2024.
+                    </p>
+                    
+                    <p className="mb-2">
+                      Thank you to all our IBD patients, also our clinicians 
+                      <a href="https://x.com/GwoTzerHo" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@GwoTzerHo</a>,
+                      <a href="https://x.com/chershiong" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@chershiong</a>,
+                      <a href="https://x.com/reb_hal" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@reb_hal</a>,
+                      <a href="https://x.com/EdinUni_IRR" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@EdinUni_IRR</a>
+                    </p>
+                    
+                    <p className="mb-2">
+                      Next steps? Watch this space!
+                    </p>
+                    
+                    <p className="mb-2">
+                      Long form paper also available at www.musicstudy.uk
+                    </p>
+                    
+                    <p className="mb-2">
+                      And 
+                      < a href="https://x.com/HelmsleyTrust" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@HelmsleyTrust</a> for funding the main research allowing this PPIE work to be done!
+                    </p>
+      
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              28 March 2025
+            </div>
+          </div>
+
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div>
+                <h2 className="text-2xl mb-4">Our Lives with IBD</h2>
+                <p className="mb-2">
+                  Watch 'Our Lives with IBD', a short documentary film by Hugo
+                  Hemmati. The film features people involved with the MUSIC study discussing their experiences with IBD, while
+                  offering viewers a behind-the-scenes look at laboratory
+                  research in action.
+                </p>
+                <a
+                  href="https://media.ed.ac.uk/media/Our+Lives+with+IBD/1_13bc6268"
+                  target="_blank"
+                  className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
+                >
+                  <Image
+                    src="/static/images/our_lives_with_ibd_thumbnail.png"
+                    alt="Our Lives with IBD Short Documentary Film"
+                    height="1755"
+                    width="873"
+                    priority={true}
+                    className="rounded-lg"
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              28 March 2025
+            </div>
+          </div>
+
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
             <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
               <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                 <Image
@@ -164,24 +343,27 @@ export default function Home() {
               </div>
               <div>
                 <h2 className="text-2xl mb-4">
-                  You've told us that fatigue is one of the key things we should study
+                  You've told us that fatigue is one of the key things we should
+                  study
                 </h2>
                 <p className="mb-2">
-                  We performed an online survey last year and are now pleased to present the initial results of a joint effort between patients and clinicians to study fatigue in IBD.
+                  We performed an online survey last year and are now pleased to
+                  present the initial results of a joint effort between patients
+                  and clinicians to study fatigue in IBD.
                 </p>
-                
+
                 <p className="mb-2">
-                  Our patient-public involvement group summarises the full findings of the online survey and
-                  we have built an initial machine learning pipeline to better understand fatigue in IBD.
+                  Our patient-public involvement group summarises the full
+                  findings of the online survey and we have built an initial
+                  machine learning pipeline to better understand fatigue in IBD.
                 </p>
-                
+
                 <Link
                   href="/results"
                   className=" hover:text-[#e76f51] pr-1 underline underline-offset-2"
                 >
                   Read more
                 </Link>
-                
               </div>
             </div>
             <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">

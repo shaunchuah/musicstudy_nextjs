@@ -72,7 +72,9 @@ export default function Results() {
                           className="rounded-full"
                         />
                         <div class="md:flex items-center md:divide-x-2 divide-gray-500 ">
-                          <div class="md:pr-3 font-medium flex-none">Molly Halligan</div>
+                          <div class="md:pr-3 font-medium flex-none">
+                            Molly Halligan
+                          </div>
                           <div class="md:pl-3 text-sm">
                             on behalf of the Gut Research Group Patient PPIE
                             team
@@ -151,8 +153,34 @@ export default function Results() {
                             d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                           ></path>
                         </svg>
-                        PDF
+                        Full Paper PDF
                       </a>
+
+                      <a
+                        href="https://www.medrxiv.org/content/10.1101/2025.03.19.25324163v1"
+                        target="_blank"
+                        className="flex items-center hover:text-[#e76f51]"
+                      >
+                        <svg
+                          data-slot="icon"
+                          fill="none"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          className="mr-1 w-4 h-4"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                          ></path>
+                        </svg>
+                        Preprint for Publication
+                      </a>
+
+                      
                     </div>
                   </div>
                   <div className="text-sm text-gray-400">
@@ -303,8 +331,6 @@ export default function Results() {
                         </svg>
                         GitHub Repository
                       </a>
-
-                      
                     </div>
                   </div>
                   <div className="text-sm text-gray-400">
