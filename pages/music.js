@@ -57,7 +57,7 @@ export default function Participants() {
             <p className="mb-4">We are looking for patients:</p>
             <ul className="list-disc list-outside pl-4 space-y-4">
               <li>Age 16 and above</li>
-              <li>Have Crohn's disease or ulcerative colitis</li>
+              <li>Have Crohn&apos;s disease or ulcerative colitis</li>
               <li>Referred by their NHS doctor</li>
               <li>Edinburgh, Glasgow or Dundee</li>
             </ul>
@@ -79,7 +79,7 @@ export default function Participants() {
             </p>
             <p>
               This may allow them to make treatment adjustments and check on how
-              you're doing more closely than usual. For full details, please
+              you&apos;re doing more closely than usual. For full details, please
               read the patient information sheet below.
             </p>
           </div>

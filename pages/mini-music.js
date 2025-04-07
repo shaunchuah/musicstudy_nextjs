@@ -40,9 +40,9 @@ export default function Participants() {
           <div className="text-xl space-y-4 max-w-prose">
             <p>We aim to investigate two things:</p>
             <p>
-              How damage-associated molecular patterns (DAMPs) or 'danger
-              signals' could be used as a test of disease activity in children
-              and young people with IBD (Crohn's disease or ulcerative colitis
+              How damage-associated molecular patterns (DAMPs) or &apos;danger
+              signals&apos; could be used as a test of disease activity in children
+              and young people with IBD (Crohn&apos;s disease or ulcerative colitis
               or IBD-unclassified). We want to find out if DAMPs can tell us how
               your IBD is doing and if DAMPs can tell us more about how your
               bowel is compared to the current blood and stool tests available
@@ -50,7 +50,7 @@ export default function Participants() {
             </p>
             <p>
               How do the bacteria in the mouth and the rest of your gut (your
-              microbiome) change in Crohn's disease and ulcerative colitis and
+              microbiome) change in Crohn&apos;s disease and ulcerative colitis and
               can these be used to predict disease activity?
             </p>
           </div>
@@ -92,7 +92,7 @@ export default function Participants() {
             <ul className="list-disc list-outside pl-4 space-y-4">
               <li>Age 6 to 17 years</li>
               <li>
-                Who have a diagnosis, or suspected diagnosis, of Crohn's disease
+                Who have a diagnosis, or suspected diagnosis, of Crohn&apos;s disease
                 (CD) or ulcerative colitis (UC) or or IBD-unclassified (IBDU)
               </li>
               <li>Who have been referred by one of their NHS doctors</li>
@@ -123,7 +123,7 @@ export default function Participants() {
             </p>
             <p>
               This may allow them to make treatment adjustments and check on how
-              you're doing more closely than usual. For full details, please
+              you&apos;re doing more closely than usual. For full details, please
               read the age-specific patient information sheet.
             </p>
           </div>

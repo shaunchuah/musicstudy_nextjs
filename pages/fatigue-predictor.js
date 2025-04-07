@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import MotionPage from "../components/MotionPage";
 import SectionHeader from "../components/SectionHeader";
 import SectionWrapper from "../components/SectionWrapper";
@@ -263,7 +264,7 @@ export default function Fatigue() {
                       {...register("study_group", { required: true })}
                     >
                       <option value="">Select...</option>
-                      <option value="cd">Crohn's Disease</option>
+                      <option value="cd">Crohn&apos;s Disease</option>
                       <option value="uc">Ulcerative Colitis</option>
                       <option value="ibdu">
                         Inflammatory Bowel Disease Unclassified
