@@ -84,65 +84,65 @@ export default function Participants() {
             </p>
           </div>
 
-          <ol class="items-center flex mx-auto">
-            <li class="relative mb-6 sm:mb-0 w-1/5">
-              <div class="flex items-center">
-                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+          <ol className="items-center flex mx-auto">
+            <li className="relative mb-6 sm:mb-0 w-1/5">
+              <div className="flex items-center">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   0
                 </div>
-                <div class="flex w-full bg-[#264653] h-0.5 "></div>
+                <div className="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
-              <div class="mt-3 sm:pr-8">
-                <h3 class="sm:text-lg font-semibold text-gray-900 ">Start</h3>
+              <div className="mt-3 sm:pr-8">
+                <h3 className="sm:text-lg font-semibold text-gray-900 ">Start</h3>
               </div>
             </li>
-            <li class="relative mb-6 sm:mb-0 w-1/5">
-              <div class="flex items-center">
-                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+            <li className="relative mb-6 sm:mb-0 w-1/5">
+              <div className="flex items-center">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   3
                 </div>
-                <div class="flex w-full bg-[#264653] h-0.5 "></div>
+                <div className="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
-              <div class="mt-3 sm:pr-8">
-                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+              <div className="mt-3 sm:pr-8">
+                <h3 className="sm:text-lg font-semibold text-gray-900 ">
                   3 Months
                 </h3>
               </div>
             </li>
-            <li class="relative mb-6 sm:mb-0 w-1/5">
-              <div class="flex items-center">
-                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+            <li className="relative mb-6 sm:mb-0 w-1/5">
+              <div className="flex items-center">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   6
                 </div>
-                <div class="flex w-full bg-[#264653] h-0.5 "></div>
+                <div className="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
-              <div class="mt-3 sm:pr-8">
-                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+              <div className="mt-3 sm:pr-8">
+                <h3 className="sm:text-lg font-semibold text-gray-900 ">
                   6 Months
                 </h3>
               </div>
             </li>
-            <li class="relative mb-6 sm:mb-0 w-1/5">
-              <div class="flex items-center">
-                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+            <li className="relative mb-6 sm:mb-0 w-1/5">
+              <div className="flex items-center">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   9
                 </div>
-                <div class="flex w-full bg-[#264653] h-0.5 "></div>
+                <div className="flex w-full bg-[#264653] h-0.5 "></div>
               </div>
-              <div class="mt-3 sm:pr-8">
-                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+              <div className="mt-3 sm:pr-8">
+                <h3 className="sm:text-lg font-semibold text-gray-900 ">
                   9 Months
                 </h3>
               </div>
             </li>
-            <li class="relative mb-6 sm:mb-0 w-1/5">
-              <div class="flex items-center">
-                <div class="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+            <li className="relative mb-6 sm:mb-0 w-1/5">
+              <div className="flex items-center">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
                   12
                 </div>
               </div>
-              <div class="mt-3 sm:pr-8">
-                <h3 class="sm:text-lg font-semibold text-gray-900 ">
+              <div className="mt-3 sm:pr-8">
+                <h3 className="sm:text-lg font-semibold text-gray-900 ">
                   12 Months
                 </h3>
               </div>

@@ -24,7 +24,7 @@ export default function Results() {
                 Gwo-Tzer Ho
               </div>
               <div className="mb-8">
-                <div class="grid lg:grid-cols-2 gap-8">
+                <div className="grid lg:grid-cols-2 gap-8">
                   <div>
                     <figure className="border rounded-lg p-4 shadow-md">
                       <svg
@@ -37,7 +37,7 @@ export default function Results() {
                         <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
                       </svg>
                       <blockquote>
-                        <p class="text-lg">
+                        <p className="text-lg">
                           This draft report analyses and discusses patient
                           reported concerns from a survey exploring Wellbeing
                           living with Inflammatory Bowel Disease (IBD). This
@@ -63,7 +63,7 @@ export default function Results() {
                         </p>
                       </blockquote>
 
-                      <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                      <figcaption className="flex items-center justify-center mt-6 space-x-3">
                         <Image
                           src="/static/images/ppi.jpg"
                           alt="Molly Halligan"
@@ -71,11 +71,11 @@ export default function Results() {
                           height="36"
                           className="rounded-full"
                         />
-                        <div class="md:flex items-center md:divide-x-2 divide-gray-500 ">
-                          <div class="md:pr-3 font-medium flex-none">
+                        <div className="md:flex items-center md:divide-x-2 divide-gray-500 ">
+                          <div className="md:pr-3 font-medium flex-none">
                             Molly Halligan
                           </div>
-                          <div class="md:pl-3 text-sm">
+                          <div className="md:pl-3 text-sm">
                             on behalf of the Gut Research Group Patient PPIE
                             team
                           </div>
@@ -95,7 +95,7 @@ export default function Results() {
                         <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
                       </svg>
                       <blockquote>
-                        <p class="text-lg">
+                        <p className="text-lg">
                           This is an immensely impactful work driven entirely by
                           our patient group. As both clinician and researcher, I
                           (and my whole team) have learned a lot and this have
@@ -104,7 +104,7 @@ export default function Results() {
                           wholly led by our patients.
                         </p>
                       </blockquote>
-                      <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                      <figcaption className="flex items-center justify-center mt-6 space-x-3">
                         <Image
                           src="/static/images/gth.jpg"
                           alt="Gwo-Tzer Ho"
@@ -112,11 +112,11 @@ export default function Results() {
                           height="36"
                           className="rounded-full"
                         />
-                        <div class="md:flex items-center md:divide-x-2 divide-gray-500 ">
-                          <div class="md:pr-3 font-medium flex-none">
+                        <div className="md:flex items-center md:divide-x-2 divide-gray-500 ">
+                          <div className="md:pr-3 font-medium flex-none">
                             Professor Gwo-Tzer Ho
                           </div>
-                          <div class="md:pl-3 text-sm">
+                          <div className="md:pl-3 text-sm">
                             on behalf of the MUSIC IBD team
                           </div>
                         </div>
@@ -140,7 +140,7 @@ export default function Results() {
                         <svg
                           data-slot="icon"
                           fill="none"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
@@ -148,8 +148,8 @@ export default function Results() {
                           className="mr-1 w-4 h-4"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                           ></path>
                         </svg>
@@ -164,7 +164,7 @@ export default function Results() {
                         <svg
                           data-slot="icon"
                           fill="none"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
@@ -172,8 +172,8 @@ export default function Results() {
                           className="mr-1 w-4 h-4"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                           ></path>
                         </svg>
@@ -269,7 +269,7 @@ export default function Results() {
                         <svg
                           data-slot="icon"
                           fill="none"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
@@ -277,8 +277,8 @@ export default function Results() {
                           className="mr-1 w-4 h-4"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                           ></path>
                         </svg>
@@ -293,7 +293,7 @@ export default function Results() {
                         <svg
                           data-slot="icon"
                           fill="none"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
@@ -301,8 +301,8 @@ export default function Results() {
                           className="mr-1 w-4 h-4"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                           ></path>
                         </svg>
@@ -316,7 +316,7 @@ export default function Results() {
                         <svg
                           data-slot="icon"
                           fill="none"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
@@ -324,8 +324,8 @@ export default function Results() {
                           className="mr-1 w-4 h-4"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                           ></path>
                         </svg>

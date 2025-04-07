@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <main className={`${merriweather.variable} font-sans ${roboto.variable}`}>
         <Layout>
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </Layout>

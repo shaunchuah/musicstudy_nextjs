@@ -77,12 +77,12 @@ export default function Fatigue() {
           <SectionHeader title="Fatigue Predictor" />
 
           <div
-            class=" items-center px-4 md:px-8 py-4 mb-4 text-red-800 rounded-lg bg-red-100 "
+            className=" items-center px-4 md:px-8 py-4 mb-4 text-red-800 rounded-lg bg-red-100 "
             role="alert"
           >
             <div className="flex flex-row items-center mb-2">
               <svg
-                class="shrink-0 inline w-4 h-4 mr-2"
+                className="shrink-0 inline w-4 h-4 mr-2"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -90,9 +90,9 @@ export default function Fatigue() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
               </svg>
-              <span class="sr-only">Info</span>
+              <span className="sr-only">Info</span>
               <div>
-                <span class="font-medium">Disclaimer</span>
+                <span className="font-medium">Disclaimer</span>
               </div>
             </div>
             <div>
@@ -106,10 +106,10 @@ export default function Fatigue() {
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700 mb-4">
-              <div class="">
+              <div className="">
                 <h3 className="text-2xl font-medium mb-4">Baseline</h3>
-                <div class="mb-4">
-                  <label for="height" class="mb-4 text-gray-600 ">
+                <div className="mb-4">
+                  <label for="height" className="mb-4 text-gray-600 ">
                     On how many days over the last 14 days have you felt
                     fatigue? (0-14)
                   </label>
@@ -117,7 +117,7 @@ export default function Fatigue() {
                     type="number"
                     id="height"
                     name="height"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
                     placeholder="Fatigue Days"
                     {...register("cucq_5", {
                       min: 0,
@@ -137,18 +137,18 @@ export default function Fatigue() {
 
             <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700">
               <div className="grid md:grid-cols-2 gap-4 mb-4">
-                <div class="mb-4 ">
+                <div className="mb-4 ">
                   <h3 className="text-2xl font-medium mb-4">Demographics</h3>
 
-                  <div class="mb-4">
-                    <label for="age" class="mb-4 text-gray-600 ">
+                  <div className="mb-4">
+                    <label for="age" className="mb-4 text-gray-600 ">
                       Age
                     </label>
                     <input
                       type="number"
                       id="age"
                       name="age"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
                       placeholder="Age"
                       {...register("age", { required: true })}
                     />
@@ -160,14 +160,14 @@ export default function Fatigue() {
                     )}
                   </div>
 
-                  <div class="mb-4">
-                    <label for="sex" class="mb-4 text-gray-600 ">
+                  <div className="mb-4">
+                    <label for="sex" className="mb-4 text-gray-600 ">
                       Biological Sex
                     </label>
                     <select
                       id="sex"
                       name="sex"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
                       placeholder="Biological Sex"
                       {...register("sex", { required: true })}
                     >
@@ -181,15 +181,15 @@ export default function Fatigue() {
                       </span>
                     )}
                   </div>
-                  <div class="mb-4">
-                    <label for="height" class="mb-4 text-gray-600 ">
+                  <div className="mb-4">
+                    <label for="height" className="mb-4 text-gray-600 ">
                       Height (cm)
                     </label>
                     <input
                       type="number"
                       id="height"
                       name="height"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
                       placeholder="Height in cm"
                       {...register("height", {
                         required: true,
@@ -205,15 +205,15 @@ export default function Fatigue() {
                     )}
                   </div>
 
-                  <div class="mb-4">
-                    <label for="weight" class="mb-4 text-gray-600 ">
+                  <div className="mb-4">
+                    <label for="weight" className="mb-4 text-gray-600 ">
                       Weight (kg)
                     </label>
                     <input
                       type="number"
                       id="weight"
                       name="weight"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
                       placeholder="Weight"
                       {...register("weight", { required: true })}
                     />
@@ -224,14 +224,14 @@ export default function Fatigue() {
                       </span>
                     )}
                   </div>
-                  <div class="">
-                    <label for="is_smoker" class="mb-4 text-gray-600 ">
+                  <div className="">
+                    <label for="is_smoker" className="mb-4 text-gray-600 ">
                       Smoking Status
                     </label>
                     <select
                       id="is_smoker"
                       name="is_smoker"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
                       placeholder="Smoking Status"
                       {...register("is_smoker", { required: true })}
                     >
@@ -251,14 +251,14 @@ export default function Fatigue() {
                   <h3 className="text-2xl font-medium mb-4">
                     Diagnosis Details
                   </h3>
-                  <div class="mb-4">
-                    <label for="study_group" class="mb-4 text-gray-600 ">
+                  <div className="mb-4">
+                    <label for="study_group" className="mb-4 text-gray-600 ">
                       Diagnosis
                     </label>
                     <select
                       id="study_group"
                       name="study_group"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
                       placeholder="Diagnosis"
                       {...register("study_group", { required: true })}
                     >
@@ -276,15 +276,15 @@ export default function Fatigue() {
                     )}
                   </div>
 
-                  <div class="mb-4">
-                    <label for="age_at_diagnosis" class="mb-4 text-gray-600 ">
+                  <div className="mb-4">
+                    <label for="age_at_diagnosis" className="mb-4 text-gray-600 ">
                       Age at Diagnosis
                     </label>
                     <input
                       type="number"
                       id="age_at_diagnosis"
                       name="age_at_diagnosis"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
                       placeholder="Age at Diagnosis"
                       {...register("age_at_diagnosis", { required: true })}
                     />
@@ -296,15 +296,15 @@ export default function Fatigue() {
                     )}
                   </div>
 
-                  <div class="mb-4">
-                    <label for="date_of_diagnosis" class="mb-4 text-gray-600 ">
+                  <div className="mb-4">
+                    <label for="date_of_diagnosis" className="mb-4 text-gray-600 ">
                       Date of Diagnosis
                     </label>
                     <input
                       type="date"
                       id="date_of_diagnosis"
                       name="date_of_diagnosis"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 px-4 py-2"
                       {...register("date_of_diagnosis", { required: true })}
                     />
                     {errors.date_of_diagnosis && (
@@ -980,7 +980,7 @@ export default function Fatigue() {
 
               <button
                 type="submit"
-                class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg w-full sm:w-auto px-5 py-2.5 text-center "
+                className="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg w-full sm:w-auto px-5 py-2.5 text-center "
               >
                 {isLoading ? (
                   <>

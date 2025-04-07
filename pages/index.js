@@ -7,6 +7,7 @@ import SectionWrapper from "../components/SectionWrapper";
 import SectionWrapperWhite from "../components/SectionWrapperWhite";
 import SectionWrapperHero from "../components/SectionWrapperHero";
 import MaxWidthControl from "../components/MaxWidthControl";
+import Script from "next/script";
 
 export default function Home() {
   const consoleStyle =
@@ -21,17 +22,13 @@ export default function Home() {
   return (
     <main className="flex flex-col w-full">
       <Head>
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script>
+        <Script src="https://platform.twitter.com/widgets.js" />
       </Head>
       <SectionWrapperHero id="hero">
         <div className="md:grid grid-cols-3 mt-20">
           <div className="col-span-2">
             <div className="flex mb-2 md:mb-0">
-              <div class="text-5xl md:text-7xl md:-ml-1">
+              <div className="text-5xl md:text-7xl md:-ml-1">
                 MUSIC & Mini-MUSIC
               </div>
             </div>
@@ -89,28 +86,29 @@ export default function Home() {
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow flex flex-wrap gap-4 justify-center lg:justify-start items-start mb-6">
               <div>
                 <div className="md:flex flex-row items-start gap-4">
-                  <div className="flex w-full md:w-1/3">
+                  <div className="flex w-full md:w-1/4 md:flex-none">
                     <div className="mx-auto md:mx-0 mb-4 md:mb-0">
                       <Image
                         src="/static/images/ppi.jpg"
                         alt="Molly Halligan shares her experience"
-                        width="100"
-                        height="100"
+                        width="150"
+                        height="150"
                         className="rounded-full"
                       />
                     </div>
                   </div>
                   <div>
-                    <h2 className="text-xl">
-                      Molly Halligan, Patient Representative
+                    <h2 className="text-xl mb-2">
+                      From Patient to Research Partner
                     </h2>
                     <p className="mb-6">
-                      Listen to her experience on taking part in IBD research.
+                      Hear Molly share her journey as both patient and research
+                      advocate.
                     </p>
                   </div>
                 </div>
 
-                <audio id="marvel_intro" controls className="mb-4">
+                <audio id="music_intro" controls className="mb-4">
                   <source
                     src="/static/files/musicintromolly.mp3"
                     type="audio/mpeg"
@@ -121,16 +119,34 @@ export default function Home() {
             </div>
             <div className="bg-white text-gray-800 border p-6 rounded-lg shadow flex flex-wrap gap-4 justify-center lg:justify-start items-start mb-6">
               <div>
-                <h2 className="text-xl">
-                  John Rysdale, Patient Representative
-                </h2>
-                <p className="mb-6">
-                  on what this study is about and why you should consider taking
-                  part.
-                </p>
-                <audio id="marvel_intro" controls className="mb-4">
+                <div className="md:flex flex-row items-start gap-4">
+                  <div className="flex w-full md:w-1/4 md:flex-none">
+                    <div className="mx-auto md:mx-0 mb-4 md:mb-0">
+                      <Image
+                        src="/static/images/ppi_meeting.jpg"
+                        alt="Our patients take the lead"
+                        width="150"
+                        height="150"
+                        className="rounded-full"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <h2 className="text-xl mb-2">
+                      When Patients Lead: Transforming IBD Research
+                    </h2>
+                    <p className="mb-6">
+                      This podcast explores our innovative approach where
+                      patients—not clinicians—analyzed and interpreted data from
+                      hundreds of people living with IBD, revealing perspectives
+                      often missed in traditional research.
+                    </p>
+                  </div>
+                </div>
+
+                <audio id="music_intro" controls className="mb-4">
                   <source
-                    src="/static/files/musicintrojon.mp3"
+                    src="/static/files/musicintromolly.mp3"
                     type="audio/mpeg"
                   />
                   Your browser does not support the audio element.
@@ -164,9 +180,13 @@ export default function Home() {
               </div>
               <div>
                 <h2 className="text-2xl mb-4">
-                  What happens if patients take the lead in an IBD Project?
+                  <Link href="/patients-taking-the-lead" legacyBehavior>
+                    <a className=" hover:text-[#e76f51]">
+                      What happens if patients take the lead in an IBD Project?
+                    </a>
+                  </Link>
                 </h2>
-                <blockquote class="twitter-tweet">
+                <blockquote className="twitter-tweet">
                   <p lang="en" dir="ltr">
                     What happens if patients take the lead in an IBD project?{" "}
                     <br />
@@ -212,83 +232,180 @@ export default function Home() {
                   </a>
                   .
                 </p>
-                <p className="mb-2">We've also included a transcript of the thread for accessibility:</p>
+                <p className="mb-2">
+                  We've also included a transcript of the thread for
+                  accessibility:
+                </p>
                 <details>
                   <summary className="cursor-pointer font-semibold text-[#264653] hover:text-[#e76f51]">
                     Click to view full thread transcript
                   </summary>
-                                    <div className="mt-3 ml-4 pl-3 border-l-2 border-gray-300">
+                  <div className="mt-3 ml-4 pl-3 border-l-2 border-gray-300">
                     <p className="mb-2">
                       What happens if patients take the lead in an IBD project?
                     </p>
                     <p className="mb-2">
-                      Result: A wholly patient-led paper on ''What it means to live with IBD'.
+                      Result: A wholly patient-led paper on ''What it means to
+                      live with IBD'.
                     </p>
                     <p className="mb-2">
-                      🧵on how our patient-public involvement (PPI) #IBD came about....
+                      🧵on how our patient-public involvement (PPI) #IBD came
+                      about....
                     </p>
-                    
+
                     <p className="mb-2">
-                      In 2023, 1315 patients with IBD in UK and across the world took part in our work, aided by 
-                      <a href="https://x.com/CMF_UK" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@CMF_UK</a>,
-                      <a href="https://x.com/CrohnsColitisC3" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@CrohnsColitisC3</a>, and
-                      <a href="https://x.com/CrohnsColitisR" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@CrohnsColitisR</a>.
-                      They left 415 specific comments about IBD and their lives.
+                      In 2023, 1315 patients with IBD in UK and across the world
+                      took part in our work, aided by
+                      <a
+                        href="https://x.com/CMF_UK"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @CMF_UK
+                      </a>
+                      ,
+                      <a
+                        href="https://x.com/CrohnsColitisC3"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @CrohnsColitisC3
+                      </a>
+                      , and
+                      <a
+                        href="https://x.com/CrohnsColitisR"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @CrohnsColitisR
+                      </a>
+                      . They left 415 specific comments about IBD and their
+                      lives.
                     </p>
-                    
+
                     <p className="mb-2">
-                      Precious data to analyse and study. But how to capture, analyse and present this?
+                      Precious data to analyse and study. But how to capture,
+                      analyse and present this?
                     </p>
-                    
+
                     <p className="mb-2">
-                      Our IBD PPI volunteers, Molly 
-                      <a href="https://x.com/halligan_molly" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@halligan_molly</a> and Tricia
-                      <a href="https://x.com/Patricia_EKelly" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@Patricia_EKelly</a> came out with the idea of a 'Patient-led' effort. We handed over the reins, 100% to our fab patient group.
+                      Our IBD PPI volunteers, Molly
+                      <a
+                        href="https://x.com/halligan_molly"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @halligan_molly
+                      </a>{" "}
+                      and Tricia
+                      <a
+                        href="https://x.com/Patricia_EKelly"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @Patricia_EKelly
+                      </a>{" "}
+                      came out with the idea of a 'Patient-led' effort. We
+                      handed over the reins, 100% to our fab patient group.
                     </p>
-                    
+
                     <p className="mb-2">
-                      They met, discussed and wrote up this paper over 6 months with 
-                      <a href="https://x.com/emmapryde7" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@emmapryde7</a>,
-                      <a href="https://x.com/AerinET" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@AerinET</a> and Destiny.
+                      They met, discussed and wrote up this paper over 6 months
+                      with
+                      <a
+                        href="https://x.com/emmapryde7"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @emmapryde7
+                      </a>
+                      ,
+                      <a
+                        href="https://x.com/AerinET"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @AerinET
+                      </a>{" "}
+                      and Destiny.
                     </p>
-                    
+
                     <p className="mb-2">
-                      The result is a radiant, fresh, empowering and positive perspective. Produced by the patients. But lessons for all. With no input from analytical tools, clinicians, pharma input, KOLs, researchers.
+                      The result is a radiant, fresh, empowering and positive
+                      perspective. Produced by the patients. But lessons for
+                      all. With no input from analytical tools, clinicians,
+                      pharma input, KOLs, researchers.
                     </p>
-                    
+
                     <p className="mb-2">
-                      The paper is a great read, note 24 pages...(with a cup of tea?).
+                      The paper is a great read, note 24 pages...(with a cup of
+                      tea?).
                     </p>
-                    
+
                     <p className="mb-2">
-                      'This was an incredibly rewarding process and an opportunity to represent people living with IBD in a totally new way'
+                      'This was an incredibly rewarding process and an
+                      opportunity to represent people living with IBD in a
+                      totally new way'
                     </p>
-                    
+
                     <p className="mb-2">
-                      Molly led this group effort and originally introduced this at CCUK Patient Day in 2024.
+                      Molly led this group effort and originally introduced this
+                      at CCUK Patient Day in 2024.
                     </p>
-                    
+
                     <p className="mb-2">
-                      Thank you to all our IBD patients, also our clinicians 
-                      <a href="https://x.com/GwoTzerHo" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@GwoTzerHo</a>,
-                      <a href="https://x.com/chershiong" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@chershiong</a>,
-                      <a href="https://x.com/reb_hal" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@reb_hal</a>,
-                      <a href="https://x.com/EdinUni_IRR" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@EdinUni_IRR</a>
+                      Thank you to all our IBD patients, also our clinicians
+                      <a
+                        href="https://x.com/GwoTzerHo"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @GwoTzerHo
+                      </a>
+                      ,
+                      <a
+                        href="https://x.com/chershiong"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @chershiong
+                      </a>
+                      ,
+                      <a
+                        href="https://x.com/reb_hal"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @reb_hal
+                      </a>
+                      ,
+                      <a
+                        href="https://x.com/EdinUni_IRR"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @EdinUni_IRR
+                      </a>
                     </p>
-                    
-                    <p className="mb-2">
-                      Next steps? Watch this space!
-                    </p>
-                    
+
+                    <p className="mb-2">Next steps? Watch this space!</p>
+
                     <p className="mb-2">
                       Long form paper also available at www.musicstudy.uk
                     </p>
-                    
+
                     <p className="mb-2">
-                      And 
-                      < a href="https://x.com/HelmsleyTrust" target="_blank" className=" hover:text-[#e76f51] pl-1 underline underline-offset-2">@HelmsleyTrust</a> for funding the main research allowing this PPIE work to be done!
+                      And
+                      <a
+                        href="https://x.com/HelmsleyTrust"
+                        target="_blank"
+                        className=" hover:text-[#e76f51] pl-1 underline underline-offset-2"
+                      >
+                        @HelmsleyTrust
+                      </a>{" "}
+                      for funding the main research allowing this PPIE work to
+                      be done!
                     </p>
-      
                   </div>
                 </details>
               </div>
@@ -303,10 +420,12 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl mb-4">Our Lives with IBD</h2>
                 <p className="mb-2">
-                  Watch 'Our Lives with IBD', a short documentary film by Hugo
-                  Hemmati. The film features people involved with the MUSIC study discussing their experiences with IBD, while
-                  offering viewers a behind-the-scenes look at laboratory
-                  research in action.
+                  "It's about more than just finding biomarkers — it's about
+                  changing lives." Experience Hugo Hemmati's documentary that
+                  weaves together personal testimonies from people living with
+                  IBD and behind the scenes access to the MUSIC study's research
+                  facilities. Discover how patient experiences are directly
+                  shaping the science that could revolutionize IBD treatment.
                 </p>
                 <a
                   href="https://media.ed.ac.uk/media/Our+Lives+with+IBD/1_13bc6268"
@@ -343,19 +462,21 @@ export default function Home() {
               </div>
               <div>
                 <h2 className="text-2xl mb-4">
-                  You've told us that fatigue is one of the key things we should
-                  study
+                  Tackling IBD Fatigue: Your Priority, Our Research Focus
                 </h2>
                 <p className="mb-2">
-                  We performed an online survey last year and are now pleased to
-                  present the initial results of a joint effort between patients
-                  and clinicians to study fatigue in IBD.
+                  When over 1,300 patients told us fatigue was their most
+                  debilitating symptom, we listened. Our collaborative team of
+                  patients and clinicians has now produced the first findings
+                  from our comprehensive study on this challenging aspect
+                  of IBD.
                 </p>
 
                 <p className="mb-2">
-                  Our patient-public involvement group summarises the full
-                  findings of the online survey and we have built an initial
-                  machine learning pipeline to better understand fatigue in IBD.
+                  Using advanced machine learning techniques guided by patient
+                  insights, we're identifying patterns that could explain why
+                  fatigue persists even during clinical remission — a crucial step
+                  toward developing targeted interventions.
                 </p>
 
                 <Link
@@ -391,15 +512,15 @@ export default function Home() {
                   at the Crohn's and Colitis UK Patient Involvement in Research
                   Day.
                 </p>
-                <div class="mb-2">
+                <div className="mb-2">
                   <iframe
                     className="w-full aspect-video"
                     src="https://www.youtube.com/embed/GhqFOjJuYE0?si=-2cVmp37o4rLHhAz&amp;start=4642"
                     title="YouTube video player"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
                   ></iframe>
                 </div>
                 <a
