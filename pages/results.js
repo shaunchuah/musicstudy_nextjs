@@ -2,7 +2,7 @@ import MotionPage from "../components/MotionPage";
 import SectionHeader from "../components/SectionHeader";
 import SectionWrapper from "../components/SectionWrapper";
 import data from "../data/results.json";
-import Image from "next/image";
+import Image from "next/legacy/image";
 export default function Results() {
   const ResultsData = data;
 

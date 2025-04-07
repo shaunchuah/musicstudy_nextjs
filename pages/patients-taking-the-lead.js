@@ -2,7 +2,7 @@ import MotionPage from "../components/MotionPage";
 import SectionHeader from "../components/SectionHeader";
 import SectionWrapper from "../components/SectionWrapper";
 import data from "../data/results.json";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Head from "next/head";
 import Script from "next/script";
 export default function PatientsTakingTheLead() {
