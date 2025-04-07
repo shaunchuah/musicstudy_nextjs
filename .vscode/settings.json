@@ -1,2 +1,7 @@
 {
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Start with an action word (Add, Update, Fix, Remove, Refactor, Change, Improve, etc). Be extremely detailed and use lots of emojis."
+    }
+  ]
 }

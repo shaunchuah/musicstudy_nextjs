@@ -1,6 +1,6 @@
-# MARVEL Study Website
+# MUSIC Study Website
 
-Website for MARVEL IBD study.
+Website for MUSIC IBD study.
 
 ## Framework
 

@@ -1,12 +1,9 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
-import Head from "next/head";
-import SectionHeader from "../components/SectionHeader";
 import SectionHeaderWhite from "../components/SectionHeaderWhite";
 import SectionWrapper from "../components/SectionWrapper";
 import SectionWrapperWhite from "../components/SectionWrapperWhite";
 import SectionWrapperHero from "../components/SectionWrapperHero";
-import MaxWidthControl from "../components/MaxWidthControl";
 import Script from "next/script";
 
 export default function Home() {
@@ -21,9 +18,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col w-full">
-      <Head>
-        <Script src="https://platform.twitter.com/widgets.js" />
-      </Head>
+      <Script src="https://platform.twitter.com/widgets.js" />
       <SectionWrapperHero id="hero">
         <div className="md:grid grid-cols-3 mt-20">
           <div className="col-span-2">
@@ -135,22 +130,28 @@ export default function Home() {
                     <h2 className="text-xl mb-2">
                       When Patients Lead: Transforming IBD Research
                     </h2>
-                    <p className="mb-6">
-                      This podcast explores our innovative approach where
-                      patients—not clinicians—analyzed and interpreted data from
-                      hundreds of people living with IBD, revealing perspectives
-                      often missed in traditional research.
+                    <audio id="music_intro" controls className="mb-2">
+                      <source
+                        src="/static/files/musicintromolly.mp3"
+                        type="audio/mpeg"
+                      />
+                      Your browser does not support the audio element.
+                    </audio>
+                    <p className="mb-2">
+                      This podcast summarises our recent innovative approach
+                      where patients — not clinicians — analyzed and interpreted
+                      data from hundreds of people living with IBD, revealing
+                      perspectives often missed in traditional research.
                     </p>
+                    <div className="mb-6">
+                      <Link href="/patients-taking-the-lead" legacyBehavior>
+                        <button className="border-[#264653] bg-[#264653] hover:bg-teal-800 text-white py-2 px-6 rounded text-lg">
+                          Explore paper and audiobook
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-
-                <audio id="music_intro" controls className="mb-4">
-                  <source
-                    src="/static/files/musicintromolly.mp3"
-                    type="audio/mpeg"
-                  />
-                  Your browser does not support the audio element.
-                </audio>
               </div>
             </div>
           </div>
@@ -186,6 +187,13 @@ export default function Home() {
                     </a>
                   </Link>
                 </h2>
+                <div className="mb-4">
+                  <Link href="/patients-taking-the-lead" legacyBehavior>
+                    <button className="border-[#264653] bg-[#264653] hover:bg-teal-800 text-white py-2 px-6 rounded text-lg">
+                      Explore paper and audiobook
+                    </button>
+                  </Link>
+                </div>
                 <blockquote className="twitter-tweet">
                   <p lang="en" dir="ltr">
                     What happens if patients take the lead in an IBD project?{" "}
@@ -233,7 +241,7 @@ export default function Home() {
                   .
                 </p>
                 <p className="mb-2">
-                  We've also included a transcript of the thread for
+                  We&apos;ve also included a transcript of the thread for
                   accessibility:
                 </p>
                 <details>
@@ -245,8 +253,8 @@ export default function Home() {
                       What happens if patients take the lead in an IBD project?
                     </p>
                     <p className="mb-2">
-                      Result: A wholly patient-led paper on ''What it means to
-                      live with IBD'.
+                      Result: A wholly patient-led paper on &quot;What it means
+                      to live with IBD&quot;.
                     </p>
                     <p className="mb-2">
                       🧵on how our patient-public involvement (PPI) #IBD came
@@ -305,7 +313,7 @@ export default function Home() {
                       >
                         @Patricia_EKelly
                       </a>{" "}
-                      came out with the idea of a 'Patient-led' effort. We
+                      came out with the idea of a &apos;Patient-led&apos; effort. We
                       handed over the reins, 100% to our fab patient group.
                     </p>
 
@@ -343,9 +351,9 @@ export default function Home() {
                     </p>
 
                     <p className="mb-2">
-                      'This was an incredibly rewarding process and an
+                      &apos;This was an incredibly rewarding process and an
                       opportunity to represent people living with IBD in a
-                      totally new way'
+                      totally new way&apos;
                     </p>
 
                     <p className="mb-2">
@@ -420,10 +428,10 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl mb-4">Our Lives with IBD</h2>
                 <p className="mb-2">
-                  "It's about more than just finding biomarkers — it's about
-                  changing lives." Experience Hugo Hemmati's documentary that
+                  &quot;It&apos;s about more than just finding biomarkers — it&apos;s about
+                  changing lives.&quot; Experience Hugo Hemmati&apos;s documentary that
                   weaves together personal testimonies from people living with
-                  IBD and behind the scenes access to the MUSIC study's research
+                  IBD and behind the scenes access to the MUSIC study&apos;s research
                   facilities. Discover how patient experiences are directly
                   shaping the science that could revolutionize IBD treatment.
                 </p>
@@ -468,15 +476,15 @@ export default function Home() {
                   When over 1,300 patients told us fatigue was their most
                   debilitating symptom, we listened. Our collaborative team of
                   patients and clinicians has now produced the first findings
-                  from our comprehensive study on this challenging aspect
-                  of IBD.
+                  from our comprehensive study on this challenging aspect of
+                  IBD.
                 </p>
 
                 <p className="mb-2">
                   Using advanced machine learning techniques guided by patient
-                  insights, we're identifying patterns that could explain why
-                  fatigue persists even during clinical remission — a crucial step
-                  toward developing targeted interventions.
+                  insights, we&apos;re identifying patterns that could explain why
+                  fatigue persists even during clinical remission — a crucial
+                  step toward developing targeted interventions.
                 </p>
 
                 <Link
@@ -509,7 +517,7 @@ export default function Home() {
                 </h2>
                 <p className="mb-2">
                   We recently presented on how patients influence our research
-                  at the Crohn's and Colitis UK Patient Involvement in Research
+                  at the Crohn&apos;s and Colitis UK Patient Involvement in Research
                   Day.
                 </p>
                 <div className="mb-2">
@@ -564,7 +572,7 @@ export default function Home() {
                   A fantastic afternoon with our Patient Engagement group! We
                   discussed co-production of our IBD wellbeing paper, new work
                   with paediatric IBD, our upcoming Edinburgh Science Festival
-                  show 'Our Lives and IBD'; and welcoming Ola, our new parent
+                  show &apos;Our Lives and IBD&apos; and welcoming Ola, our new parent
                   patient representative!
                 </p>
               </div>
@@ -628,7 +636,7 @@ export default function Home() {
                   Welcome to our new PPI member Aerin Thompson
                 </h2>
                 <p className="mb-2">
-                  I'm Aerin, a first year PhD student at The University of
+                  I&apos;m Aerin, a first year PhD student at The University of
                   Edinburgh studying inflammation resolution and tissue repair.
                 </p>
                 <p className="mb-2">
@@ -708,7 +716,7 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl mb-4">Read and hear from Kris</h2>
                 <p className="mb-2">
-                  Kris is one of our study's patient representative and he
+                  Kris is one of our study&apos;s patient representative and he
                   shares his story with The Herald{" "}
                   <a
                     target="_blank"

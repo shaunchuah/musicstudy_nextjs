@@ -3,6 +3,7 @@ import SectionHeader from "../components/SectionHeader";
 import SectionWrapper from "../components/SectionWrapper";
 import data from "../data/results.json";
 import Image from "next/legacy/image";
+import Link from "next/link";
 export default function Results() {
   const ResultsData = data;
 
@@ -18,173 +19,142 @@ export default function Results() {
                 Patient-led Analysis of Inflammatory Bowel Disease: Defining an
                 Equitable Approach towards Patient-Centric IBD care
               </h2>
-              <div className="text-base mb-8">
+              <div className="text-base mb-4">
                 Molly J Halligan, Aerin E Thompson, Destiny Docherty, Patricia
-                Kelly, Emma Pryde, Crohn's and Colitis UK, Rebecca Hall and
+                Kelly, Emma Pryde, Crohn&apos;s and Colitis UK, Rebecca Hall and
                 Gwo-Tzer Ho
               </div>
               <div className="mb-8">
-                <div className="grid lg:grid-cols-2 gap-8">
+                <div className="mb-4">
+                  <Link href="/patients-taking-the-lead" legacyBehavior>
+                    <button className="border-[#264653] bg-[#264653] hover:bg-teal-800 text-white py-2 px-6 rounded text-lg">
+                      Explore paper and audiobook
+                    </button>
+                  </Link>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Abstract</h3>
+                <div className="space-y-6">
                   <div>
-                    <figure className="border rounded-lg p-4 shadow-md">
-                      <svg
-                        className="w-8 h-8 mx-auto mb-2"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 18 14"
-                      >
-                        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-                      </svg>
-                      <blockquote>
-                        <p className="text-lg">
-                          This draft report analyses and discusses patient
-                          reported concerns from a survey exploring Wellbeing
-                          living with Inflammatory Bowel Disease (IBD). This
-                          report was developed by members of the IBD Patient
-                          Public Involvement (PPI) group who have lived
-                          experience of either Crohn's disease or colitis.
-                          <br />
-                          <br />
-                          The report draws together survey responses and the PPI
-                          group members' experiences of managing wellbeing
-                          living with IBD. The key findings highlight priority
-                          areas for future research, such as improving quality
-                          of life overall, addressing the confusion around the
-                          term 'remission', and improving access to mental
-                          health support. The report also outlines a number of
-                          interconnected issues across the themes explored.
-                          <br />
-                          <br />
-                          Currently, the project group is working to refine this
-                          report and strengthen its ability to influence
-                          clinical-based research, practice, and challenge
-                          traditional models of PPI work.
-                        </p>
-                      </blockquote>
-
-                      <figcaption className="flex items-center justify-center mt-6 space-x-3">
-                        <Image
-                          src="/static/images/ppi.jpg"
-                          alt="Molly Halligan"
-                          width="36"
-                          height="36"
-                          className="rounded-full"
-                        />
-                        <div className="md:flex items-center md:divide-x-2 divide-gray-500 ">
-                          <div className="md:pr-3 font-medium flex-none">
-                            Molly Halligan
-                          </div>
-                          <div className="md:pl-3 text-sm">
-                            on behalf of the Gut Research Group Patient PPIE
-                            team
-                          </div>
-                        </div>
-                      </figcaption>
-                    </figure>
+                    <h3 className="text-xl font-semibold mb-2">Background</h3>
+                    <p className="mb-4">
+                      This paper investigates a patient-led approach to research
+                      on wellbeing in individuals with Inflammatory Bowel
+                      Disease (IBD). Traditionally, Public and Patient
+                      Involvement (PPI) groups have contributed to the design of
+                      clinical research but less often to the analysis and
+                      reporting of findings. This study is wholly led by a
+                      patient group with no direct input from clinicians, thus
+                      presenting an entirely novel and unique patient-centric
+                      view.
+                    </p>
                   </div>
+
                   <div>
-                    <figure className="border rounded-lg p-4 shadow-md">
-                      <svg
-                        className="w-8 h-8 mx-auto mb-2"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 18 14"
+                    <h3 className="text-xl font-semibold mb-2">Methods</h3>
+                    <p className="mb-4">
+                      This report draws on data from a Wellbeing Survey led by
+                      the Edinburgh IBD Science team as part of the MUSIC IBD
+                      cohort study (www.musiscstudy.uk) with over 1375 IBD
+                      respondents over two time periods in 2023 from United
+                      Kingdom. The PPI group utilised high-level topic analysis
+                      and their own lived experience of IBD to explore the 415
+                      free-text survey responses. Regular discussions allowed
+                      the team to reflect on patient narratives and generate
+                      findings collaboratively. PPI members contributed to both
+                      the structure and content of the final write-up, utilising
+                      their diverse backgrounds and skillsets.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Results</h3>
+                    <p className="mb-4">
+                      The analysis provided in-depth exploration of several key
+                      themes affecting wellbeing in IBD patients. Of interest,
+                      the PPI group discussed and explored themes such as &apos;what
+                      does remission mean?&apos;, access to care, expectations of
+                      self-management, mental and women&apos;s health. The patient
+                      narratives highlighted the variability of IBD experiences,
+                      the interconnectedness of these issues, and the importance
+                      of holistic, patient-centric approaches to care. The
+                      findings emphasise the necessity for improved support,
+                      both within and beyond healthcare settings.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Conclusion</h3>
+                    <p>
+                      This patient-led research approach demonstrates that
+                      allowing patients to lead in analysis (&apos;taking the reins&apos;)
+                      and reporting provides deeper and impactful insights into
+                      IBD experiences. By integrating patient perspectives, this
+                      study advocates for a patient-dominant approach to
+                      research and care, which can improve outcomes and support
+                      ways to address the complexities of living with IBD. The
+                      model highlights challenges and benefits of this approach,
+                      serving as a foundational template for future patient-led
+                      collaborations, in addition to the immediate impact of
+                      patients&apos; wellbeing from shared experiences, to educating
+                      clinicians and people without IBD about the impact of IBD
+                      on patients&apos; lives.
+                    </p>
+                  </div>
+
+                  <div className="mt-6 flex flex-col md:flex-row md:items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex flex-wrap gap-3">
+                      <a
+                        href="/static/files/patient_led_analysis_of_ibd.pdf"
+                        target="_blank"
+                        className="flex items-center px-3 py-2 bg-[#264653] text-white rounded-md hover:bg-opacity-90 transition"
                       >
-                        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-                      </svg>
-                      <blockquote>
-                        <p className="text-lg">
-                          This is an immensely impactful work driven entirely by
-                          our patient group. As both clinician and researcher, I
-                          (and my whole team) have learned a lot and this have
-                          changed my practice. We aim to publish this work as a
-                          model of patient public involvement work that is
-                          wholly led by our patients.
-                        </p>
-                      </blockquote>
-                      <figcaption className="flex items-center justify-center mt-6 space-x-3">
-                        <Image
-                          src="/static/images/gth.jpg"
-                          alt="Gwo-Tzer Ho"
-                          width="36"
-                          height="36"
-                          className="rounded-full"
-                        />
-                        <div className="md:flex items-center md:divide-x-2 divide-gray-500 ">
-                          <div className="md:pr-3 font-medium flex-none">
-                            Professor Gwo-Tzer Ho
-                          </div>
-                          <div className="md:pl-3 text-sm">
-                            on behalf of the MUSIC IBD team
-                          </div>
-                        </div>
-                      </figcaption>
-                    </figure>
+                        <svg
+                          className="w-5 h-5 mr-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                          />
+                        </svg>
+                        Full PDF
+                      </a>
+                      <a
+                        href="https://www.medrxiv.org/content/10.1101/2025.03.19.25324163v1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center px-3 py-2 bg-[#264653] text-white rounded-md hover:bg-opacity-90 transition"
+                      >
+                        <svg
+                          className="w-5 h-5 mr-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                          />
+                        </svg>
+                        Preprint
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="border-t pt-4">
                 <div className="flex flex-row justify-between items-start">
-                  <div>
-                    <h3 className="uppercase text-sm font-medium mb-1">
-                      Links
-                    </h3>
-                    <div className="text-sm flex space-x-2">
-                      <a
-                        href="/static/files/patient_led_analysis_of_ibd.pdf"
-                        target="_blank"
-                        className="flex items-center hover:text-[#e76f51]"
-                      >
-                        <svg
-                          data-slot="icon"
-                          fill="none"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                          className="mr-1 w-4 h-4"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                          ></path>
-                        </svg>
-                        Full Paper PDF
-                      </a>
-
-                      <a
-                        href="https://www.medrxiv.org/content/10.1101/2025.03.19.25324163v1"
-                        target="_blank"
-                        className="flex items-center hover:text-[#e76f51]"
-                      >
-                        <svg
-                          data-slot="icon"
-                          fill="none"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                          className="mr-1 w-4 h-4"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                          ></path>
-                        </svg>
-                        Preprint for Publication
-                      </a>
-
-                      
-                    </div>
-                  </div>
+                  <div></div>
                   <div className="text-sm text-gray-400">
-                    Draft Paper | 20 January 2025
+                    Preprint | 20 January 2025
                   </div>
                 </div>
               </div>
@@ -248,7 +218,7 @@ export default function Results() {
                 <p>
                   <b>Conclusion:</b> We provide a comprehensive patient
                   involvement-ML-pathway to predict IBD-associated fatigue. Our
-                  data suggests a large 'hidden' pathobiological component and
+                  data suggests a large &apos;hidden&apos; pathobiological component and
                   current work is in progress to integrate deep molecular data
                   and build a clinical-scientific ML model as a step towards
                   better understanding of IBD-associated fatigue.
