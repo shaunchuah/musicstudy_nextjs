@@ -54,7 +54,7 @@ export default function Results() {
                     <p className="mb-4">
                       This report draws on data from a Wellbeing Survey led by
                       the Edinburgh IBD Science team as part of the MUSIC IBD
-                      cohort study (www.musiscstudy.uk) with over 1375 IBD
+                      cohort study (www.musicstudy.uk) with over 1375 IBD
                       respondents over two time periods in 2023 from United
                       Kingdom. The PPI group utilised high-level topic analysis
                       and their own lived experience of IBD to explore the 415

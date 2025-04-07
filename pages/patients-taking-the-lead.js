@@ -189,7 +189,7 @@ export default function PatientsTakingTheLead() {
                 <p className="mb-4">
                   This report draws on data from a Wellbeing Survey led by the
                   Edinburgh IBD Science team as part of the MUSIC IBD cohort
-                  study (www.musiscstudy.uk) with over 1375 IBD respondents over
+                  study (www.musicstudy.uk) with over 1375 IBD respondents over
                   two time periods in 2023 from United Kingdom. The PPI group
                   utilised high-level topic analysis and their own lived
                   experience of IBD to explore the 415 free-text survey
@@ -357,7 +357,7 @@ export default function PatientsTakingTheLead() {
                 <p className="text-lg">
                   This is an immensely impactful work driven entirely by our
                   patient group. As both clinician and researcher, I (and my
-                  whole team) have learned a lot and this have changed my
+                  whole team) have learned a lot and this has changed my
                   practice. We aim to publish this work as a model of patient
                   public involvement work that is wholly led by our patients.
                 </p>
