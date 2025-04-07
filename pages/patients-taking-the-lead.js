@@ -22,11 +22,11 @@ export default function PatientsTakingTheLead() {
                   </span>
                 </div>
                 <h1 className="text-4xl font-bold mb-4">
-                  Patient-led Analysis of Inflammatory Bowel Disease
+                  Our patient group&apos;s research into IBD wellbeing
                 </h1>
                 <p className="text-lg opacity-90 mb-6">
-                  A groundbreaking approach where patients define what matters
-                  most in IBD care
+                  A novel approach where patients define what matters most in
+                  IBD care
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
@@ -39,9 +39,9 @@ export default function PatientsTakingTheLead() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
                       <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
                     </svg>
@@ -161,7 +161,8 @@ export default function PatientsTakingTheLead() {
               </div>
               <p className="text-sm italic">
                 You can download these files for offline listening by
-                right-clicking on the player and selecting &quot;Save audio as...&quot;
+                right-clicking on the player and selecting &quot;Save audio
+                as...&quot;
               </p>
             </div>
           </div>
@@ -206,8 +207,8 @@ export default function PatientsTakingTheLead() {
                 <p className="mb-4">
                   The analysis provided in-depth exploration of several key
                   themes affecting wellbeing in IBD patients. Of interest, the
-                  PPI group discussed and explored themes such as &apos;what does
-                  remission mean?&apos;, access to care, expectations of
+                  PPI group discussed and explored themes such as &apos;what
+                  does remission mean?&apos;, access to care, expectations of
                   self-management, mental and women&apos;s health. The patient
                   narratives highlighted the variability of IBD experiences, the
                   interconnectedness of these issues, and the importance of
@@ -221,17 +222,18 @@ export default function PatientsTakingTheLead() {
                 <h3 className="text-xl font-semibold mb-2">Conclusion</h3>
                 <p>
                   This patient-led research approach demonstrates that allowing
-                  patients to lead in analysis (&apos;taking the reins&apos;) and
-                  reporting provides deeper and impactful insights into IBD
+                  patients to lead in analysis (&apos;taking the reins&apos;)
+                  and reporting provides deeper and impactful insights into IBD
                   experiences. By integrating patient perspectives, this study
                   advocates for a patient-dominant approach to research and
                   care, which can improve outcomes and support ways to address
                   the complexities of living with IBD. The model highlights
                   challenges and benefits of this approach, serving as a
                   foundational template for future patient-led collaborations,
-                  in addition to the immediate impact of patients&apos; wellbeing
-                  from shared experiences, to educating clinicians and people
-                  without IBD about the impact of IBD on patients&apos; lives.
+                  in addition to the immediate impact of patients&apos;
+                  wellbeing from shared experiences, to educating clinicians and
+                  people without IBD about the impact of IBD on patients&apos;
+                  lives.
                 </p>
               </div>
 
@@ -297,21 +299,23 @@ export default function PatientsTakingTheLead() {
                 <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
               </svg>
               <blockquote>
-                <p className="text-lg">
+                <p>
                   This draft report analyses and discusses patient reported
                   concerns from a survey exploring Wellbeing living with
                   Inflammatory Bowel Disease (IBD). This report was developed by
                   members of the IBD Patient Public Involvement (PPI) group who
-                  have lived experience of either Crohn&apos;s disease or colitis.
+                  have lived experience of either Crohn&apos;s disease or
+                  colitis.
                   <br />
                   <br />
                   The report draws together survey responses and the PPI group
-                  members&apos; experiences of managing wellbeing living with IBD.
-                  The key findings highlight priority areas for future research,
-                  such as improving quality of life overall, addressing the
-                  confusion around the term &apos;remission&apos;, and improving access to
-                  mental health support. The report also outlines a number of
-                  interconnected issues across the themes explored.
+                  members&apos; experiences of managing wellbeing living with
+                  IBD. The key findings highlight priority areas for future
+                  research, such as improving quality of life overall,
+                  addressing the confusion around the term
+                  &apos;remission&apos;, and improving access to mental health
+                  support. The report also outlines a number of interconnected
+                  issues across the themes explored.
                   <br />
                   <br />
                   Currently, the project group is working to refine this report
@@ -354,7 +358,7 @@ export default function PatientsTakingTheLead() {
                 <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
               </svg>
               <blockquote>
-                <p className="text-lg">
+                <p>
                   This is an immensely impactful work driven entirely by our
                   patient group. As both clinician and researcher, I (and my
                   whole team) have learned a lot and this has changed my

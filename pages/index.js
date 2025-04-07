@@ -71,7 +71,7 @@ export default function Home() {
                   </svg>
                 </span>
                 <br />
-                Centre for Inflammation Research
+                Institute for Regeneration and Repair
                 <br />
                 University of Edinburgh
               </a>
@@ -130,15 +130,15 @@ export default function Home() {
                     <h2 className="text-xl mb-2">
                       When Patients Lead: Transforming IBD Research
                     </h2>
-                    <audio id="music_intro" controls className="mb-2">
+                    <audio id="ppi_intro" controls className="mb-2">
                       <source
-                        src="/static/files/musicintromolly.mp3"
+                        src="/static/audio/ppi_intro.mp3"
                         type="audio/mpeg"
                       />
                       Your browser does not support the audio element.
                     </audio>
                     <p className="mb-2">
-                      This podcast summarises our recent innovative approach
+                      This 3-minute summary covers our recent innovative approach
                       where patients — not clinicians — analyzed and interpreted
                       data from hundreds of people living with IBD, revealing
                       perspectives often missed in traditional research.
