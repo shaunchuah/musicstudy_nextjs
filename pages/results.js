@@ -169,7 +169,7 @@ export default function Results() {
                 predictive machine learning to develop a scientific platform to
                 study fatigue in Inflammatory Bowel Disease
               </h2>
-              <div className="text-base mb-8">
+              <div className="text-base mb-4">
                 Rebecca Hall, Robert J Whelan, Peter D Cartlidge, Emily F
                 Brownson, Craig Mowat, John Paul Seenan, Jonathan C MacDonald,
                 Iona AM Campbell, Gwo-Tzer Ho, Shaun Chuah

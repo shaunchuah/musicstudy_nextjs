@@ -103,7 +103,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <audio id="music_intro" controls className="mb-4">
+                <audio id="music_intro" controls className="">
                   <source
                     src="/static/files/musicintromolly.mp3"
                     type="audio/mpeg"
@@ -137,19 +137,21 @@ export default function Home() {
                       />
                       Your browser does not support the audio element.
                     </audio>
-                    <p className="mb-2">
-                      This 3-minute summary covers our recent innovative approach
-                      where patients — not clinicians — analyzed and interpreted
-                      data from hundreds of people living with IBD, revealing
-                      perspectives often missed in traditional research.
-                    </p>
-                    <div className="mb-6">
-                      <Link href="/patients-taking-the-lead" legacyBehavior>
-                        <button className="border-[#264653] bg-[#264653] hover:bg-teal-800 text-white py-2 px-6 rounded text-lg">
-                          Explore paper and audiobook
-                        </button>
-                      </Link>
-                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p className="mb-2">
+                    This 3-minute summary covers our recent innovative approach
+                    where patients analyzed and interpreted data from hundreds
+                    of people living with IBD, revealing perspectives often
+                    missed in traditional research.
+                  </p>
+                  <div className="">
+                    <Link href="/patients-taking-the-lead" legacyBehavior>
+                      <button className="border-[#264653] bg-[#264653] hover:bg-teal-800 text-white py-2 px-6 rounded text-lg">
+                        Explore paper and audiobook
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -313,8 +315,9 @@ export default function Home() {
                       >
                         @Patricia_EKelly
                       </a>{" "}
-                      came out with the idea of a &apos;Patient-led&apos; effort. We
-                      handed over the reins, 100% to our fab patient group.
+                      came out with the idea of a &apos;Patient-led&apos;
+                      effort. We handed over the reins, 100% to our fab patient
+                      group.
                     </p>
 
                     <p className="mb-2">
@@ -428,12 +431,13 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl mb-4">Our Lives with IBD</h2>
                 <p className="mb-2">
-                  &quot;It&apos;s about more than just finding biomarkers — it&apos;s about
-                  changing lives.&quot; Experience Hugo Hemmati&apos;s documentary that
-                  weaves together personal testimonies from people living with
-                  IBD and behind the scenes access to the MUSIC study&apos;s research
-                  facilities. Discover how patient experiences are directly
-                  shaping the science that could revolutionize IBD treatment.
+                  &quot;It&apos;s about more than just finding biomarkers —
+                  it&apos;s about changing lives.&quot; Experience Hugo
+                  Hemmati&apos;s documentary that weaves together personal
+                  testimonies from people living with IBD and behind the scenes
+                  access to the MUSIC study&apos;s research facilities. Discover
+                  how patient experiences are directly shaping the science that
+                  could revolutionize IBD treatment.
                 </p>
                 <a
                   href="https://media.ed.ac.uk/media/Our+Lives+with+IBD/1_13bc6268"
@@ -482,9 +486,9 @@ export default function Home() {
 
                 <p className="mb-2">
                   Using advanced machine learning techniques guided by patient
-                  insights, we&apos;re identifying patterns that could explain why
-                  fatigue persists even during clinical remission — a crucial
-                  step toward developing targeted interventions.
+                  insights, we&apos;re identifying patterns that could explain
+                  why fatigue persists even during clinical remission — a
+                  crucial step toward developing targeted interventions.
                 </p>
 
                 <Link
@@ -501,24 +505,16 @@ export default function Home() {
           </div>
           <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
             <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
-              <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
-                <Image
-                  src="/static/images/microscope.jpg"
-                  alt="CCUK Patient Involvement in Research Day"
-                  height="1024"
-                  width="1024"
-                  priority={true}
-                  className="rounded-full"
-                />
-              </div>
               <div>
                 <h2 className="text-2xl mb-4">
                   How Patients Shape Our Research
                 </h2>
                 <p className="mb-2">
-                  We recently presented on how patients influence our research
-                  at the Crohn&apos;s and Colitis UK Patient Involvement in Research
-                  Day.
+                  At the 2024 Crohn&apos;s and Colitis UK Patient Involvement Day,
+                  our team showcased how patient partnerships have fundamentally
+                  reshaped our research approach. The presentation highlights
+                  real examples of how patient insights led to significant
+                  improvements in our study design and outcomes.
                 </p>
                 <div className="mb-2">
                   <iframe
@@ -572,8 +568,8 @@ export default function Home() {
                   A fantastic afternoon with our Patient Engagement group! We
                   discussed co-production of our IBD wellbeing paper, new work
                   with paediatric IBD, our upcoming Edinburgh Science Festival
-                  show &apos;Our Lives and IBD&apos; and welcoming Ola, our new parent
-                  patient representative!
+                  show &apos;Our Lives and IBD&apos; and welcoming Ola, our new
+                  parent patient representative!
                 </p>
               </div>
             </div>
