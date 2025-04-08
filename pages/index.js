@@ -118,11 +118,11 @@ export default function Home() {
                   <div className="flex w-full md:w-1/4 md:flex-none">
                     <div className="mx-auto md:mx-0 mb-4 md:mb-0">
                       <Image
-                        src="/static/images/ppi_meeting.jpg"
+                        src="/static/images/ppi_group_2.jpg"
                         alt="Our patients take the lead"
                         width="150"
                         height="150"
-                        className="rounded-full"
+                        className="rounded-lg"
                       />
                     </div>
                   </div>

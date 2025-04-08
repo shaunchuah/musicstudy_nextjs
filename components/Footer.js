@@ -96,8 +96,8 @@ export default function Footer() {
             />
           </Link>
           <p className="text-center lg:text-left text-sm text-gray-300 lg:ml-4 lg:mt-0 mt-4">
-            © 2023 MUSIC &amp; mini-MUSIC Research Team <br />
-            Last Updated January 2025
+            © 2025 MUSIC &amp; mini-MUSIC Research Team <br />
+            Last Updated April 2025
           </p>
         </div>
       </div>
