@@ -173,6 +173,80 @@ export default function Home() {
             <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
               <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
                 <Image
+                  src="/static/images/qfit.png"
+                  alt="Quantitative faecal immunohistochemical testing (qFIT)"
+                  height="480"
+                  width="480"
+                  priority={true}
+                  className="rounded-full"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl mb-4">
+                  <Link href="/patients-taking-the-lead" legacyBehavior>
+                    <a className=" hover:text-[#e76f51]">
+                      qFIT vs Calprotectin: Which stool tests do you prefer?
+                    </a>
+                  </Link>
+                </h2>
+                <div className="mb-4">
+                  <p className="mb-2">
+                    We have been studying the performance of quantitative faecal
+                    immunohistochemical testing (qFIT) (also known as the bowel
+                    screening test in the UK) and comparing it against faecal
+                    calprotectin to determine its effectiveness for monitoring
+                    patients with IBD.
+                  </p>
+                  <p className="mb-2">
+                    We are looking for patients with IBD to complete a short
+                    survey (3 minutes) to help us understand which test you
+                    prefer if it performs similarly to current options. Your
+                    input will help shape future testing approaches for IBD
+                    monitoring.
+                  </p>
+                                    <p className="mb-2">
+                    <a 
+                      href="https://crohnsandcolitis.org.uk/get-involved/want-to-get-involved-in-research/shaping-research/can-we-improve-how-to-monitor-ibd"
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="hover:text-[#e76f51] text-[#264653] underline underline-offset-2"
+                    >
+                      Sign up here
+                    </a> - it only takes 3 minutes and your input is invaluable.
+                  </p>
+                </div>
+                <blockquote class="twitter-tweet">
+                  <p lang="en" dir="ltr">
+                    Check out this new Shaping Research opportunity! <br />
+                    <br />
+                    Researchers at University of Glasgow would like you to
+                    complete a short online survey looking at IBD testing
+                    methods. <br />
+                    <br />
+                    Find out more{" "}
+                    <a href="https://t.co/cgilxUdpK1">
+                      https://t.co/cgilxUdpK1
+                    </a>{" "}
+                    <a href="https://t.co/bM6CbL5XlP">
+                      pic.twitter.com/bM6CbL5XlP
+                    </a>
+                  </p>
+                  &mdash; Crohn&#39;s &amp; Colitis Research (@CrohnsColitisR){" "}
+                  <a href="https://twitter.com/CrohnsColitisR/status/1918247342295400589?ref_src=twsrc%5Etfw">
+                    May 2, 2025
+                  </a>
+                </blockquote>
+              </div>
+            </div>
+            <div className="flex flex-row-reverse text-gray-700 text-sm mt-6">
+              28 March 2025
+            </div>
+          </div>
+
+          <div className="bg-white text-gray-800 border p-6 rounded-lg shadow mb-6">
+            <div className="md:flex flex-row gap-8 justify-center lg:justify-start items-start">
+              <div className="w-1/3 md:w-1/4 flex-none mx-auto md:mx-0 mb-4 md:mb-0">
+                <Image
                   src="/static/images/ppi_meeting.jpg"
                   alt="End of 2023 patient public involvement group meeting"
                   height="480"
@@ -510,11 +584,11 @@ export default function Home() {
                   How Patients Shape Our Research
                 </h2>
                 <p className="mb-2">
-                  At the 2024 Crohn&apos;s and Colitis UK Patient Involvement Day,
-                  our team showcased how patient partnerships have fundamentally
-                  reshaped our research approach. The presentation highlights
-                  real examples of how patient insights led to significant
-                  improvements in our study design and outcomes.
+                  At the 2024 Crohn&apos;s and Colitis UK Patient Involvement
+                  Day, our team showcased how patient partnerships have
+                  fundamentally reshaped our research approach. The presentation
+                  highlights real examples of how patient insights led to
+                  significant improvements in our study design and outcomes.
                 </p>
                 <div className="mb-2">
                   <iframe
