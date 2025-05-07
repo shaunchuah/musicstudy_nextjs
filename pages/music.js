@@ -1,7 +1,7 @@
 import MotionPage from "../components/MotionPage";
 import SectionHeaderWhite from "../components/SectionHeaderWhite";
 import SectionWrapperWhite from "../components/SectionWrapperWhite";
-import CenterCard from "../components/CenterCard";
+import CenterCard from "../components/ui/CenterCard";
 import InlinePDFViewer from "../components/InlinePDFViewer";
 import FileDownload from "../components/FileDownload";
 
@@ -87,10 +87,10 @@ export default function Participants() {
           <ol className="items-center flex mx-auto">
             <li className="relative mb-6 sm:mb-0 w-1/5">
               <div className="flex items-center">
-                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-primary  shrink-0">
                   0
                 </div>
-                <div className="flex w-full bg-[#264653] h-0.5 "></div>
+                <div className="flex w-full bg-primary h-0.5 "></div>
               </div>
               <div className="mt-3 sm:pr-8">
                 <h3 className="sm:text-lg font-semibold text-gray-900 ">Start</h3>
@@ -98,10 +98,10 @@ export default function Participants() {
             </li>
             <li className="relative mb-6 sm:mb-0 w-1/5">
               <div className="flex items-center">
-                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-primary  shrink-0">
                   3
                 </div>
-                <div className="flex w-full bg-[#264653] h-0.5 "></div>
+                <div className="flex w-full bg-primary h-0.5 "></div>
               </div>
               <div className="mt-3 sm:pr-8">
                 <h3 className="sm:text-lg font-semibold text-gray-900 ">
@@ -111,10 +111,10 @@ export default function Participants() {
             </li>
             <li className="relative mb-6 sm:mb-0 w-1/5">
               <div className="flex items-center">
-                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-primary  shrink-0">
                   6
                 </div>
-                <div className="flex w-full bg-[#264653] h-0.5 "></div>
+                <div className="flex w-full bg-primary h-0.5 "></div>
               </div>
               <div className="mt-3 sm:pr-8">
                 <h3 className="sm:text-lg font-semibold text-gray-900 ">
@@ -124,10 +124,10 @@ export default function Participants() {
             </li>
             <li className="relative mb-6 sm:mb-0 w-1/5">
               <div className="flex items-center">
-                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-primary  shrink-0">
                   9
                 </div>
-                <div className="flex w-full bg-[#264653] h-0.5 "></div>
+                <div className="flex w-full bg-primary h-0.5 "></div>
               </div>
               <div className="mt-3 sm:pr-8">
                 <h3 className="sm:text-lg font-semibold text-gray-900 ">
@@ -137,7 +137,7 @@ export default function Participants() {
             </li>
             <li className="relative mb-6 sm:mb-0 w-1/5">
               <div className="flex items-center">
-                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-[#264653]  shrink-0">
+                <div className="z-10 flex items-center justify-center w-14 h-14 bg-white rounded-full ring-2 ring-primary  shrink-0">
                   12
                 </div>
               </div>

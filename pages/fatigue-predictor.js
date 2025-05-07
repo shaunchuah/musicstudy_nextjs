@@ -78,7 +78,7 @@ export default function Fatigue() {
           <SectionHeader title="Fatigue Predictor" />
 
           <div
-            className=" items-center px-4 md:px-8 py-4 mb-4 text-red-800 rounded-lg bg-red-100 "
+            className=" items-center px-4 md:px-8 py-4 mb-4 text-blue-800 text-lg rounded-lg bg-blue-100 "
             role="alert"
           >
             <div className="flex flex-row items-center mb-2">
@@ -93,16 +93,15 @@ export default function Fatigue() {
               </svg>
               <span className="sr-only">Info</span>
               <div>
-                <span className="font-medium">Disclaimer</span>
+                <span className="font-medium">Service Discontinued</span>
               </div>
             </div>
             <div>
               <p className="mb-1">
-                This fatigue predictor is for research use/interest only and has
-                not been validated. We may record responses to ensure the
-                backend can handle the load.
+                This fatigue predictor is no longer active as the ML model did
+                not pass validation. The form is maintained for demonstration
+                purposes only. No predictions can be made.
               </p>
-              
             </div>
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -278,7 +277,10 @@ export default function Fatigue() {
                   </div>
 
                   <div className="mb-4">
-                    <label for="age_at_diagnosis" className="mb-4 text-gray-600 ">
+                    <label
+                      for="age_at_diagnosis"
+                      className="mb-4 text-gray-600 "
+                    >
                       Age at Diagnosis
                     </label>
                     <input
@@ -298,7 +300,10 @@ export default function Fatigue() {
                   </div>
 
                   <div className="mb-4">
-                    <label for="date_of_diagnosis" className="mb-4 text-gray-600 ">
+                    <label
+                      for="date_of_diagnosis"
+                      className="mb-4 text-gray-600 "
+                    >
                       Date of Diagnosis
                     </label>
                     <input
@@ -980,36 +985,11 @@ export default function Fatigue() {
               </div>
 
               <button
-                type="submit"
-                className="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg w-full sm:w-auto px-5 py-2.5 text-center "
+                type="button" // Changed from "submit" to "button" to prevent form submission
+                disabled
+                className="mt-8 text-white bg-gray-500 cursor-not-allowed rounded-lg w-full sm:w-auto px-5 py-2.5 text-center"
               >
-                {isLoading ? (
-                  <>
-                    <svg
-                      className="animate-spin inline w-5 h-5 mr-3 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                      ></path>
-                    </svg>
-                    Processing...
-                  </>
-                ) : (
-                  "Get Prediction"
-                )}
+                Prediction Service Discontinued
               </button>
             </div>
           </form>
@@ -1128,11 +1108,19 @@ export default function Fatigue() {
                 )}
               </div>
             ) : (
-              <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700 mt-8">
-                <h3 className="text-2xl font-medium mb-4">
-                  Prediction Results
-                </h3>
-                <p className="text-center">Awaiting your prediction request.</p>
+              <div>
+                <div className="flex flex-col text-lg bg-white rounded-lg p-4 md:p-8 text-gray-700 mt-8">
+                  <h3 className="text-2xl font-medium mb-4">
+                    Prediction Results
+                  </h3>
+                  <div className="p-4 border-l-4 border-blue-500 bg-blue-50">
+                    <p className="text-blue-700">
+                      The fatigue prediction service has been discontinued as
+                      the ML model did not pass validation. This page is
+                      maintained for demonstration purposes only.
+                    </p>
+                  </div>
+                </div>
               </div>
             )}
           </div>

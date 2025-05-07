@@ -12,7 +12,7 @@ export default function Contact() {
             <div className="text-3xl text-center mb-2 font-bold">MUSIC</div>
             <div className="mb-16">
               <a
-                className="flex flex-row items-center hover:text-[#e76f51]"
+                className="flex flex-row items-center hover:text-secondary"
                 href="mailto:ibdmusicstudy@ed.ac.uk"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,7 +34,7 @@ export default function Contact() {
             </div>
             <div>
               <a
-                className="flex flex-row items-center hover:text-[#e76f51]"
+                className="flex flex-row items-center hover:text-secondary"
                 href="mailto:minimusic@ed.ac.uk"
                 target="_blank"
                 rel="noopener noreferrer"

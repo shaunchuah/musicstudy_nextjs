@@ -4,7 +4,7 @@ import MaxWidthControl from "./MaxWidthControl.js"
 export default function Header() {
   return (
     
-    <header className="sticky top-0 z-50 shadow-xl bg-[#264653]">
+    <header className="sticky top-0 z-50 shadow-xl bg-primary">
       <MaxWidthControl>
       <div className="flex justify-between flex-wrap md:px-12 2xl:px-0 py-4 flex-col lg:flex-row items-center">
         <div className="flex items-center mb-4 lg:mb-0">
@@ -15,7 +15,7 @@ export default function Header() {
         <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-6 sm:text-xl">
           <Link
             href="/"
-            className="flex flex-row items-center gap-1 hover:text-[#e76f51]">
+            className="flex flex-row items-center gap-1 hover:text-secondary">
             <svg
               className="w-5 h-5"
               fill="none"
@@ -32,7 +32,7 @@ export default function Header() {
           </Link>
           <Link
             href="/music"
-            className="flex flex-row items-center gap-1 hover:text-[#e76f51]">
+            className="flex flex-row items-center gap-1 hover:text-secondary">
             <svg
               className="w-5 h-5"
               fill="none"
@@ -49,7 +49,7 @@ export default function Header() {
           </Link>
           <Link
             href="/mini-music"
-            className="flex flex-row items-center gap-1 hover:text-[#e76f51]">
+            className="flex flex-row items-center gap-1 hover:text-secondary">
             <svg
               className="w-5 h-5"
               fill="none"
@@ -73,7 +73,7 @@ export default function Header() {
           </Link>
           <Link
             href="/results"
-            className="flex flex-row items-center gap-1 hover:text-[#e76f51]">
+            className="flex flex-row items-center gap-1 hover:text-secondary">
             <svg
               className="w-5 h-5"
               fill="none"
@@ -90,7 +90,7 @@ export default function Header() {
           </Link>
           <Link
             href="/contact"
-            className="flex flex-row items-center gap-1 hover:text-[#e76f51]">
+            className="flex flex-row items-center gap-1 hover:text-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

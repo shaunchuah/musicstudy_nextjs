@@ -3,7 +3,7 @@ export default function FileDownload({ filename, file_path }) {
     <a
       href={file_path}
       target="_blank"
-      className="flex flex-row items-center hover:text-[#e76f51]">
+      className="flex flex-row items-center hover:text-secondary">
       <svg
         className="flex-none w-8 h-8 mr-1"
         fill="currentColor"

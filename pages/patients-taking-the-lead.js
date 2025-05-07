@@ -4,6 +4,8 @@ import SectionWrapper from "../components/SectionWrapper";
 import data from "../data/results.json";
 import Image from "next/legacy/image";
 import Script from "next/script";
+import AudioPlayer from "../components/ui/AudioPlayer";
+
 export default function PatientsTakingTheLead() {
   const ResultsData = data;
 
@@ -17,7 +19,7 @@ export default function PatientsTakingTheLead() {
             <div className=" text-white p-8 rounded-t-lg">
               <div className="max-w-5xl mx-auto">
                 <div className="flex items-center mb-4">
-                  <span className="px-3 py-1 bg-white text-[#264653] rounded-full text-sm font-bold">
+                  <span className="px-3 py-1 bg-white text-primary rounded-full text-sm font-bold">
                     PATIENT-LED RESEARCH
                   </span>
                 </div>
@@ -31,7 +33,7 @@ export default function PatientsTakingTheLead() {
                 <div className="flex flex-wrap gap-4">
                   <a
                     href="#audiobook"
-                    className="btn bg-white text-[#264653] hover:bg-gray-100 px-4 py-2 rounded-md flex items-center"
+                    className="btn bg-white text-primary hover:bg-gray-100 px-4 py-2 rounded-md flex items-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +52,7 @@ export default function PatientsTakingTheLead() {
                   <a
                     href="/static/files/patient_led_analysis_of_ibd.pdf"
                     target="_blank"
-                    className="btn bg-white text-[#264653] hover:bg-gray-100 px-4 py-2 rounded-md flex items-center"
+                    className="btn bg-white text-primary hover:bg-gray-100 px-4 py-2 rounded-md flex items-center"
                   >
                     <svg
                       className="w-5 h-5 mr-2"
@@ -71,7 +73,7 @@ export default function PatientsTakingTheLead() {
                   <a
                     href="https://www.medrxiv.org/content/10.1101/2025.03.19.25324163v1"
                     target="_blank"
-                    className="btn bg-white text-[#264653] hover:bg-gray-100 px-4 py-2 rounded-md flex items-center"
+                    className="btn bg-white text-primary hover:bg-gray-100 px-4 py-2 rounded-md flex items-center"
                   >
                     <svg
                       className="w-5 h-5 mr-2"
@@ -113,13 +115,13 @@ export default function PatientsTakingTheLead() {
                   />
                 </div>
                 <div className="w-16 h-16 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-gray-200">
-                  <span className="text-lg font-bold text-[#264653]">DD</span>
+                  <span className="text-lg font-bold text-primary">DD</span>
                 </div>
                 <div className="w-16 h-16 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-gray-200">
-                  <span className="text-lg font-bold text-[#264653]">PK</span>
+                  <span className="text-lg font-bold text-primary">PK</span>
                 </div>
                 <div className="w-16 h-16 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-gray-200">
-                  <span className="text-lg font-bold text-[#264653]">EP</span>
+                  <span className="text-lg font-bold text-primary">EP</span>
                 </div>
                 {/* More authors */}
               </div>
@@ -128,33 +130,29 @@ export default function PatientsTakingTheLead() {
 
           {/* Card Group */}
           <div
-            className="bg-white text-[#264653] shadow-md rounded-lg p-8 max-w-5xl mx-auto mt-8 scroll-mt-24"
+            className="bg-white text-primary shadow-md rounded-lg p-8 max-w-5xl mx-auto mt-8 scroll-mt-24"
             id="audiobook"
           >
             <h2 className="text-3xl font-bold mb-2">Listen to the Audiobook</h2>
             <div className="space-y-6">
               <div>
                 <p className="mb-2 font-medium">Abstract:</p>
-                <audio controls className="w-full">
-                  <source
-                    src="/static/audio/ppi_abstract.mp3"
-                    type="audio/mpeg"
-                  />
-                  Your browser does not support the audio element.
-                </audio>
+                <AudioPlayer 
+                  id="abstract_audio"
+                  src="/static/audio/ppi_abstract.mp3"
+                  className="w-full"
+                />
                 <p className="text-sm text-gray-500 mt-1">
                   Brief overview of the patient-led paper (5 min)
                 </p>
               </div>
               <div>
                 <p className="mb-2 font-medium">Full Paper:</p>
-                <audio controls className="w-full">
-                  <source
-                    src="/static/audio/full_ppi_paper.mp3"
-                    type="audio/mpeg"
-                  />
-                  Your browser does not support the audio element.
-                </audio>
+                <AudioPlayer 
+                  id="full_paper_audio"
+                  src="/static/audio/full_ppi_paper.mp3"
+                  className="w-full"
+                />
                 <p className="text-sm text-gray-500 mt-1">
                   Complete reading of the patient-led analysis (42 min)
                 </p>
@@ -168,7 +166,7 @@ export default function PatientsTakingTheLead() {
           </div>
           {/* End Card Group */}
 
-          <div className="bg-white text-[#264653] shadow-md rounded-lg p-8 max-w-5xl mx-auto mt-8">
+          <div className="bg-white text-primary shadow-md rounded-lg p-8 max-w-5xl mx-auto mt-8">
             <h2 className="text-3xl font-bold mb-4">Abstract</h2>
             <div className="space-y-6">
               <div>
@@ -242,7 +240,7 @@ export default function PatientsTakingTheLead() {
                   <a
                     href="/static/files/patient_led_analysis_of_ibd.pdf"
                     target="_blank"
-                    className="flex items-center px-3 py-2 bg-[#264653] text-white rounded-md hover:bg-opacity-90 transition"
+                    className="flex items-center px-3 py-2 bg-primary text-white rounded-md hover:bg-opacity-90 transition"
                   >
                     <svg
                       className="w-5 h-5 mr-2"
@@ -264,7 +262,7 @@ export default function PatientsTakingTheLead() {
                     href="https://www.medrxiv.org/content/10.1101/2025.03.19.25324163v1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center px-3 py-2 bg-[#264653] text-white rounded-md hover:bg-opacity-90 transition"
+                    className="flex items-center px-3 py-2 bg-primary text-white rounded-md hover:bg-opacity-90 transition"
                   >
                     <svg
                       className="w-5 h-5 mr-2"
@@ -287,7 +285,7 @@ export default function PatientsTakingTheLead() {
             </div>
           </div>
           {/* Card Group */}
-          <div className="bg-white text-[#264653] shadow-md rounded-lg p-8 max-w-5xl mx-auto mt-8">
+          <div className="bg-white text-primary shadow-md rounded-lg p-8 max-w-5xl mx-auto mt-8">
             <figure>
               <svg
                 className="w-8 h-8 mx-auto mb-2"
@@ -346,7 +344,7 @@ export default function PatientsTakingTheLead() {
           </div>
 
           {/* Card Group */}
-          <div className="bg-white text-[#264653] shadow-md rounded-lg p-8 max-w-5xl mx-auto mt-8">
+          <div className="bg-white text-primary shadow-md rounded-lg p-8 max-w-5xl mx-auto mt-8">
             <figure>
               <svg
                 className="w-8 h-8 mx-auto mb-2"
@@ -387,7 +385,7 @@ export default function PatientsTakingTheLead() {
           </div>
 
           <div className="max-w-5xl mx-auto py-8">
-            <h2 className="text-2xl font-bold mb-4 text-center text-[#264653]">
+            <h2 className="text-2xl font-bold mb-4 text-center text-primary">
               Share This Page
             </h2>
             <div className="flex flex-col items-center space-y-4">
@@ -474,7 +472,7 @@ export default function PatientsTakingTheLead() {
                 </a>
               </div>
 
-              <div className="mt-6 bg-white text-[#264653] p-4 rounded-md shadow-sm flex items-center w-full max-w-md">
+              <div className="mt-6 bg-white text-primary p-4 rounded-md shadow-sm flex items-center w-full max-w-md">
                 <input
                   type="text"
                   readOnly
@@ -491,7 +489,7 @@ export default function PatientsTakingTheLead() {
                       alert("Link copied!");
                     }
                   }}
-                  className="ml-2 p-2 bg-[#264653] text-white rounded-md hover:bg-opacity-90 text-sm flex items-center"
+                  className="ml-2 p-2 bg-primary text-white rounded-md hover:bg-opacity-90 text-sm flex items-center"
                 >
                   <svg
                     className="w-4 h-4 mr-1"
