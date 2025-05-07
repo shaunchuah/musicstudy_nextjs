@@ -15,7 +15,7 @@ export default function Home() {
 
   console.log("%cWelcome to the MUSIC study website!", consoleStyle);
   console.log(
-    "%cWebsite created by Dr Shaun Chuah using NextJS. For website-related queries please get in touch via twitter https://twitter.com/chershiong",
+    "%cWebsite created by Dr Shaun Chuah using NextJS. For website-related queries please get in touch via email at shaun.chuah@glasgow.ac.uk",
     consoleStyle
   );
 

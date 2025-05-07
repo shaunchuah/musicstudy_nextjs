@@ -18,6 +18,12 @@ export default function Results() {
         <main className="flex flex-col w-full">
           <SectionWrapper id="results">
             <SectionHeader title="Results" />
+            <div className="max-w-4xl mb-8 mx-auto ">
+              <p className="text-lg">
+              The MUSIC Study is beginning to generate findings that improve our understanding of inflammatory bowel disease. Below are our current preprints and publications.
+              </p>
+              <p className="text-lg text-gray-200 mt-4">Last updated: May 2025</p>
+            </div>
             <div className="grid justify-center items-center space-y-8">
               <PaperCard
                 title="Patient-led Analysis of Inflammatory Bowel Disease: Defining an Equitable Approach towards Patient-Centric IBD care"

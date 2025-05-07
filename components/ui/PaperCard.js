@@ -12,7 +12,7 @@ export default function PaperCard({
   explorationButtonText
 }) {
   return (
-    <div className="bg-white text-primary shadow-md rounded-lg p-8 max-w-5xl">
+    <div className="bg-white text-primary shadow-md rounded-lg p-6 md:p-8 max-w-4xl">
       <h2 className="text-3xl font-bold mb-2">{title}</h2>
       <div className="text-base mb-4">{authors}</div>
       
