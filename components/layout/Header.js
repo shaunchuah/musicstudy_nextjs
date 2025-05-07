@@ -7,7 +7,7 @@ export default function Header() {
       <MaxWidthControl>
         <div className="flex justify-between flex-wrap md:px-12 2xl:px-0 py-4 flex-col lg:flex-row items-center">
           <div className="flex items-center mb-4 lg:mb-0">
-            <Link href="/" legacyBehavior>
+            <Link href="/">
               <h1 className="text-2xl">MUSIC & Mini-MUSIC</h1>
             </Link>
           </div>
