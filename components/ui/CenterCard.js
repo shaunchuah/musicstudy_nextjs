@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function CenterCard({ name, city, pi, image_url }) {
   return (
@@ -7,8 +7,8 @@ export default function CenterCard({ name, city, pi, image_url }) {
         <Image
           src={image_url}
           alt="name"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           className="rounded-t-lg"
         />
       </div>

@@ -2,7 +2,7 @@ import MotionPage from "../components/MotionPage";
 import SectionHeader from "../components/SectionHeader";
 import SectionWrapper from "../components/SectionWrapper";
 import data from "../data/results.json";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Script from "next/script";
 import AudioPlayer from "../components/ui/AudioPlayer";
 import SEOHead from "../components/SEOHead";

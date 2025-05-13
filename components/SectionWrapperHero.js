@@ -1,4 +1,3 @@
-import Image from "next/legacy/image";
 import MaxWidthControl from "./MaxWidthControl";
 
 export default function SectionWrapperHero({ children, id }) {

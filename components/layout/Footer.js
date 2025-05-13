@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import FooterLink from "../FooterLink";
 import MaxWidthControl from "../MaxWidthControl";
@@ -93,9 +93,8 @@ export default function Footer() {
               <Image
                 src="/static/images/musicicon.png"
                 alt="MUSIC Logo"
-                height="50"
-                width="56"
-                priority={true}
+                height={50}
+                width={56}
                 className="border border-white rounded-xl"
               />
             </Link>
