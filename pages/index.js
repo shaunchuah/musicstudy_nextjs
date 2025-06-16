@@ -169,6 +169,27 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-4xl mx-auto gap-4 lg:gap-6">
+
+            <NewsCard
+            image="/static/images/one-ibd-logo-main.png"
+              imageAlt="One-IBD Study Logo"
+              title="Coming Soon: The One-IBD Study"
+              date="1 June 2025"
+            >
+               <p className="mb-2">
+                We’re excited to announce the upcoming launch of the One-IBD Study - a new research project exploring the causes and patterns of fatigue in people with Crohn’s disease, ulcerative colitis, and other forms of IBD.
+              </p>
+               <p className="mb-2">
+                This study has been shaped by valuable input from patients and our patient public involvement group, whose experiences and priorities have directly motivated the planning and setup of One-IBD.
+              </p>
+               <p className="mb-2">
+                The study will invite adults who receive their IBD care from NHS Greater Glasgow &amp; Clyde and NHS Lanarkshire to take part in short, online wellbeing surveys and help us link this information with routine NHS data (with your consent). Healthy volunteers will also be welcome.
+              </p>
+              <p className="mb-2">
+                Stay tuned for more details and information on how to get involved.
+              </p>
+            </NewsCard>
+
             <NewsCard
               image="/static/images/qfit.png"
               imageAlt="Quantitative faecal immunohistochemical testing (qFIT)"
