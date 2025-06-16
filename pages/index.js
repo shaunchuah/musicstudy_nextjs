@@ -177,7 +177,7 @@ export default function Home() {
               date="1 June 2025"
             >
                <p className="mb-2">
-                We’re excited to announce the upcoming launch of the One-IBD Study - a new research project exploring the causes and patterns of fatigue in people with Crohn’s disease, ulcerative colitis, and other forms of IBD.
+                We&apos;re excited to announce the upcoming launch of the One-IBD Study - a new research project exploring the causes and patterns of fatigue in people with Crohn&apos;s disease, ulcerative colitis, and IBD unclassified.
               </p>
                <p className="mb-2">
                 This study has been shaped by valuable input from patients and our patient public involvement group, whose experiences and priorities have directly motivated the planning and setup of One-IBD.
