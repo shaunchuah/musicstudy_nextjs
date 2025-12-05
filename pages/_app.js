@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
 import { AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
 import { Merriweather, Roboto } from "next/font/google";
 import { Analytics } from '@vercel/analytics/react';
 import Head from 'next/head';
@@ -21,15 +20,6 @@ const roboto = Roboto({
 })
 
 function MyApp({ Component, pageProps, router }) {
-  const [isLoaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
-
-  if (!isLoaded) {
-    return <></>;
-  }
   return (
     <>
       <Head>
