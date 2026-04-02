@@ -169,6 +169,62 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-4xl mx-auto gap-4 lg:gap-6">
+            <NewsCard
+              image="/static/images/ppi_meeting.jpg"
+              imageAlt="End of 2023 patient public involvement group meeting"
+              title="Two previously announced preprints are now published"
+              date="2 April 2026"
+              imageRounded="lg"
+            >
+              <p className="mb-3">
+                Two papers we previously highlighted here as preprints have now
+                completed peer review and are available as final publications:
+              </p>
+              <ul className="mb-4 space-y-3">
+                <li className="leading-relaxed">
+                  <a
+                    href="/static/files/cc360_patient_led_analysis.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold hover:text-secondary underline underline-offset-2"
+                  >
+                    Patient-led thematic analysis on the impact of living with
+                    inflammatory bowel disease
+                  </a>{" "}
+                  is our patient-led paper, now published in Crohn&apos;s &amp;
+                  Colitis 360.
+                </li>
+                <li className="leading-relaxed">
+                  <a
+                    href="/static/files/bmjdh_ml_ibd_fatigue.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold hover:text-secondary underline underline-offset-2"
+                  >
+                    Machine-learning approach to dissect the clinical
+                    heterogeneity of IBD-associated fatigue
+                  </a>{" "}
+                  is our researcher-led fatigue paper, shaped by patient
+                  priorities and now published in BMJ Digital Health &amp; AI.
+                </li>
+              </ul>
+              <p className="mb-4 text-sm text-gray-600">
+                The earlier preprints remain available as archival links on the
+                publication pages.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/results" legacyBehavior>
+                  <button className="border-primary bg-primary hover:bg-teal-800 text-white py-2 px-6 rounded text-lg">
+                    View all publications
+                  </button>
+                </Link>
+                <Link href="/patients-taking-the-lead" legacyBehavior>
+                  <button className="border-primary bg-white hover:bg-gray-100 text-primary py-2 px-6 rounded text-lg">
+                    Read the patient-led page
+                  </button>
+                </Link>
+              </div>
+            </NewsCard>
 
             <NewsCard
             image="/static/images/one-ibd-logo-main.png"

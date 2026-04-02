@@ -2,17 +2,14 @@ import MotionPage from "../components/MotionPage";
 import SectionHeader from "../components/SectionHeader";
 import SectionWrapper from "../components/SectionWrapper";
 import PaperCard from "../components/ui/PaperCard";
-import data from "../data/results.json";
 import SEOHead from "../components/SEOHead";
 
 export default function Results() {
-  const ResultsData = data;
-
   return (
     <>
       <SEOHead
         title="Research Results"
-        description="Discover the latest research findings from the MUSIC and Mini-MUSIC IBD studies, including patient-led analysis."
+        description="Discover the latest research findings from the MUSIC and Mini-MUSIC IBD studies, including the published patient-led papers and archival preprints."
       />
       <MotionPage>
         <main className="flex flex-col w-full">
@@ -20,48 +17,57 @@ export default function Results() {
             <SectionHeader title="Results" />
             <div className="max-w-4xl mb-8 mx-auto ">
               <p className="text-lg">
-              The MUSIC Study is beginning to generate findings that improve our understanding of inflammatory bowel disease. Below are our current preprints and publications.
+                The MUSIC Study is beginning to generate findings that improve
+                our understanding of inflammatory bowel disease. Below are our
+                current publications, with archival preprints still linked
+                where available.
               </p>
-              <p className="text-lg text-gray-200 mt-4">Last updated: May 2025</p>
+              <p className="text-lg text-gray-200 mt-4">Last updated: April 2026</p>
             </div>
             <div className="grid justify-center items-center space-y-8">
               <PaperCard
-                title="Patient-led Analysis of Inflammatory Bowel Disease: Defining an Equitable Approach towards Patient-Centric IBD care"
-                authors="Molly J Halligan, Aerin E Thompson, Destiny Docherty, Patricia Kelly, Emma Pryde, Crohn's and Colitis UK, Rebecca Hall and Gwo-Tzer Ho"
+                title="Patient-led thematic analysis on the impact of living with inflammatory bowel disease: a contemporary appraisal of 415 patient-reported outcomes to improve care and research"
+                authors="Molly J Halligan, Aerin E Thompson, Destiny Docherty, Patricia Kelly, Emma Pryde, Cher Shiong Chuah, Rebecca Hall and Gwo-tzer Ho"
                 abstract={{
                   background:
-                    "This paper investigates a patient-led approach to research on wellbeing in individuals with Inflammatory Bowel Disease (IBD). Traditionally, Public and Patient Involvement (PPI) groups have contributed to the design of clinical research but less often to the analysis and reporting of findings. This study is wholly led by a patient group with no direct input from clinicians, thus presenting an entirely novel and unique patient-centric view.",
+                    "The conceptual context of wellbeing for people living with inflammatory bowel disease (IBD) is complex and encompasses many dimensions. Here, we employed a wholly patient-led analysis to provide a unique \"patient first\" narrative on wellbeing and IBD.",
                   methods:
-                    "This report draws on data from a Wellbeing Survey led by the Edinburgh IBD Science team as part of the MUSIC IBD cohort study (www.musicstudy.uk) with over 1375 IBD respondents over two time periods in 2023 from United Kingdom. The PPI group utilised high-level topic analysis and their own lived experience of IBD to explore the 415 free-text survey responses. Regular discussions allowed the team to reflect on patient narratives and generate findings collaboratively. PPI members contributed to both the structure and content of the final write-up, utilising their diverse backgrounds and skillsets.",
+                    "Our report draws on data from a Wellbeing Survey led by the Glasgow and Edinburgh IBD Science team as part of the MUSIC IBD cohort study (www.musicstudy.uk) with over 1375 IBD respondents in 2023 from the United Kingdom and globally. Our public and patient involvement (PPI) group utilized unstructured patient-reported experiences and conducted a high-level topic analysis and based their own lived experience of IBD to explore and assimilate the 415 free-text responses on the priorities and unmet needs of our IBD participants. Within the PPI group, a transparent structure of patient-led analysis, identification of key topic areas, discussion, and finally writing was agreed at the start of the project with minimal input from the clinical team.",
                   results:
-                    "The analysis provided in-depth exploration of several key themes affecting wellbeing in IBD patients. Of interest, the PPI group discussed and explored themes such as 'what does remission mean?', access to care, expectations of self-management, mental and women's health. The patient narratives highlighted the variability of IBD experiences, the interconnectedness of these issues, and the importance of holistic, patient-centric approaches to care. The findings emphasise the necessity for improved support, both within and beyond healthcare settings.",
+                    "The analysis provided an in-depth exploration of several key themes affecting wellbeing in IBD patients. Of interest, the PPI group discussed and explored themes such as \"what does remission mean?,\" access to care, expectations of self-management, mental and women's health. The patient narratives highlighted the variability of IBD experiences, the interconnectedness of these issues, and the importance of holistic, patient-centric approaches to care. The findings emphasize the necessity for improved support, both within and beyond healthcare settings. The findings are written and presented by our PPI group to provide viewpoints that resonate directly with people living with IBD.",
                   conclusion:
-                    "This patient-led research approach demonstrates that allowing patients to lead in analysis ('taking the reins') and reporting provides deeper and impactful insights into IBD experiences. By integrating patient perspectives, this study advocates for a patient-dominant approach to research and care, which can improve outcomes and support ways to address the complexities of living with IBD. The model highlights challenges and benefits of this approach, serving as a foundational template for future patient-led collaborations, in addition to the immediate impact of patients' wellbeing from shared experiences, to educating clinicians and people without IBD about the impact of IBD on patients' lives.",
+                    "Our patient-led research approach demonstrates that allowing patients to lead in analysis (\"taking the reins\") and reporting provides deeper and impactful insights into IBD experiences. By shifting the lens of analysis via the patient when integrating their perspectives into wellbeing, this study advocates for a patient-dominant approach to research and care, which can provide unique insights into ways to improve outcomes and to address the complexities of living with IBD.",
                 }}
                 explorationLink="/patients-taking-the-lead"
                 explorationButtonText="Explore paper and audiobook"
-                pdfLink="/static/files/patient_led_analysis_of_ibd.pdf"
+                pdfLink="/static/files/cc360_patient_led_analysis.pdf"
+                pdfLinkLabel="Published article PDF"
+                publisherLink="https://academic.oup.com/crohnscolitis360/article/8/1/otag011/8487896"
+                publisherLinkLabel="Publisher website"
                 preprintLink="https://www.medrxiv.org/content/10.1101/2025.03.19.25324163v1"
-                footerText="Preprint | 20 January 2025"
+                footerText="Published in Crohn's & Colitis 360 | 16 February 2026"
               />
 
               <PaperCard
-                title="Characterisation of 3000 patient reported outcomes with predictive machine learning to develop a scientific platform to study fatigue in Inflammatory Bowel Disease"
-                authors="Rebecca Hall, Robert J Whelan, Peter D Cartlidge, Emily F Brownson, Craig Mowat, John Paul Seenan, Jonathan C MacDonald, Iona AM Campbell, Gwo-Tzer Ho, Shaun Chuah"
+                title="Machine-learning approach to dissect the clinical heterogeneity of IBD-associated fatigue"
+                authors="Cher S Chuah, Rebecca Hall, Robert J Whelan, Peter D Cartlidge, Beatriz Gros, Eva Iglesias-Flores, Nikita Parkash, Ray K Boyapati, Clara Ramos-Belinchon, Solomon Ong, Emily F Brownson, Iona A M Campbell, Craig Mowat, John P Seenan, Jonathan C MacDonald, MUSIC Patient-Public Involvement Group and Gwo-Tzer Ho"
                 abstract={{
                   background:
-                    "Fatigue is commonly identified by IBD patients as major issue that affects their wellbeing. This presentation, however, is complex, multifactorial and mired in clinical heterogeneity.",
+                    "Extreme and persistent fatigue affects >50% of individuals with inflammatory bowel disease (IBD), with similar prevalence across many common immune-mediated inflammatory diseases (IMIDs). Despite its ubiquity, human scientific studies have yet to fully explain the mechanistic basis of this complex symptom. One fundamental reason is our inability to account for the clinical heterogeneity and multifactorial nature of fatigue.",
                   methods:
-                    "We prospectively captured patient reported outcomes (PROs) from 2 current IBD biomarker studies in Scotland with ~100 clinical metadata points; and an international dataset (that includes non-IBD healthy controls) using CUCQ32, a validated IBD questionnaire to generate a contemporaneous dataset of fatigue and overall wellbeing (2021-2024) and utilized 6 different machine learning (ML) approaches to predict IBD-associated fatigue and patterns that may aid future stratification to human mechanistic and clinical studies.",
+                    "We present the conceptual machine-learning (ML) framework to dissect fatigue using one of the largest prospectively captured, real-world patient-reported outcome (PROs) on well-being from three contemporaneous cohorts (2020-present), totalling 2970 responses from 2290 participants across the UK and internationally, including non-IBD controls with 100 lines of clinical metadata. In parallel, our patient public involvement group performed thematic analysis of this PRO dataset, which identified fatigue as a key research priority (www.musicstudy.uk).",
                   results:
-                    "In 2 970 responses from 2 290 participants, CUCQ32 were higher in active IBD vs. remission; and in remission, higher than in non-IBD controls (both p<0.0001). CUCQ32-specific fatigue score significantly correlated to all CUCQ32 components (p=2.9 x 10-28 to 3.2 x 10-147). During active IBD, patients had significantly more fatigue days compared to those in remission and non-IBD controls (medians 14 vs. 7 vs. 4 [out of 14 days]; both p<0.0001). We determine a threshold of ≥10/14 days of fatigue as clinically relevant - Fatiguehigh. Overall, 72.8% (863/1185), 45.0% (408/906) and 13.7% (46/355) responses in active, remission and non-IBD controls were in Fatiguehigh. Using train-validate-test steps, we incorporated all available metadata to generate ML-models to predict Fatiguehigh. The 6 ML models performed similarly (all 6 models AUC of ~0.70). SHapley Additive exPlanations (SHAP) analysis revealed that each algorithm places different importance on variables with seasonality, biologic drug levels, BMI and gender identified as factors. ML prediction of Fatiguehigh in patients in biochemical remission (CRP<5 mg/l and calprotectin <250ug/g) was more challenging with AUC of 0.66-0.61.",
+                    "We systematically defined the (1) threshold of fatigue as our primary outcome (>=10/14 fatigue days in 1604 patients (1151 responses in active disease and 1061 responses in remission; some patients measured longitudinally; median fatigue days 14 vs 7, respectively; p<0.001) to build our ML approach, (2) used routinely available clinical data that can be used at a population-level analysis, (3) employed seven different ML methods with external validation in three different cohorts in the UK, Spain and Australia (n=252), (4) employed Shapley Additive Explanations (SHAP) analysis to break down clinical heterogeneity and allow the examination of clinical predictive factors at an individual level; and finally, (5) investigated whether there are distinct clusters of fatigue patients. We found that ML models performed comparably (area under the curve/C-index ~0.7) on external validation with SHAP analysis showing interpretable, individualised fatigue drivers and five distinct fatigue cluster groups, including a subgroup with lower fatigue burden.",
                   conclusion:
-                    "We provide a comprehensive patient involvement-ML-pathway to predict IBD-associated fatigue. Our data suggests a large 'hidden' pathobiological component and current work is in progress to integrate deep molecular data and build a clinical-scientific ML model as a step towards better understanding of IBD-associated fatigue.",
+                    "Our data provide the ML 'roadmap' to predict and deconstruct fatigue in IBD and potentially more widely in IMIDs, enabling patient-level dissection beyond symptom-based classification with the ability to integrate deep molecular data. This is a step towards future clinical-scientific artificial intelligence models with immediate clinical application to stratify patients for human experimental studies to better identify patient-level patterns associated with fatigue.",
                 }}
-                pdfLink="/static/files/machine_learning_for_ibd_fatigue.pdf"
+                pdfLink="/static/files/bmjdh_ml_ibd_fatigue.pdf"
+                pdfLinkLabel="Published article PDF"
+                publisherLink="https://bmjdigitalhealth.bmj.com/content/2/1/e000037"
+                publisherLinkLabel="Publisher website"
                 preprintLink="https://www.medrxiv.org/content/10.1101/2025.01.18.25320777v1"
                 githubLink="https://github.com/1-gut/machine_learning_for_ibd_fatigue"
-                footerText="Preprint | 20 January 2025"
+                footerText="Published in BMJ Digital Health & AI | 26 February 2026"
               />
             </div>
           </SectionWrapper>

@@ -5,7 +5,11 @@ export default function PaperCard({
   authors,
   abstract = {},
   pdfLink,
+  pdfLinkLabel = "Full PDF",
+  publisherLink,
+  publisherLinkLabel = "Publisher website",
   preprintLink,
+  preprintLinkLabel = "Archived preprint",
   githubLink,
   footerText,
   explorationLink,
@@ -61,57 +65,71 @@ export default function PaperCard({
         </>
       )}
 
-      <div className="mt-6 flex flex-col md:flex-row md:items-center gap-4 p-4 bg-gray-50 rounded-lg">
-        <div className="flex flex-wrap gap-3">
-          {pdfLink && (
-            <a
-              href={pdfLink}
-              target="_blank"
-              className="flex items-center px-3 py-2 bg-primary text-white rounded-md hover:bg-opacity-90 transition"
-            >
-              <svg
-                className="w-5 h-5 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+      <div className="mt-6 flex flex-col md:flex-row md:items-start gap-4 p-4 bg-gray-50 rounded-lg">
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-wrap gap-3">
+            {pdfLink && (
+              <a
+                href={pdfLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center px-3 py-2 bg-primary text-white rounded-md hover:bg-opacity-90 transition"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                />
-              </svg>
-              Full PDF
-            </a>
-          )}
-          
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  />
+                </svg>
+                {pdfLinkLabel}
+              </a>
+            )}
+
+            {publisherLink && (
+              <a
+                href={publisherLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center px-3 py-2 border border-primary text-primary rounded-md hover:bg-white transition"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13.828 10.172a4 4 0 015.657 5.656l-3 3a4 4 0 01-5.657-5.656m-1.414 1.414a4 4 0 01-5.657-5.656l3-3a4 4 0 115.657 5.656"
+                  />
+                </svg>
+                {publisherLinkLabel}
+              </a>
+            )}
+          </div>
+
           {preprintLink && (
             <a
               href={preprintLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center px-3 py-2 bg-primary text-white rounded-md hover:bg-opacity-90 transition"
+              className="text-xs md:text-sm text-gray-500 hover:text-secondary underline underline-offset-2"
             >
-              <svg
-                className="w-5 h-5 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                />
-              </svg>
-              Preprint
+              {preprintLinkLabel}
             </a>
           )}
-          
+
           {githubLink && (
             <a
               href={githubLink}
