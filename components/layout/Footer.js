@@ -15,7 +15,11 @@ export default function Footer() {
               </h2>
               <div className="flex flex-col">
                 <FooterLink
-                  text="G-Trac"
+                  text="Foundry120"
+                  href="https://app.musicstudy.uk/"
+                />
+                <FooterLink
+                  text="G-Trac (Legacy)"
                   href="https://samples.musicstudy.uk/"
                 />
                 <FooterLink
