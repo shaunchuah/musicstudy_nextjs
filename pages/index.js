@@ -53,12 +53,12 @@ export default function Home() {
               <div className="flex items-center mb-16">
                 <a
                   className="mt-4 text-gray-300 hover:text-white"
-                  href="https://www.ed.ac.uk/inflammation-research/research/gut-research-unit"
+                  href="https://www.gla.ac.uk/schools/infectionimmunity/staff/gwotzerho/theguttranslationalresearchgroup/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span className="inline-flex">
-                    A project by the Gut Research Unit
+                    A project by the Gut Translational Research Group
                     <svg
                       className="ml-1 w-5 h-5"
                       fill="none"
@@ -75,9 +75,9 @@ export default function Home() {
                     </svg>
                   </span>
                   <br />
-                  Institute for Regeneration and Repair
+                  School of Infection and Immunity
                   <br />
-                  University of Edinburgh
+                  University of Glasgow
                 </a>
               </div>
             </div>
