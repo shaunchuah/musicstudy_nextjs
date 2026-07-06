@@ -6,7 +6,7 @@ import SectionWrapperWhite from "../components/SectionWrapperWhite";
 import SectionWrapperHero from "../components/SectionWrapperHero";
 import AudioPlayer from "../components/ui/AudioPlayer";
 import NewsCard from "../components/ui/NewsCard";
-import { Tweet } from "react-tweet";
+import SafeTweet from "../components/ui/SafeTweet";
 import SEOHead from "../components/SEOHead";
 
 export default function Home() {
@@ -279,7 +279,7 @@ export default function Home() {
                   help shape future testing approaches for IBD monitoring.
                 </p>
               </div>
-              <Tweet id="1918247342295400589" />
+              <SafeTweet id="1918247342295400589" />
             </NewsCard>
 
             <NewsCard
@@ -295,7 +295,7 @@ export default function Home() {
                   </button>
                 </Link>
               </div>
-              <Tweet id="1903842652522500525" />
+              <SafeTweet id="1903842652522500525" />
               <p className="mb-2">
                 We&apos;ve also included a transcript of the thread for
                 accessibility:
